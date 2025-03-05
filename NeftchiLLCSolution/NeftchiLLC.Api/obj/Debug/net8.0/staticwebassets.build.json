@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "GuvjFy5WAoJA9p2kE9wKlkj6h7zzxoVgtiZu2jNM1xw=",
+  "Source": "NeftchiLLC.Api",
+  "BasePath": "_content/NeftchiLLC.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
