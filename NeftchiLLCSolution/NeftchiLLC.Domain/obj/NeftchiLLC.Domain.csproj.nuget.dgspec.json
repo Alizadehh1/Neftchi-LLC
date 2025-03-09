@@ -50,6 +50,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Intelect.Domain.Core": {
+              "target": "Package",
+              "version": "[1.1.9-beta--1.1.8, )"
+            },
+            "Intelect.Infrastructure.Core": {
+              "target": "Package",
+              "version": "[1.1.9-beta--1.1.8, )"
+            },
             "Microsoft.AspNetCore.Localization": {
               "target": "Package",
               "version": "[2.3.0, )"
