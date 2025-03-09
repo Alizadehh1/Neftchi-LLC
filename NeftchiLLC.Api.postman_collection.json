@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "9d007c52-f1e5-44ae-8c1b-7064d0646604",
+		"name": "NeftchiLLC.Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21158932"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "licences",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/licences",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"licences"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/licences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"licences"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files[0].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/test.docx"
+										},
+										{
+											"key": "files[0].ismain",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "files[1].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/AZneft İstehsalat Birliyi (Metal qırıntılarının qəbul edilməsi)17.01.25.pdf"
+										},
+										{
+											"key": "files[1].ismain",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "lisenziya-test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/licences",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"licences"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/licences/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"licences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7171"
+		}
+	]
+}

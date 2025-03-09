@@ -1,5 +1,41 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\03e40158-03bd-40c1-acc4-170d580bb79b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/03e40158-03bd-40c1-acc4-170d580bb79b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>da30559r3f</Fingerprint>
+      <Integrity>pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\03e40158-03bd-40c1-acc4-170d580bb79b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0ec47bcf-ff27-4765-b3c1-6bd4225a035d.docx'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/0ec47bcf-ff27-4765-b3c1-6bd4225a035d.docx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5ipweew5fc</Fingerprint>
+      <Integrity>47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0ec47bcf-ff27-4765-b3c1-6bd4225a035d.docx'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\14c63a38-4ebf-4161-97c0-fb05d3e0cb07.png'))">
       <SourceType>Package</SourceType>
       <SourceId>NeftchiLLC.Api</SourceId>
@@ -17,6 +53,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\14c63a38-4ebf-4161-97c0-fb05d3e0cb07.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\151c624d-222d-4916-a80f-c7ecea54f4b8.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/151c624d-222d-4916-a80f-c7ecea54f4b8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>da30559r3f</Fingerprint>
+      <Integrity>pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\151c624d-222d-4916-a80f-c7ecea54f4b8.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\2d284227-9bad-4426-9531-1412410fb9ee.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/2d284227-9bad-4426-9531-1412410fb9ee.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gjrfpr8d3w</Fingerprint>
+      <Integrity>LP5fqG7YwAYUIUQQXWwJuwtzBkDm/WvyPrfmqZXg7mM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\2d284227-9bad-4426-9531-1412410fb9ee.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\36f7c492-d229-49be-9cae-8a18428f92a2.png'))">
       <SourceType>Package</SourceType>
@@ -36,6 +108,60 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\36f7c492-d229-49be-9cae-8a18428f92a2.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\37302344-8f17-49f6-ac89-49b7a4e908bf.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/37302344-8f17-49f6-ac89-49b7a4e908bf.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>da30559r3f</Fingerprint>
+      <Integrity>pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\37302344-8f17-49f6-ac89-49b7a4e908bf.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\3e944d8c-deb5-4dda-bfbf-a6538ca67d27.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/3e944d8c-deb5-4dda-bfbf-a6538ca67d27.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ctm0hxlata</Fingerprint>
+      <Integrity>gOcMec+WfZ3Hmpo1Z+gMD3jAkHojVL/LHeE8Fx3KA3k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\3e944d8c-deb5-4dda-bfbf-a6538ca67d27.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4e15a07e-f562-40dd-85ce-1685e03f8be3.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/4e15a07e-f562-40dd-85ce-1685e03f8be3.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4fyank5n4d</Fingerprint>
+      <Integrity>wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4e15a07e-f562-40dd-85ce-1685e03f8be3.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5125910e-9660-41cc-aafa-815539c524f1.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NeftchiLLC.Api</SourceId>
@@ -54,6 +180,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5125910e-9660-41cc-aafa-815539c524f1.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\54c0f654-b825-43ac-a733-912aa4be658f.docx'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/54c0f654-b825-43ac-a733-912aa4be658f.docx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5ipweew5fc</Fingerprint>
+      <Integrity>47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\54c0f654-b825-43ac-a733-912aa4be658f.docx'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\58c56d63-1623-40f1-bd2e-f29510071c25.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NeftchiLLC.Api</SourceId>
@@ -71,6 +215,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\58c56d63-1623-40f1-bd2e-f29510071c25.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\72413f5a-947a-4d50-b758-c2b51d881620.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/72413f5a-947a-4d50-b758-c2b51d881620.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gjrfpr8d3w</Fingerprint>
+      <Integrity>LP5fqG7YwAYUIUQQXWwJuwtzBkDm/WvyPrfmqZXg7mM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\72413f5a-947a-4d50-b758-c2b51d881620.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\8cd83091-29cd-448c-96e9-b392e5085bbc.png'))">
       <SourceType>Package</SourceType>
@@ -143,6 +305,60 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b6583708-2cf8-439a-ad48-1d677a27bf59.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bc5f29ff-9082-4abf-b272-10a8bff3e86b.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/bc5f29ff-9082-4abf-b272-10a8bff3e86b.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4fyank5n4d</Fingerprint>
+      <Integrity>wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bc5f29ff-9082-4abf-b272-10a8bff3e86b.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f356d27f-6053-49e4-b3d6-4d4340137b6e.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/f356d27f-6053-49e4-b3d6-4d4340137b6e.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ctm0hxlata</Fingerprint>
+      <Integrity>gOcMec+WfZ3Hmpo1Z+gMD3jAkHojVL/LHeE8Fx3KA3k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f356d27f-6053-49e4-b3d6-4d4340137b6e.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f6827944-fc81-444e-bab6-8aa1e12f70c0.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NeftchiLLC.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NeftchiLLC.Api</BasePath>
+      <RelativePath>uploads/f6827944-fc81-444e-bab6-8aa1e12f70c0.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>da30559r3f</Fingerprint>
+      <Integrity>pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f6827944-fc81-444e-bab6-8aa1e12f70c0.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>
