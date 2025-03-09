@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "9FaqCAwP5Qg=",
+  "dgSpecHash": "DY+aMgyc6uQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\NeftchiLLC.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alide\\.nuget\\packages\\aspnetcoreratelimit\\5.0.0\\aspnetcoreratelimit.5.0.0.nupkg.sha512",
     "C:\\Users\\alide\\.nuget\\packages\\aspnetcoreratelimit.redis\\2.0.0\\aspnetcoreratelimit.redis.2.0.0.nupkg.sha512",
     "C:\\Users\\alide\\.nuget\\packages\\autofac\\8.2.0\\autofac.8.2.0.nupkg.sha512",
+    "C:\\Users\\alide\\.nuget\\packages\\autofac.extensions.dependencyinjection\\10.0.0\\autofac.extensions.dependencyinjection.10.0.0.nupkg.sha512",
     "C:\\Users\\alide\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\alide\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\alide\\.nuget\\packages\\bouncycastle.netcore\\2.2.1\\bouncycastle.netcore.2.2.1.nupkg.sha512",

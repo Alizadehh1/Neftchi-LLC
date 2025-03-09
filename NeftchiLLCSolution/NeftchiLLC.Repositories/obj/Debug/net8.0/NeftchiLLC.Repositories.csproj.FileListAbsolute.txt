@@ -15,3 +15,4 @@ C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\Neftchi
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\refint\NeftchiLLC.Repositories.dll
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.pdb
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\ref\NeftchiLLC.Repositories.dll
+C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.sourcelink.json

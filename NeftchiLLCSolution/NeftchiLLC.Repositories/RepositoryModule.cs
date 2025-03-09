@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Autofac;
 
 namespace NeftchiLLC.Repositories
 {
-	internal class RepositoryModule
+	public class RepositoryModule : Module
 	{
+		protected override void Load(ContainerBuilder builder)
+		{
+			base.Load(builder);
+
+			builder.RegisterAssemblyTypes(typeof(RepositoryModule).Assembly)
+				.AsImplementedInterfaces()
+				.InstancePerLifetimeScope();
+		}
 	}
 }
