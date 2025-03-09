@@ -1,8 +1,6 @@
 ﻿using Intelect.Application.Core.Services;
 using Intelect.Infrastructure.Core.Services;
 using MediatR;
-using Microsoft.AspNetCore.Hosting;
-using NeftchiLLC.Application.Extensions;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Domain.Models.Entities;
 using NeftchiLLC.Domain.Models.StableModels;

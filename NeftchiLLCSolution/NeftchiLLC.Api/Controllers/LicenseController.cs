@@ -2,8 +2,9 @@
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using NeftchiLLC.Application.Dtos;
 using NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand;
+using NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand;
+using NeftchiLLC.Application.Features.License.Queries.LicenseGetByIdQuery;
 using NeftchiLLC.Application.Features.License.Queries.LicensesGetAllRequest;
 
 namespace NeftchiLLC.Api.Controllers
@@ -20,8 +21,23 @@ namespace NeftchiLLC.Api.Controllers
 			var dto = ApiResponse.Success(response);
 			return Ok(dto);
 		}
+		[HttpPut("{id:int:min(1)}")]
+		[Transaction]
+		public async Task<IActionResult> Edit(int id, [FromForm] LicenseEditRequest request)
+		{
+			request.Id = id;
+			await mediator.Send(request);
+			return Ok();
+		}
 		[HttpGet()]
 		public async Task<IActionResult> GetAll([FromQuery] LicensesGetAllRequest request)
+		{
+			var response = await mediator.Send(request);
+			var dto = ApiResponse.Success(response);
+			return Ok(dto);
+		}
+		[HttpGet("{id:int:min(1)}")]
+		public async Task<IActionResult> GetById([FromRoute] LicenseGetByIdRequest request)
 		{
 			var response = await mediator.Send(request);
 			var dto = ApiResponse.Success(response);

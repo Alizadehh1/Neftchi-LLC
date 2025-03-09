@@ -37,6 +37,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "NeftchiLLC.Api.Controllers.LicenseController",
+    "Method": "Edit",
+    "RelativePath": "api/licences/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Files",
+        "Type": "System.Collections.Generic.List\u00601[[NeftchiLLC.Application.Dtos.DocumentAddFileDto, NeftchiLLC.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.LicenseController",
+    "Method": "GetById",
+    "RelativePath": "api/licences/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NeftchiLLC.Api.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "weatherforecast",
