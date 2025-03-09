@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand;
 using NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand;
+using NeftchiLLC.Application.Features.License.Commands.LicenseRemoveCommand;
 using NeftchiLLC.Application.Features.License.Queries.LicenseGetByIdQuery;
 using NeftchiLLC.Application.Features.License.Queries.LicensesGetAllRequest;
 
@@ -24,6 +25,14 @@ namespace NeftchiLLC.Api.Controllers
 		[HttpPut("{id:int:min(1)}")]
 		[Transaction]
 		public async Task<IActionResult> Edit(int id, [FromForm] LicenseEditRequest request)
+		{
+			request.Id = id;
+			await mediator.Send(request);
+			return Ok();
+		}
+		[HttpPut("remove/{id:int:min(1)}")]
+		[Transaction]
+		public async Task<IActionResult> Remove(int id, [FromForm] LicenseRemoveRequest request)
 		{
 			request.Id = id;
 			await mediator.Send(request);
