@@ -12,8 +12,8 @@ using NeftchiLLC.Domain.Contexts;
 namespace NeftchiLLC.Domain.Migrations
 {
     [DbContext(typeof(NeftchiContext))]
-    [Migration("20250310202603_ServiceAdded")]
-    partial class ServiceAdded
+    [Migration("20250310220953_servicecreated")]
+    partial class servicecreated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

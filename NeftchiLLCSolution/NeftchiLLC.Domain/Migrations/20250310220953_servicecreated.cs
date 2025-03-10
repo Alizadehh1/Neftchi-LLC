@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace NeftchiLLC.Domain.Migrations
 {
     /// <inheritdoc />
-    public partial class ServiceAdded : Migration
+    public partial class servicecreated : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
