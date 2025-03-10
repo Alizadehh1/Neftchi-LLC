@@ -1,4 +1,4 @@
 /NeftchiLLCSolution/.vs
 bin
-obj
+/NeftchiLLCSolution/NeftchiLLC.Domain/obj
 /NeftchiLLCSolution/NeftchiLLC.Api/wwwroot/uploads
