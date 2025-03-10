@@ -8,4 +8,5 @@
 /NeftchiLLCSolution/NeftchiLLC.Api/wwwroot/uploads
 /NeftchiLLCSolution/NeftchiLLC.Api/obj/*
 /NeftchiLLCSolution/NeftchiLLC.Api/bin/*
-/NeftchiLLCSolution/NeftchiLLC.Api/bin/Debug/net8.0/NeftchiLLC.Api.dll
+**/bin/
+**/obj/
