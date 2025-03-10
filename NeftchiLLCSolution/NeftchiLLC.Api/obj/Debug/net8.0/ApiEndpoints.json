@@ -84,6 +84,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "NeftchiLLC.Api.Controllers.LicenseController",
+    "Method": "Remove",
+    "RelativePath": "api/licences/remove/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NeftchiLLC.Api.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "weatherforecast",

@@ -54,9 +54,6 @@ namespace NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand
 			foreach (var file in filesToDelete)
 				await documentRepository.RemoveFileAsync(file);
 
-
-
-
 			#endregion
 			#region Add new files
 
