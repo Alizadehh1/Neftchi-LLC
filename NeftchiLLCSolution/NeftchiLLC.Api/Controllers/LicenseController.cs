@@ -30,7 +30,7 @@ namespace NeftchiLLC.Api.Controllers
 			await mediator.Send(request);
 			return Ok();
 		}
-		[HttpPut("remove/{id:int:min(1)}")]
+		[HttpDelete("remove/{id:int:min(1)}")]
 		[Transaction]
 		public async Task<IActionResult> Remove(int id, [FromForm] LicenseRemoveRequest request)
 		{
