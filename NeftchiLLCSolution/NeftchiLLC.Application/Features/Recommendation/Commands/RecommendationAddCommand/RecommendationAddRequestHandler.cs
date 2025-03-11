@@ -8,19 +8,8 @@ using Document = NeftchiLLC.Domain.Models.Entities.Document;
 
 namespace NeftchiLLC.Application.Features.Recommendation.Commands.RecommendationAddCommand
 {
-    public class RecommendationAddRequestHandler : IRequestHandler<RecommendationAddRequest, Document>
+    class RecommendationAddRequestHandler(IFileService fileService, IDocumentRepository documentRepository, LocalFileService localFileService) : IRequestHandler<RecommendationAddRequest, Document>
     {
-        private readonly IFileService fileService;
-        private readonly IDocumentRepository documentRepository;
-        private readonly LocalFileService localFileService;
-
-        public RecommendationAddRequestHandler(IFileService fileService, IDocumentRepository documentRepository, LocalFileService localFileService)
-        {
-            this.fileService = fileService;
-            this.documentRepository = documentRepository;
-            this.localFileService = localFileService;
-        }
-
         public async Task<Document> Handle(RecommendationAddRequest request, CancellationToken cancellationToken)
         {
             var recommendation = new Document
