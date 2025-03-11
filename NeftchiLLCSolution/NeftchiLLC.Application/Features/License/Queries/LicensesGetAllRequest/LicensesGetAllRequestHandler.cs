@@ -10,7 +10,7 @@ namespace NeftchiLLC.Application.Features.License.Queries.LicensesGetAllRequest
 		public async Task<IEnumerable<DocumentGetAllDto>> Handle(LicensesGetAllRequest request, CancellationToken cancellationToken)
 		{
 			var documents = documentRepository.GetAll(d => d.DeletedAt == null && d.Type == DocumentType.License);
-			var files = documentRepository.GetFiles(d => d.DeletedAt == null && d.IsMain);
+			var files = documentRepository.GetFiles(d => d.DeletedAt == null);
 
 			var query = from d in documents
 						join f in files on d.Id equals f.DocumentId
