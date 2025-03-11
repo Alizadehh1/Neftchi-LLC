@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k9IzCsUceg6/1k0fY5S3O5hLhaSEacs3JbaQuxcHTe8=",
+  "Hash": "f38QrGMS5+9aLEuU+0SMToNPNfld2KUWaLKWcoKHmck=",
   "Source": "NeftchiLLC.Api",
   "BasePath": "_content/NeftchiLLC.Api",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\03e40158-03bd-40c1-acc4-170d580bb79b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\0a9210ca-a5f3-49fb-aaf4-3a2033482593.png",
+      "SourceId": "NeftchiLLC.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\",
+      "BasePath": "_content/NeftchiLLC.Api",
+      "RelativePath": "uploads/0a9210ca-a5f3-49fb-aaf4-3a2033482593#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4fyank5n4d",
+      "Integrity": "wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\0a9210ca-a5f3-49fb-aaf4-3a2033482593.png"
     },
     {
       "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\0ec47bcf-ff27-4765-b3c1-6bd4225a035d.docx",
@@ -185,6 +206,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\3e944d8c-deb5-4dda-bfbf-a6538ca67d27.pdf"
     },
     {
+      "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\454fd912-72bd-4d9c-b277-b46f434ee2b5.jpg",
+      "SourceId": "NeftchiLLC.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\",
+      "BasePath": "_content/NeftchiLLC.Api",
+      "RelativePath": "uploads/454fd912-72bd-4d9c-b277-b46f434ee2b5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da30559r3f",
+      "Integrity": "pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\454fd912-72bd-4d9c-b277-b46f434ee2b5.jpg"
+    },
+    {
       "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\4e15a07e-f562-40dd-85ce-1685e03f8be3.png",
       "SourceId": "NeftchiLLC.Api",
       "SourceType": "Discovered",
@@ -269,6 +311,48 @@
       "OriginalItemSpec": "wwwroot\\uploads\\58c56d63-1623-40f1-bd2e-f29510071c25.jpg"
     },
     {
+      "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\63adf6e7-0af1-432f-ae2d-038044399a63.jpg",
+      "SourceId": "NeftchiLLC.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\",
+      "BasePath": "_content/NeftchiLLC.Api",
+      "RelativePath": "uploads/63adf6e7-0af1-432f-ae2d-038044399a63#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da30559r3f",
+      "Integrity": "pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\63adf6e7-0af1-432f-ae2d-038044399a63.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\6ec9f93e-ee83-42fe-aa94-1dddc7b4631d.jpg",
+      "SourceId": "NeftchiLLC.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\",
+      "BasePath": "_content/NeftchiLLC.Api",
+      "RelativePath": "uploads/6ec9f93e-ee83-42fe-aa94-1dddc7b4631d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da30559r3f",
+      "Integrity": "pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\6ec9f93e-ee83-42fe-aa94-1dddc7b4631d.jpg"
+    },
+    {
       "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\72413f5a-947a-4d50-b758-c2b51d881620.jpg",
       "SourceId": "NeftchiLLC.Api",
       "SourceType": "Discovered",
@@ -309,6 +393,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\8cd83091-29cd-448c-96e9-b392e5085bbc.png"
+    },
+    {
+      "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\91d95923-edbe-4d52-b9a4-397e4698205e.png",
+      "SourceId": "NeftchiLLC.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\",
+      "BasePath": "_content/NeftchiLLC.Api",
+      "RelativePath": "uploads/91d95923-edbe-4d52-b9a4-397e4698205e#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4fyank5n4d",
+      "Integrity": "wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\91d95923-edbe-4d52-b9a4-397e4698205e.png"
     },
     {
       "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\99b4173a-90c3-4b38-9226-01b16da173d5.jpg",
@@ -395,6 +500,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\bc5f29ff-9082-4abf-b272-10a8bff3e86b.png"
     },
     {
+      "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\cb25ed3d-c763-42b5-bc51-375c498b84c5.png",
+      "SourceId": "NeftchiLLC.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\",
+      "BasePath": "_content/NeftchiLLC.Api",
+      "RelativePath": "uploads/cb25ed3d-c763-42b5-bc51-375c498b84c5#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4fyank5n4d",
+      "Integrity": "wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cb25ed3d-c763-42b5-bc51-375c498b84c5.png"
+    },
+    {
       "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\f356d27f-6053-49e4-b3d6-4d4340137b6e.pdf",
       "SourceId": "NeftchiLLC.Api",
       "SourceType": "Discovered",
@@ -435,6 +561,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\f6827944-fc81-444e-bab6-8aa1e12f70c0.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\fba6a950-5437-4bb7-bc08-ac9d21577224.png",
+      "SourceId": "NeftchiLLC.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\",
+      "BasePath": "_content/NeftchiLLC.Api",
+      "RelativePath": "uploads/fba6a950-5437-4bb7-bc08-ac9d21577224#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4fyank5n4d",
+      "Integrity": "wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\fba6a950-5437-4bb7-bc08-ac9d21577224.png"
+    },
+    {
+      "Identity": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\fee6a752-08d0-4b17-b44c-07d4cb8a80cb.jpg",
+      "SourceId": "NeftchiLLC.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\",
+      "BasePath": "_content/NeftchiLLC.Api",
+      "RelativePath": "uploads/fee6a752-08d0-4b17-b44c-07d4cb8a80cb#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da30559r3f",
+      "Integrity": "pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\fee6a752-08d0-4b17-b44c-07d4cb8a80cb.jpg"
     }
   ],
   "Endpoints": [
@@ -517,6 +685,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/0a9210ca-a5f3-49fb-aaf4-3a2033482593.4fyank5n4d.png",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\0a9210ca-a5f3-49fb-aaf4-3a2033482593.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "634621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4fyank5n4d"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/0a9210ca-a5f3-49fb-aaf4-3a2033482593.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/0a9210ca-a5f3-49fb-aaf4-3a2033482593.png",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\0a9210ca-a5f3-49fb-aaf4-3a2033482593.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "634621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8="
         }
       ]
     },
@@ -1095,6 +1345,88 @@
       ]
     },
     {
+      "Route": "uploads/454fd912-72bd-4d9c-b277-b46f434ee2b5.da30559r3f.jpg",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\454fd912-72bd-4d9c-b277-b46f434ee2b5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da30559r3f"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/454fd912-72bd-4d9c-b277-b46f434ee2b5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/454fd912-72bd-4d9c-b277-b46f434ee2b5.jpg",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\454fd912-72bd-4d9c-b277-b46f434ee2b5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
       "Route": "uploads/4e15a07e-f562-40dd-85ce-1685e03f8be3.4fyank5n4d.png",
       "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\4e15a07e-f562-40dd-85ce-1685e03f8be3.png",
       "Selectors": [],
@@ -1423,6 +1755,170 @@
       ]
     },
     {
+      "Route": "uploads/63adf6e7-0af1-432f-ae2d-038044399a63.da30559r3f.jpg",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\63adf6e7-0af1-432f-ae2d-038044399a63.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da30559r3f"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/63adf6e7-0af1-432f-ae2d-038044399a63.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/63adf6e7-0af1-432f-ae2d-038044399a63.jpg",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\63adf6e7-0af1-432f-ae2d-038044399a63.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6ec9f93e-ee83-42fe-aa94-1dddc7b4631d.da30559r3f.jpg",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\6ec9f93e-ee83-42fe-aa94-1dddc7b4631d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:37:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da30559r3f"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/6ec9f93e-ee83-42fe-aa94-1dddc7b4631d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6ec9f93e-ee83-42fe-aa94-1dddc7b4631d.jpg",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\6ec9f93e-ee83-42fe-aa94-1dddc7b4631d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:37:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
       "Route": "uploads/72413f5a-947a-4d50-b758-c2b51d881620.gjrfpr8d3w.jpg",
       "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\72413f5a-947a-4d50-b758-c2b51d881620.jpg",
       "Selectors": [],
@@ -1573,6 +2069,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Sun, 09 Mar 2025 16:49:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/91d95923-edbe-4d52-b9a4-397e4698205e.4fyank5n4d.png",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\91d95923-edbe-4d52-b9a4-397e4698205e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "634621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4fyank5n4d"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/91d95923-edbe-4d52-b9a4-397e4698205e.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/91d95923-edbe-4d52-b9a4-397e4698205e.png",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\91d95923-edbe-4d52-b9a4-397e4698205e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "634621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:44:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1915,6 +2493,88 @@
       ]
     },
     {
+      "Route": "uploads/cb25ed3d-c763-42b5-bc51-375c498b84c5.4fyank5n4d.png",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\cb25ed3d-c763-42b5-bc51-375c498b84c5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "634621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:43:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4fyank5n4d"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cb25ed3d-c763-42b5-bc51-375c498b84c5.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cb25ed3d-c763-42b5-bc51-375c498b84c5.png",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\cb25ed3d-c763-42b5-bc51-375c498b84c5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "634621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:43:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8="
+        }
+      ]
+    },
+    {
       "Route": "uploads/f356d27f-6053-49e4-b3d6-4d4340137b6e.ctm0hxlata.pdf",
       "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\f356d27f-6053-49e4-b3d6-4d4340137b6e.pdf",
       "Selectors": [],
@@ -2065,6 +2725,170 @@
         {
           "Name": "Last-Modified",
           "Value": "Sun, 09 Mar 2025 17:25:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/fba6a950-5437-4bb7-bc08-ac9d21577224.4fyank5n4d.png",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\fba6a950-5437-4bb7-bc08-ac9d21577224.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "634621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:43:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4fyank5n4d"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/fba6a950-5437-4bb7-bc08-ac9d21577224.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/fba6a950-5437-4bb7-bc08-ac9d21577224.png",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\fba6a950-5437-4bb7-bc08-ac9d21577224.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "634621"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:43:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wCP1C+t72g4RQhvXI13f2uD7sT/5drXznQjomSCl3v8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/fee6a752-08d0-4b17-b44c-07d4cb8a80cb.da30559r3f.jpg",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\fee6a752-08d0-4b17-b44c-07d4cb8a80cb.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:37:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da30559r3f"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/fee6a752-08d0-4b17-b44c-07d4cb8a80cb.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/fee6a752-08d0-4b17-b44c-07d4cb8a80cb.jpg",
+      "AssetFile": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\NeftchiLLCSolution\\NeftchiLLC.Api\\wwwroot\\uploads\\fee6a752-08d0-4b17-b44c-07d4cb8a80cb.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pbn8DxRglAocL2GTDhEYGPdIeIgNZEt7vPtGP6Mu2Uw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 23:37:11 GMT"
         },
         {
           "Name": "Cache-Control",
