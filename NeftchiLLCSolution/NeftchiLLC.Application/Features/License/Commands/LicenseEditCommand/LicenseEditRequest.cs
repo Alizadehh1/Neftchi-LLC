@@ -7,6 +7,6 @@ namespace NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
-		public List<DocumentAddFileDto> Files { get; set; }
+		public List<DocumentFileEditDto> Files { get; set; }
 	}
 }
