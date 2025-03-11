@@ -205,3 +205,10 @@ C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\Neftchi
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.sourcelink.json
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Api\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Api\bin\Debug\net8.0\NeftchiLLC.Api.staticwebassets.runtime.json
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.csproj.AssemblyReference.cache
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.AssemblyInfoInputs.cache
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.AssemblyInfo.cs
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.csproj.CoreCompileInputs.cache
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.sourcelink.json

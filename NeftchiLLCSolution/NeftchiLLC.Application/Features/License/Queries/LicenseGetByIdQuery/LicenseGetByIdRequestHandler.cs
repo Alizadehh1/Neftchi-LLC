@@ -4,9 +4,9 @@ using NeftchiLLC.Application.Repositories;
 
 namespace NeftchiLLC.Application.Features.License.Queries.LicenseGetByIdQuery
 {
-	class LicenseGetByIdRequestHandler(IDocumentRepository documentRepository) : IRequestHandler<LicenseGetByIdRequest, DocumentGetByIdDto>
+	class CertificateGetByIdRequestHandler(IDocumentRepository documentRepository) : IRequestHandler<CertificateGetByIdRequest, DocumentGetByIdDto>
 	{
-		public async Task<DocumentGetByIdDto> Handle(LicenseGetByIdRequest request, CancellationToken cancellationToken)
+		public async Task<DocumentGetByIdDto> Handle(CertificateGetByIdRequest request, CancellationToken cancellationToken)
 		{
 			var license = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.License && d.DeletedAt == null && d.Id == request.Id, cancellationToken: cancellationToken);
 

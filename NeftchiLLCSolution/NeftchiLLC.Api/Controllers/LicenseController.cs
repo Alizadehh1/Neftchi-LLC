@@ -24,7 +24,7 @@ namespace NeftchiLLC.Api.Controllers
 		}
 		[HttpPut("{id:int:min(1)}")]
 		[Transaction]
-		public async Task<IActionResult> Edit(int id, [FromForm] LicenseEditRequest request)
+		public async Task<IActionResult> Edit(int id, [FromForm] CertificateEditRequest request)
 		{
 			request.Id = id;
 			await mediator.Send(request);
@@ -32,21 +32,21 @@ namespace NeftchiLLC.Api.Controllers
 		}
 		[HttpDelete("remove/{id:int:min(1)}")]
 		[Transaction]
-		public async Task<IActionResult> Remove(int id, [FromForm] LicenseRemoveRequest request)
+		public async Task<IActionResult> Remove(int id, [FromForm] CertificateRemoveRequest request)
 		{
 			request.Id = id;
 			await mediator.Send(request);
 			return Ok();
 		}
 		[HttpGet()]
-		public async Task<IActionResult> GetAll([FromQuery] LicensesGetAllRequest request)
+		public async Task<IActionResult> GetAll([FromQuery] CertificateGetAllRequest request)
 		{
 			var response = await mediator.Send(request);
 			var dto = ApiResponse.Success(response);
 			return Ok(dto);
 		}
 		[HttpGet("{id:int:min(1)}")]
-		public async Task<IActionResult> GetById([FromRoute] LicenseGetByIdRequest request)
+		public async Task<IActionResult> GetById([FromRoute] CertificateGetByIdRequest request)
 		{
 			var response = await mediator.Send(request);
 			var dto = ApiResponse.Success(response);

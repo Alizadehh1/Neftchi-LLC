@@ -2,7 +2,7 @@
 
 namespace NeftchiLLC.Application.Features.License.Commands.LicenseRemoveCommand
 {
-	public class LicenseRemoveRequest : IRequest
+	public class CertificateRemoveRequest : IRequest
 	{
 		public int Id { get; set; }
 	}

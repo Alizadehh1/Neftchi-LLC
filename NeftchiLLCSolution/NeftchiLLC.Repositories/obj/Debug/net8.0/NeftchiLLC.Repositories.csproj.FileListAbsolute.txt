@@ -16,3 +16,9 @@ C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\Neftchi
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.pdb
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\ref\NeftchiLLC.Repositories.dll
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.sourcelink.json
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.csproj.AssemblyReference.cache
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.AssemblyInfoInputs.cache
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.AssemblyInfo.cs
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.csproj.CoreCompileInputs.cache
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.sourcelink.json
