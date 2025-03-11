@@ -106,14 +106,6 @@
 							"name": "GetById",
 							"request": {
 								"method": "GET",
-								"header": []
-							},
-							"response": []
-						},
-						{
-							"name": "Edit",
-							"request": {
-								"method": "PUT",
 								"header": [],
 								"url": {
 									"raw": "{{baseUrl}}/api/licences/1",
@@ -124,6 +116,690 @@
 										"api",
 										"licences",
 										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "lisenziya-test-edited",
+											"type": "text"
+										},
+										{
+											"key": "files[0].ismain",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "files[0].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/mac-white-screen-610x347.jpg"
+										},
+										{
+											"key": "files[1].ismain",
+											"value": "false",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "files[1].file",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/licences/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"licences",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/licences/remove/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"licences",
+										"remove",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Services",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"services"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/licences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"licences"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "servis2",
+											"type": "text"
+										},
+										{
+											"key": "rank",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/services/4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"services",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "servis4",
+											"type": "text"
+										},
+										{
+											"key": "rank",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/services/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"services",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/services/remove/5",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"services",
+										"remove",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Projects",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/projects",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/licences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"licences"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "layihe1",
+											"type": "text"
+										},
+										{
+											"key": "organisationName",
+											"value": "British Petrol",
+											"type": "text"
+										},
+										{
+											"key": "organisationShortName",
+											"value": "BP",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "test description",
+											"type": "text"
+										},
+										{
+											"key": "employeeNumber",
+											"value": "32",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "30 gün",
+											"type": "text"
+										},
+										{
+											"key": "DeliveryDate",
+											"value": "12.01.2025",
+											"type": "text"
+										},
+										{
+											"key": "Materials",
+											"value": "Materiallar istifadə olunub:",
+											"type": "text"
+										},
+										{
+											"key": "files[0].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/mac-white-screen-610x347.jpg"
+										},
+										{
+											"key": "files[0].ismain",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "files[1].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/Screenshot 2025-01-13 234024.png",
+											"disabled": true
+										},
+										{
+											"key": "files[1].ismain",
+											"value": "false",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/projects",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/projects/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "layihe1-edited",
+											"type": "text"
+										},
+										{
+											"key": "organisationName",
+											"value": "British Petrol",
+											"type": "text"
+										},
+										{
+											"key": "organisationShortName",
+											"value": "BP",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "test description",
+											"type": "text"
+										},
+										{
+											"key": "employeeNumber",
+											"value": "32",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "30 gün",
+											"type": "text"
+										},
+										{
+											"key": "DeliveryDate",
+											"value": "12.01.2025",
+											"type": "text"
+										},
+										{
+											"key": "Materials",
+											"value": "Materiallar istifadə olunub:",
+											"type": "text"
+										},
+										{
+											"key": "files[0].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/Screenshot 2025-01-13 234024.png"
+										},
+										{
+											"key": "files[0].isMain",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "files[1].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/mac-white-screen-610x347.jpg"
+										},
+										{
+											"key": "files[1].isMain",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/projects/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/projects/remove/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"remove",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Portfolios",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/portfolios",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"portfolios"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/licences",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"licences"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/portfolios/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"portfolios",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "portfolio1-edited",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "test description",
+											"type": "text"
+										},
+										{
+											"key": "files[0].file",
+											"type": "file",
+											"src": "postman-cloud:///1effe14a-5a15-4730-9e95-d12cea5f30a4"
+										},
+										{
+											"key": "files[0].isMain",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "files[1].file",
+											"type": "file",
+											"src": "postman-cloud:///1effe14d-d49b-4150-98d5-4eefd50df54f"
+										},
+										{
+											"key": "files[1].isMain",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "files[0].Id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "files[1].Id",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/portfolios/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"portfolios",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/portfolios/remove/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"portfolios",
+										"remove",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "portfolio1",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "test description",
+											"type": "text"
+										},
+										{
+											"key": "files[0].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/Əliyeva Zülfiyyə. 10.01.25- Əmək məzuniyyəti.jpg"
+										},
+										{
+											"key": "files[0].ismain",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "files[1].file",
+											"type": "file",
+											"src": "/C:/Users/alide/OneDrive/Desktop/Screenshot 2025-01-13 234024.png"
+										},
+										{
+											"key": "files[1].ismain",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/portfolios",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"portfolios"
 									]
 								}
 							},
