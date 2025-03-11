@@ -14,6 +14,6 @@ namespace NeftchiLLC.Application.Features.Project.Commands.ProjectEditCommand
 		public string Date { get; set; }
 		public DateTime DeliveryDate { get; set; }
 		public string Materials { get; set; }
-		public required List<DocumentAddFileDto> Files { get; set; }
+		public required List<DocumentFileEditDto> Files { get; set; }
 	}
 }

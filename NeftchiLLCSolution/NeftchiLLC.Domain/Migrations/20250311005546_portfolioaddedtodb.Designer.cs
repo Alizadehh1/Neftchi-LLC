@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NeftchiLLC.Domain.Contexts;
 
@@ -11,9 +12,11 @@ using NeftchiLLC.Domain.Contexts;
 namespace NeftchiLLC.Domain.Migrations
 {
     [DbContext(typeof(NeftchiContext))]
-    partial class NeftchiContextModelSnapshot : ModelSnapshot
+    [Migration("20250311005546_portfolioaddedtodb")]
+    partial class portfolioaddedtodb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

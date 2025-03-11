@@ -8,6 +8,6 @@ namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioEditComman
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Description { get; set; }
-		public List<DocumentAddFileDto> Files { get; set; }
+		public List<DocumentFileEditDto> Files { get; set; }
 	}
 }
