@@ -22,3 +22,15 @@ D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLL
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.AssemblyInfo.cs
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.csproj.CoreCompileInputs.cache
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.sourcelink.json
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\bin\Debug\net8.0\NeftchiLLC.Repositories.deps.json
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\bin\Debug\net8.0\NeftchiLLC.Repositories.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\bin\Debug\net8.0\NeftchiLLC.Repositories.pdb
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\bin\Debug\net8.0\NeftchiLLC.Application.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\bin\Debug\net8.0\NeftchiLLC.Domain.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\bin\Debug\net8.0\NeftchiLLC.Application.pdb
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\bin\Debug\net8.0\NeftchiLLC.Domain.pdb
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiL.4E6335E4.Up2Date
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\refint\NeftchiLLC.Repositories.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\NeftchiLLC.Repositories.pdb
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Repositories\obj\Debug\net8.0\ref\NeftchiLLC.Repositories.dll

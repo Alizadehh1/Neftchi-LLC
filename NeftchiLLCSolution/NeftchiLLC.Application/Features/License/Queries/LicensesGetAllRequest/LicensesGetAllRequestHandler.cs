@@ -5,9 +5,9 @@ using NeftchiLLC.Domain.Models.StableModels;
 
 namespace NeftchiLLC.Application.Features.License.Queries.LicensesGetAllRequest
 {
-	class CertificateGetAllRequestHandler(IDocumentRepository documentRepository) : IRequestHandler<CertificateGetAllRequest, IEnumerable<DocumentGetAllDto>>
+	class LicenseGetAllRequestHandler(IDocumentRepository documentRepository) : IRequestHandler<LicenseGetAllRequest, IEnumerable<DocumentGetAllDto>>
 	{
-		public async Task<IEnumerable<DocumentGetAllDto>> Handle(CertificateGetAllRequest request, CancellationToken cancellationToken)
+		public async Task<IEnumerable<DocumentGetAllDto>> Handle(LicenseGetAllRequest request, CancellationToken cancellationToken)
 		{
 			var documents = documentRepository.GetAll(d => d.DeletedAt == null && d.Type == DocumentType.License);
 			var files = documentRepository.GetFiles(d => d.DeletedAt == null && d.IsMain);

@@ -11,7 +11,7 @@ using NeftchiLLC.Application.Features.Certificate.Queries.CertificateGetByIdQuer
 
 namespace NeftchiLLC.Api.Controllers
 {
-    [Route("api/licences")]
+    [Route("api/certificates")]
     [ApiController]
     public class CertificateController(IMediator mediator) : ControllerBase
     {

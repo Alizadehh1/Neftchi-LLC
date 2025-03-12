@@ -1,5 +1,110 @@
 [
   {
+    "ContainingType": "NeftchiLLC.Api.Controllers.CertificateController",
+    "Method": "Add",
+    "RelativePath": "api/certificates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Files",
+        "Type": "System.Collections.Generic.List\u00601[[NeftchiLLC.Application.Dtos.DocumentAddFileDto, NeftchiLLC.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.CertificateController",
+    "Method": "GetAll",
+    "RelativePath": "api/certificates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NeftchiLLC.Application.Features.Certificate.Queries.CertificateGetAllRequest.CertificateGetAllRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.CertificateController",
+    "Method": "Edit",
+    "RelativePath": "api/certificates/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Files",
+        "Type": "System.Collections.Generic.List\u00601[[NeftchiLLC.Application.Dtos.DocumentAddFileDto, NeftchiLLC.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.CertificateController",
+    "Method": "GetById",
+    "RelativePath": "api/certificates/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.CertificateController",
+    "Method": "Remove",
+    "RelativePath": "api/certificates/remove/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NeftchiLLC.Api.Controllers.LicenseController",
     "Method": "Add",
     "RelativePath": "api/licences",
@@ -30,7 +135,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "NeftchiLLC.Application.Features.License.Queries.LicensesGetAllRequest.LicensesGetAllRequest",
+        "Type": "NeftchiLLC.Application.Features.License.Queries.LicensesGetAllRequest.LicenseGetAllRequest",
         "IsRequired": false
       }
     ],
@@ -87,6 +192,111 @@
     "ContainingType": "NeftchiLLC.Api.Controllers.LicenseController",
     "Method": "Remove",
     "RelativePath": "api/licences/remove/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.RecommendationController",
+    "Method": "Add",
+    "RelativePath": "api/recommendations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Files",
+        "Type": "System.Collections.Generic.List\u00601[[NeftchiLLC.Application.Dtos.DocumentAddFileDto, NeftchiLLC.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.RecommendationController",
+    "Method": "GetAll",
+    "RelativePath": "api/recommendations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NeftchiLLC.Application.Features.Recommendation.Queries.RecommendationGetAllRequest.RecommendationGetAllRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.RecommendationController",
+    "Method": "Edit",
+    "RelativePath": "api/recommendations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Files",
+        "Type": "System.Collections.Generic.List\u00601[[NeftchiLLC.Application.Dtos.DocumentAddFileDto, NeftchiLLC.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.RecommendationController",
+    "Method": "GetById",
+    "RelativePath": "api/recommendations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.RecommendationController",
+    "Method": "Remove",
+    "RelativePath": "api/recommendations/remove/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

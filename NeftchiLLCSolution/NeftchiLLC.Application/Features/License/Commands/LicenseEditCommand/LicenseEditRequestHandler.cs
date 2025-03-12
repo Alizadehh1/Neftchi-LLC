@@ -6,9 +6,9 @@ using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand
 {
-	class CertificateEditRequestHandler(IDocumentRepository documentRepository, IFileService fileService, LocalFileService localFileService) : IRequestHandler<CertificateEditRequest, string>
+	class LicenseEditRequestHandler(IDocumentRepository documentRepository, IFileService fileService, LocalFileService localFileService) : IRequestHandler<LicenseEditRequest, string>
 	{
-		public async Task<string> Handle(CertificateEditRequest request, CancellationToken cancellationToken)
+		public async Task<string> Handle(LicenseEditRequest request, CancellationToken cancellationToken)
 		{
 			var license = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.License && d.Id == request.Id && d.DeletedAt == null, cancellationToken: cancellationToken);
 

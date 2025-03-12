@@ -20,3 +20,13 @@ D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.AssemblyInfo.cs
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.csproj.CoreCompileInputs.cache
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.sourcelink.json
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\bin\Debug\net8.0\NeftchiLLC.Application.deps.json
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\bin\Debug\net8.0\NeftchiLLC.Application.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\bin\Debug\net8.0\NeftchiLLC.Application.pdb
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\bin\Debug\net8.0\NeftchiLLC.Domain.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\bin\Debug\net8.0\NeftchiLLC.Domain.pdb
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiL.31BE0B49.Up2Date
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\refint\NeftchiLLC.Application.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.pdb
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\ref\NeftchiLLC.Application.dll

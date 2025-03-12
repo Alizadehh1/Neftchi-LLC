@@ -4,14 +4,12 @@ using Intelect.Infrastructure.Core.Concepts.BinderConcept;
 using Intelect.Infrastructure.Core.Concepts.CorrelationConcept;
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
 using Microsoft.AspNetCore.Http.Features;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Api.Pipeline;
 using NeftchiLLC.Application;
 using NeftchiLLC.Domain.Contexts;
-using Intelect.Infrastructure.Core.Concepts.ConverterConcept;
-using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<FormOptions>(options =>

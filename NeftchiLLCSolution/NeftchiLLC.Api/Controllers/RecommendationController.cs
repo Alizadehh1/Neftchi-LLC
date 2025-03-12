@@ -11,7 +11,7 @@ using NeftchiLLC.Application.Features.Recommendation.Queries.RecommendationGetBy
 
 namespace NeftchiLLC.Api.Controllers
 {
-    [Route("api/licences")]
+    [Route("api/recommendations")]
     [ApiController]
     public class RecommendationController(IMediator mediator) : ControllerBase
     {
