@@ -1,6 +1,7 @@
 ﻿using Intelect.Domain.Core.Commons;
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand;
 using NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand;
@@ -16,6 +17,7 @@ namespace NeftchiLLC.Api.Controllers
 	{
 		[HttpPost]
 		[Transaction]
+		[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> Add([FromForm] LicenseAddRequest request)
 		{
 			var response = await mediator.Send(request);
@@ -24,6 +26,7 @@ namespace NeftchiLLC.Api.Controllers
 		}
 		[HttpPut("{id:int:min(1)}")]
 		[Transaction]
+		[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> Edit(int id, [FromForm] LicenseEditRequest request)
 		{
 			request.Id = id;
@@ -32,6 +35,7 @@ namespace NeftchiLLC.Api.Controllers
 		}
 		[HttpDelete("remove/{id:int:min(1)}")]
 		[Transaction]
+		[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> Remove(int id, [FromForm] LicenseRemoveRequest request)
 		{
 			request.Id = id;

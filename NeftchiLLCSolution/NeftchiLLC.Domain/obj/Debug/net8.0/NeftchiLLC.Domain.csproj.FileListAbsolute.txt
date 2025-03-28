@@ -7,9 +7,9 @@ C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\Neftchi
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\NeftchiLLC.Domain.AssemblyInfoInputs.cache
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\NeftchiLLC.Domain.AssemblyInfo.cs
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\NeftchiLLC.Domain.csproj.CoreCompileInputs.cache
+C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\NeftchiLLC.Domain.sourcelink.json
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\NeftchiLLC.Domain.dll
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\refint\NeftchiLLC.Domain.dll
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\NeftchiLLC.Domain.pdb
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\NeftchiLLC.Domain.genruntimeconfig.cache
 C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\ref\NeftchiLLC.Domain.dll
-C:\Users\alide\OneDrive\Desktop\Development\Backend\Projects\Neftchi-LLC\NeftchiLLCSolution\NeftchiLLC.Domain\obj\Debug\net8.0\NeftchiLLC.Domain.sourcelink.json

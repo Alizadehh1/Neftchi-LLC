@@ -1,10 +1,12 @@
 ﻿using Intelect.Infrastructure.Core.Common;
 using Intelect.Infrastructure.Core.Services;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using NeftchiLLC.Domain.Models.Membership;
 
 namespace NeftchiLLC.Domain.Contexts
 {
-	class NeftchiContext : DbContext
+	public class NeftchiContext : IdentityDbContext<NeftchiUser>
 	{
 		private readonly IDateTimeService dateTimeService;
 

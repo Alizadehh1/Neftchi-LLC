@@ -4,6 +4,7 @@ using Intelect.Infrastructure.Core.Services;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain;
+using NeftchiLLC.Domain.Contexts;
 
 namespace NeftchiLLC.Application
 {
@@ -26,6 +27,10 @@ namespace NeftchiLLC.Application
 			builder.RegisterType(dbContextType)
 				.As<DbContext>()
 				.InstancePerLifetimeScope();
+
+			builder.RegisterType<NeftchiContext>()
+			   .AsSelf()
+			   .InstancePerLifetimeScope();
 		}
 	}
 }

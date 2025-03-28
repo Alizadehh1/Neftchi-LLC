@@ -3,18 +3,17 @@ using Intelect.Domain.Core.Configurations;
 using Intelect.Infrastructure.Core.Concepts.BinderConcept;
 using Intelect.Infrastructure.Core.Concepts.CorrelationConcept;
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Api.Pipeline;
 using NeftchiLLC.Application;
 using NeftchiLLC.Domain.Contexts;
+using NeftchiLLC.Domain.Models.Membership;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
-//builder.Services.Configure<FormOptions>(options =>
-//{
-//	options.MultipartBodyLengthLimit = 50 * 1024 * 1024; // 50MB
-//});
 builder.Services.AddControllers();
 
 builder.Services.AddCorrelation();
@@ -29,6 +28,21 @@ builder.Services.AddDbContext<DbContext>(cfg =>
 		cfg.MigrationsHistoryTable("MigrationHistory");
 	});
 });
+
+builder.Services.AddIdentity<NeftchiUser, IdentityRole>(options =>
+{
+	options.Password.RequireDigit = false;
+	options.Password.RequireNonAlphanumeric = false;
+	options.Password.RequiredUniqueChars = 0;
+	options.Password.RequireUppercase = false;
+	options.Password.RequiredLength = 6;
+	options.User.RequireUniqueEmail = true;
+})
+.AddEntityFrameworkStores<NeftchiContext>()
+.AddDefaultTokenProviders();
+
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
 
 builder.Services.AddCors(cfg => cfg.AddPolicy("allowAll", p =>
 {
@@ -63,9 +77,17 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+	var services = scope.ServiceProvider;
+	await NeftchiContextSeed.SeedAdminAsync(services);
+}
+
 
 app.Run();
 
