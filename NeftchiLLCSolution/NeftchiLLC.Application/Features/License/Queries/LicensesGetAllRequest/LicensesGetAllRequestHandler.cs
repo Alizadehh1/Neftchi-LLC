@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Application.Dtos;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Domain.Models.StableModels;
@@ -12,21 +13,18 @@ namespace NeftchiLLC.Application.Features.License.Queries.LicensesGetAllRequest
 			var documents = documentRepository.GetAll(d => d.DeletedAt == null && d.Type == DocumentType.License);
 			var files = documentRepository.GetFiles(d => d.DeletedAt == null);
 
-			var query = from d in documents
-						join f in files on d.Id equals f.DocumentId
-						select new DocumentGetAllDto
-						{
-							Id = d.Id,
-							Name = d.Name,
-							File = new DocumentFileGetAllDto
-							{
-								Id = f.Id,
-								Name = f.Name,
-								Path = f.Path,
-							},
-						};
-
-			return query;
+			return await documents.Select(f => new DocumentGetAllDto
+			{
+				Files = files.Where(x => x.DocumentId == f.Id).Select(d => new DocumentFileGetAllDto
+				{
+					IsMain = d.IsMain,
+					Name = d.Name,
+					Path = d.Path,
+					Id = d.Id,
+				}).ToList(),
+				Name = f.Name,
+				Id = f.Id,
+			}).ToListAsync(cancellationToken);
 		}
 	}
 }

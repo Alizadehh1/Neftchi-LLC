@@ -20,6 +20,7 @@ namespace NeftchiLLC.Application.Features.Project.Queries.ProjectsGetAllQuery
 							File = new DocumentFileGetAllDto
 							{
 								Id = f.Id,
+								IsMain = true,
 								Name = f.Name,
 								Path = f.Path,
 							}

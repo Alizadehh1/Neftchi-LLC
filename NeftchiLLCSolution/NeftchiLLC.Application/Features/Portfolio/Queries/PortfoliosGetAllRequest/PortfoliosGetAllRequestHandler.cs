@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Application.Dtos;
 using NeftchiLLC.Application.Repositories;
 
@@ -11,21 +12,19 @@ namespace NeftchiLLC.Application.Features.Portfolio.Queries.PortfoliosGetAllRequ
 			var portfolios = portfolioRepository.GetAll(d => d.DeletedAt == null);
 			var files = portfolioRepository.GetFiles(d => d.DeletedAt == null);
 
-			var query = from d in portfolios
-						join f in files on d.Id equals f.PortfolioId
-						select new PortfolioGetAllDto
-						{
-							Id = d.Id,
-							Name = d.Name,
-							File = new DocumentFileGetAllDto
-							{
-								Id = f.Id,
-								Name = f.Name,
-								Path = f.Path,
-							},
-						};
-
-			return query;
+			return await portfolios.Select(f => new PortfolioGetAllDto
+			{
+				Files = files.Where(x => x.PortfolioId == f.Id).Select(d => new DocumentFileGetAllDto
+				{
+					IsMain = d.IsMain,
+					Name = d.Name,
+					Path = d.Path,
+					Id = d.Id,
+				}).ToList(),
+				Name = f.Name,
+				Description = f.Description,
+				Id = f.Id,
+			}).ToListAsync(cancellationToken);
 		}
 	}
 }

@@ -4,6 +4,6 @@
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
-		public DocumentFileGetAllDto File { get; set; }
+		public List<DocumentFileGetAllDto> Files { get; set; }
 	}
 }

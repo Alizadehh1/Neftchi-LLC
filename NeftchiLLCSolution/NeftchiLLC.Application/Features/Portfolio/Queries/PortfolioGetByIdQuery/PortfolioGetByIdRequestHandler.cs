@@ -16,6 +16,7 @@ namespace NeftchiLLC.Application.Features.Portfolio.Queries.PortfolioGetByIdQuer
 			{
 				Id = portfolio.Id,
 				Name = portfolio.Name,
+				Description = portfolio.Description,
 				Files = files.Select(d => new DocumentFileGetByIdDto
 				{
 					Id = d.Id,

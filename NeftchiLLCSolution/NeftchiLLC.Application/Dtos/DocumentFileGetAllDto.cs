@@ -5,5 +5,6 @@
 		public int Id { get; set; }
 		public required string Name { get; set; }
 		public required string Path { get; set; }
+		public required bool IsMain { get; set; }
 	}
 }
