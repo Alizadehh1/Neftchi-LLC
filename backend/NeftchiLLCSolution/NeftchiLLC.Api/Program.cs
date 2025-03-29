@@ -66,6 +66,11 @@ app.UseCorrelation();
 app.UseDbTransaction();
 app.Seed();
 
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+app.MapFallbackToFile("index.html");
+
 app.UseCors("allowAll");
 
 if (app.Environment.IsDevelopment())
@@ -77,7 +82,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
-app.UseAuthorization();
+
 
 app.MapControllers();
 
