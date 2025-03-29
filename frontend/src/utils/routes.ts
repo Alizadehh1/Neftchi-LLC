@@ -1,0 +1,6 @@
+export const ABOUT_PATH = "/about"
+export const PORTFOLIO_PATH = "/portfolio"
+export const EQUIPMENT_PATH = "/equipment"
+export const CONTACT_PATH = "/contact"
+export const PROJECT_PATH = "/project"
+export const SERVICES_PATH = "/services"
