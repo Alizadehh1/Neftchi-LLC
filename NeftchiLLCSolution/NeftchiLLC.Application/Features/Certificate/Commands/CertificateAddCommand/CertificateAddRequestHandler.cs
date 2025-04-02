@@ -3,8 +3,10 @@ using Intelect.Application.Core.Services;
 using Intelect.Infrastructure.Core.Services;
 using MediatR;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 using NeftchiLLC.Domain.Models.StableModels;
+using System.ComponentModel;
 using Document = NeftchiLLC.Domain.Models.Entities.Document;
 
 namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateAddCommand
@@ -13,13 +15,13 @@ namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateAddCom
     {
         private readonly IFileService fileService;
         private readonly IDocumentRepository documentRepository;
-        private readonly LocalFileService localFileService;
+        private readonly FtpFileService ftpFileService;
 
-        public RecommendationAddRequestHandler(IFileService fileService, IDocumentRepository documentRepository, LocalFileService localFileService)
+        public RecommendationAddRequestHandler(IFileService fileService, IDocumentRepository documentRepository, FtpFileService ftpFileService)
         {
             this.fileService = fileService;
             this.documentRepository = documentRepository;
-            this.localFileService = localFileService;
+            this.ftpFileService = ftpFileService;
         }
 
         public async Task<Document> Handle(RecommendationAddRequest request, CancellationToken cancellationToken)
@@ -33,20 +35,20 @@ namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateAddCom
             await documentRepository.AddAsync(certificate, cancellationToken);
             await documentRepository.SaveAsync(cancellationToken);
 
-            var files = new List<DocumentFile>();
-            foreach (var m in request.Files)
-            {
-                var uploadedFilePath = await localFileService.UploadAsync(m.File);
-                files.Add(new DocumentFile
-                {
-                    Name = Path.GetFileNameWithoutExtension(uploadedFilePath),
-                    DocumentId = certificate.Id,
-                    IsMain = m.IsMain,
-                    Path = uploadedFilePath
-                });
-            }
+			var files = request.Files.Select(m =>
+			{
+				var uploadedPath = ftpFileService.Upload(m.File);
 
-            await documentRepository.AddFilesAsync(certificate, files, cancellationToken);
+				return new DocumentFile
+				{
+					Name = Path.GetFileNameWithoutExtension(uploadedPath),
+					DocumentId = certificate.Id,
+					IsMain = m.IsMain,
+					Path = uploadedPath
+				};
+			});
+
+			await documentRepository.AddFilesAsync(certificate, files, cancellationToken);
             await documentRepository.SaveAsync(cancellationToken);
 
             return certificate;

@@ -2,17 +2,18 @@
 using Intelect.Infrastructure.Core.Services;
 using MediatR;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Recommendation.Commands.RecommendationEditCommand
 {
-	class RecommendationEditRequestHandler(IDocumentRepository documentRepository, IFileService fileService, LocalFileService localFileService) : IRequestHandler<RecommendationEditRequest, string>
+	class RecommendationEditRequestHandler(IDocumentRepository documentRepository, IFileService fileService, FtpFileService ftpFileService) : IRequestHandler<RecommendationEditRequest, string>
 	{
 		public async Task<string> Handle(RecommendationEditRequest request, CancellationToken cancellationToken)
 		{
 			var recommendation = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.Letter && d.Id == request.Id && d.DeletedAt == null, cancellationToken: cancellationToken);
 
-            recommendation.Name = request.Name;
+			recommendation.Name = request.Name;
 
 			#region Files
 
@@ -57,13 +58,18 @@ namespace NeftchiLLC.Application.Features.Recommendation.Commands.Recommendation
 			#endregion
 			#region Add new files
 
-			var newFiles = await Task.WhenAll(filesToAdd.Select(async m => new DocumentFile
+			var newFiles = filesToAdd.Select(m =>
 			{
-				Name = Path.GetFileNameWithoutExtension(fileService.UploadAsync(m.File).Result),
-				DocumentId = recommendation.Id,
-				IsMain = m.IsMain,
-				Path = await localFileService.UploadAsync(m.File),
-			}));
+				var uploadedPath = ftpFileService.Upload(m.File);
+
+				return new DocumentFile
+				{
+					Name = Path.GetFileNameWithoutExtension(uploadedPath),
+					DocumentId = recommendation.Id,
+					IsMain = m.IsMain,
+					Path = uploadedPath
+				};
+			});
 
 			#endregion
 
