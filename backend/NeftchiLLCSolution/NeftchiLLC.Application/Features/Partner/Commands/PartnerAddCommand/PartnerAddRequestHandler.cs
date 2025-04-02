@@ -1,10 +1,12 @@
 ﻿using Intelect.Application.Core.Services;
+using Intelect.Infrastructure.Core.Services;
 using MediatR;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 
 namespace NeftchiLLC.Application.Features.Partner.Commands.PartnerAddCommand
 {
-	class PartnerAddRequestHandler(IPartnerRepository partnerRepository, LocalFileService localFileService) : IRequestHandler<PartnerAddRequest>
+	class PartnerAddRequestHandler(FtpFileService ftpFileService, IPartnerRepository partnerRepository) : IRequestHandler<PartnerAddRequest>
 	{
 		public async Task Handle(PartnerAddRequest request, CancellationToken cancellationToken)
 		{
@@ -14,7 +16,7 @@ namespace NeftchiLLC.Application.Features.Partner.Commands.PartnerAddCommand
 				Order = request.Order,
 				WebsiteUrl = request.WebsiteUrl,
 			};
-			value.LogoUrl = await localFileService.UploadAsync(request.File);
+			value.LogoUrl = ftpFileService.Upload(request.File);
 			await partnerRepository.AddAsync(value);
 			await partnerRepository.SaveAsync(cancellationToken);
 		}

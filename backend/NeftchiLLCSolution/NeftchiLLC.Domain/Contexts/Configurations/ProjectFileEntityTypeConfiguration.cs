@@ -9,7 +9,7 @@ namespace NeftchiLLC.Domain.Contexts.Configurations
 	{
 		public void Configure(EntityTypeBuilder<ProjectFile> builder)
 		{
-			builder.Property(m => m.Id).HasColumnType("int").ValueGeneratedOnAdd();
+			builder.Property(m => m.Id).HasColumnType("int").UseIdentityColumn(1, 1);
 			builder.Property(m => m.Name).HasColumnType("varchar").HasMaxLength(200).IsRequired();
 			builder.Property(m => m.Path).HasColumnType("varchar").HasMaxLength(300).IsRequired();
 			builder.Property(m => m.ProjectId).HasColumnType("int").IsRequired();

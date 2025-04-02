@@ -2,10 +2,11 @@
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 
 namespace NeftchiLLC.Application.Features.AboutUs.Commands.AboutUsEditCommand
 {
-	class AboutUsEditRequestHandler(IAboutUsRepository aboutUsRepository, LocalFileService localFileService,IWebHostEnvironment env) : IRequestHandler<AboutUsEditRequest>
+	class AboutUsEditRequestHandler(IAboutUsRepository aboutUsRepository, FtpFileService ftpFileService,IWebHostEnvironment env) : IRequestHandler<AboutUsEditRequest>
 	{
 		public async Task Handle(AboutUsEditRequest request, CancellationToken cancellationToken)
 		{
@@ -15,7 +16,7 @@ namespace NeftchiLLC.Application.Features.AboutUs.Commands.AboutUsEditCommand
 			if (request.File is not null)
 			{
 				string oldPath = value.ImagePath;
-				value.ImagePath = await localFileService.UploadAsync(request.File);
+				value.ImagePath = ftpFileService.Upload(request.File);
 				string physicalOldPath = Path.Combine(env.ContentRootPath, "wwwroot", "uploads", oldPath);
 				if (File.Exists(physicalOldPath))
 					File.Delete(physicalOldPath);

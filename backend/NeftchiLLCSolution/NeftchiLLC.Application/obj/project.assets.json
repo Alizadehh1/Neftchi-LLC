@@ -187,6 +187,19 @@
           }
         }
       },
+      "FluentFTP/52.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/FluentFTP.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/FluentFTP.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FluentValidation/11.11.0": {
         "type": "package",
         "compile": {
@@ -1430,6 +1443,22 @@
           }
         }
       },
+      "MySqlConnector/2.3.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.1"
+        },
+        "compile": {
+          "lib/net8.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -1455,6 +1484,23 @@
         },
         "runtime": {
           "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/8.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "[8.0.13, 8.0.999]",
+          "MySqlConnector": "2.3.5"
+        },
+        "compile": {
+          "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
             "related": ".xml"
           }
         }
@@ -2295,7 +2341,8 @@
           "Intelect.Infrastructure.Core": "1.1.9-beta--1.1.8",
           "Microsoft.AspNetCore.Localization": "2.3.0",
           "Microsoft.EntityFrameworkCore": "8.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.13"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.13",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.3"
         },
         "compile": {
           "bin/placeholder/NeftchiLLC.Domain.dll": {}
@@ -2514,6 +2561,33 @@
         "lib/netstandard2.1/Elasticsearch.Net.xml",
         "license.txt",
         "nuget-icon.png"
+      ]
+    },
+    "FluentFTP/52.1.0": {
+      "sha512": "d5RnVIr/tnuaS8agbTePwfY0YDN7FTlYP4cFb8Vk3GYcpVSjAEV2VNgPLosU8hrLkOhC5IRsLLVgQz8yiHv11Q==",
+      "type": "package",
+      "path": "fluentftp/52.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "fluentftp.52.1.0.nupkg.sha512",
+        "fluentftp.nuspec",
+        "lib/net462/FluentFTP.dll",
+        "lib/net462/FluentFTP.xml",
+        "lib/net472/FluentFTP.dll",
+        "lib/net472/FluentFTP.xml",
+        "lib/net5.0/FluentFTP.dll",
+        "lib/net5.0/FluentFTP.xml",
+        "lib/net6.0/FluentFTP.dll",
+        "lib/net6.0/FluentFTP.xml",
+        "lib/net7.0/FluentFTP.dll",
+        "lib/net7.0/FluentFTP.xml",
+        "lib/netstandard2.0/FluentFTP.dll",
+        "lib/netstandard2.0/FluentFTP.xml",
+        "lib/netstandard2.1/FluentFTP.dll",
+        "lib/netstandard2.1/FluentFTP.xml",
+        "logo-nuget.png"
       ]
     },
     "FluentValidation/11.11.0": {
@@ -4144,6 +4218,35 @@
         "packageIcon.png"
       ]
     },
+    "MySqlConnector/2.3.5": {
+      "sha512": "AmEfUPkFl+Ev6jJ8Dhns3CYHBfD12RHzGYWuLt6DfG6/af6YvOMyPz74ZPPjBYQGRJkumD2Z48Kqm8s5DJuhLA==",
+      "type": "package",
+      "path": "mysqlconnector/2.3.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/MySqlConnector.dll",
+        "lib/net462/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net48/MySqlConnector.dll",
+        "lib/net48/MySqlConnector.xml",
+        "lib/net6.0/MySqlConnector.dll",
+        "lib/net6.0/MySqlConnector.xml",
+        "lib/net7.0/MySqlConnector.dll",
+        "lib/net7.0/MySqlConnector.xml",
+        "lib/net8.0/MySqlConnector.dll",
+        "lib/net8.0/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.2.3.5.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.3": {
       "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
@@ -4195,6 +4298,21 @@
         "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
         "pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
         "pipelines.sockets.unofficial.nuspec"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.MySql/8.0.3": {
+      "sha512": "gOHP6v/nFp5V/FgHqv9mZocGqCLGofihEX9dTbLhiXX3H7SJHmGX70GIPUpiqLT+1jIfDxg1PZh9MTUKuk7Kig==",
+      "type": "package",
+      "path": "pomelo.entityframeworkcore.mysql/8.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll",
+        "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.xml",
+        "pomelo.entityframeworkcore.mysql.8.0.3.nupkg.sha512",
+        "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
     "RabbitMQ.Client/7.0.0": {
@@ -5761,6 +5879,7 @@
     "net8.0": [
       "Autofac >= 8.2.0",
       "Azure.Storage.Blobs >= 12.24.0",
+      "FluentFTP >= 52.1.0",
       "FluentValidation >= 11.11.0",
       "Intelect.Application.Core >= 1.1.9-beta--1.1.8",
       "Intelect.Infrastructure.Core >= 1.1.9-beta--1.1.8",
@@ -5769,23 +5888,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Huseyn Agayev\\.nuget\\packages\\": {},
+    "C:\\Users\\alide\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Neftchi\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\NeftchiLLC.Application.csproj",
+      "projectUniqueName": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\NeftchiLLC.Application.csproj",
       "projectName": "NeftchiLLC.Application",
-      "projectPath": "D:\\Neftchi\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\NeftchiLLC.Application.csproj",
-      "packagesPath": "C:\\Users\\Huseyn Agayev\\.nuget\\packages\\",
-      "outputPath": "D:\\Neftchi\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\obj\\",
+      "projectPath": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\NeftchiLLC.Application.csproj",
+      "packagesPath": "C:\\Users\\alide\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Huseyn Agayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alide\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5794,18 +5913,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "D:\\Media\\media-project\\HttpServices": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/AGDESyPmRUPgBb1H4ybyOILf6kRx7iiYBajkEnPvXQ9VdlA2SQ/api": {},
-        "https://nuget.pkg.github.com/Evis-Billing/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Neftchi\\backend\\NeftchiLLCSolution\\NeftchiLLC.Domain\\NeftchiLLC.Domain.csproj": {
-              "projectPath": "D:\\Neftchi\\backend\\NeftchiLLCSolution\\NeftchiLLC.Domain\\NeftchiLLC.Domain.csproj"
+            "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Domain\\NeftchiLLC.Domain.csproj": {
+              "projectPath": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Domain\\NeftchiLLC.Domain.csproj"
             }
           }
         }
@@ -5820,7 +5935,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -5833,6 +5948,10 @@
           "Azure.Storage.Blobs": {
             "target": "Package",
             "version": "[12.24.0, )"
+          },
+          "FluentFTP": {
+            "target": "Package",
+            "version": "[52.1.0, )"
           },
           "FluentValidation": {
             "target": "Package",
@@ -5867,7 +5986,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

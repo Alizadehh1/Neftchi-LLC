@@ -11,7 +11,7 @@ namespace NeftchiLLC.Domain.Contexts.Configurations
 		{
 			builder.Property(m => m.Id).HasColumnType("int").UseIdentityColumn(1, 1);
 			builder.Property(m => m.Order).HasColumnType("int").IsRequired();
-			builder.Property(m => m.Description).HasColumnType("nvarchar(max)").IsRequired();
+			builder.Property(m => m.Description).HasColumnType("LONGTEXT").IsRequired();
 
 			builder.ConfigureAuditable();
 

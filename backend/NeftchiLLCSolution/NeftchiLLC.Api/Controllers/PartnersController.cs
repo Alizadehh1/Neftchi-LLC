@@ -31,7 +31,7 @@ namespace NeftchiLLC.Api.Controllers
 		}
 		[HttpPost]
 		[Transaction]
-		[Authorize(Roles = "Admin")]
+		//[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> Add([FromForm] PartnerAddRequest request)
 		{
 			await mediator.Send(request);

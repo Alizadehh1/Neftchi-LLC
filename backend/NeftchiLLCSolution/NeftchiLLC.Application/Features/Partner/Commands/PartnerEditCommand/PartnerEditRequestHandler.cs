@@ -1,11 +1,11 @@
-﻿using Intelect.Application.Core.Services;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 
 namespace NeftchiLLC.Application.Features.Partner.Commands.PartnerEditCommand
 {
-	class PartnerEditRequestHandler(IPartnerRepository partnerRepository,IWebHostEnvironment env,LocalFileService localFileService) : IRequestHandler<PartnerEditRequest>
+	class PartnerEditRequestHandler(IPartnerRepository partnerRepository,IWebHostEnvironment env,FtpFileService ftpFileService) : IRequestHandler<PartnerEditRequest>
 	{
 		public async Task Handle(PartnerEditRequest request, CancellationToken cancellationToken)
 		{
@@ -13,12 +13,8 @@ namespace NeftchiLLC.Application.Features.Partner.Commands.PartnerEditCommand
 			value.Name = request.Name;
 			value.Order = request.Order;
 			if (request.File is not null)
-			{
-				string physicalPathOld = Path.Combine(env.ContentRootPath, "wwwroot", "uploads", "images", value.LogoUrl);
-				value.LogoUrl = await localFileService.UploadAsync(request.File);
-				if (File.Exists(physicalPathOld))
-					File.Delete(physicalPathOld);
-			}
+				value.LogoUrl = ftpFileService.Upload(request.File);
+
 			await partnerRepository.SaveAsync(cancellationToken);
 		}
 	}
