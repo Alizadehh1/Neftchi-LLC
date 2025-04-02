@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NeftchiLLC.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+658fd062322546a2db0ab41a7956be9b41ed2891")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31690bfe48ea67f814cb57ae882f7a505758cca4")]
 [assembly: System.Reflection.AssemblyProductAttribute("NeftchiLLC.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NeftchiLLC.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
