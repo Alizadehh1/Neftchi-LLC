@@ -25,7 +25,7 @@ builder.Services.AddDbContext<DbContext>(cfg =>
 {
 	cfg.UseMySql(
 		builder.Configuration.GetConnectionString("cString"),
-		new MySqlServerVersion(new Version(8, 0, 41)), // Replace with actual MySQL version
+		new MySqlServerVersion(new Version(8, 0, 41)),
 		options =>
 		{
 			options.MigrationsHistoryTable("MigrationHistory");
