@@ -17,6 +17,10 @@ namespace NeftchiLLC.Application
 			   .As<IDateTimeService>()
 			   .InstancePerLifetimeScope();
 
+			builder.RegisterType<SftpFileService>()
+				.AsImplementedInterfaces()
+				.InstancePerLifetimeScope();
+
 			builder.RegisterType<LocalFileService>()
 				.AsImplementedInterfaces()
 				.InstancePerLifetimeScope();
