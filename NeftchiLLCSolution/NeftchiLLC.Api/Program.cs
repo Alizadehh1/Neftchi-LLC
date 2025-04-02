@@ -100,28 +100,28 @@ using (var scope = app.Services.CreateScope())
 
 app.Run();
 
-public class XEnumerableModelBinderProvider : IModelBinderProvider
-{
-	public IModelBinder? GetBinder(ModelBinderProviderContext context)
-	{
-		if (context == null)
-			throw new ArgumentNullException(nameof(context));
+//public class XEnumerableModelBinderProvider : IModelBinderProvider
+//{
+//	public IModelBinder? GetBinder(ModelBinderProviderContext context)
+//	{
+//		if (context == null)
+//			throw new ArgumentNullException(nameof(context));
 
-		if (context.Metadata.IsEnumerableType)
-		{
-			Type? elementType = context.Metadata.ElementType;
-			if (((object)elementType == null || !elementType.IsEnum) && IsSimpleType(context.Metadata.ElementType))
-			{
-				return new BinderTypeModelBinder(typeof(EnumerableModelBinder<>).MakeGenericType(context.Metadata.ElementType));
-			}
-			else if (context.Metadata.ElementType?.IsEnum != true && context.BindingInfo.BindingSource?.IsFromRequest == true)
-				return new BinderTypeModelBinder(typeof(EnumerableModelBinder<>).MakeGenericType(context.Metadata.ElementType!));
-		}
-		return null;
-	}
+//		if (context.Metadata.IsEnumerableType)
+//		{
+//			Type? elementType = context.Metadata.ElementType;
+//			if (((object)elementType == null || !elementType.IsEnum) && IsSimpleType(context.Metadata.ElementType))
+//			{
+//				return new BinderTypeModelBinder(typeof(EnumerableModelBinder<>).MakeGenericType(context.Metadata.ElementType));
+//			}
+//			else if (context.Metadata.ElementType?.IsEnum != true && context.BindingInfo.BindingSource?.IsFromRequest == true)
+//				return new BinderTypeModelBinder(typeof(EnumerableModelBinder<>).MakeGenericType(context.Metadata.ElementType!));
+//		}
+//		return null;
+//	}
 
-	private bool IsSimpleType(Type? type)
-	{
-		return type != null && (type.IsPrimitive || type == typeof(string) || type == typeof(decimal) || type == typeof(DateTime) || type == typeof(Guid));
-	}
-}
+//	private bool IsSimpleType(Type? type)
+//	{
+//		return type != null && (type.IsPrimitive || type == typeof(string) || type == typeof(decimal) || type == typeof(DateTime) || type == typeof(Guid));
+//	}
+//}
