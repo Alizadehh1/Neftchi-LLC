@@ -9,6 +9,7 @@ using NeftchiLLC.Application.Features.License.Commands.LicenseRemoveCommand;
 using NeftchiLLC.Application.Features.License.Queries.LicenseGetByIdQuery;
 using NeftchiLLC.Application.Features.License.Queries.LicensesGetAllRequest;
 
+
 namespace NeftchiLLC.Api.Controllers
 {
 	[Route("api/licences")]
@@ -43,7 +44,7 @@ namespace NeftchiLLC.Api.Controllers
 			return Ok();
 		}
 		[HttpGet()]
-		public async Task<IActionResult> GetAll([FromQuery] LicensesGetAllRequest request)
+		public async Task<IActionResult> GetAll([FromQuery] LicenseGetAllRequest request)
 		{
 			var response = await mediator.Send(request);
 			var dto = ApiResponse.Success(response);

@@ -3,14 +3,22 @@ using Intelect.Domain.Core.Configurations;
 using Intelect.Infrastructure.Core.Concepts.BinderConcept;
 using Intelect.Infrastructure.Core.Concepts.CorrelationConcept;
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
+<<<<<<< HEAD:NeftchiLLCSolution/NeftchiLLC.Api/Program.cs
+using Microsoft.AspNetCore.Http.Features;
+=======
 using Microsoft.AspNetCore.Identity;
+>>>>>>> 225d7bfde9925c736b0f2f44ba8551be625092c6:backend/NeftchiLLCSolution/NeftchiLLC.Api/Program.cs
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Api.Pipeline;
 using NeftchiLLC.Application;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Contexts;
+<<<<<<< HEAD:NeftchiLLCSolution/NeftchiLLC.Api/Program.cs
+=======
 using NeftchiLLC.Domain.Models.Membership;
+>>>>>>> 225d7bfde9925c736b0f2f44ba8551be625092c6:backend/NeftchiLLCSolution/NeftchiLLC.Api/Program.cs
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -19,6 +27,7 @@ builder.Services.AddCorrelation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Host.UseServiceProviderFactory(new NeftchiServiceProviderFactory());
+builder.Services.AddSingleton<ITranslationService, TranslationService>();
 
 builder.Services.AddDbContext<DbContext>(cfg =>
 {

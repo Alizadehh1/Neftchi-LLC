@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand
 {
 	internal class LicenseEditRequestValidator
-	{
+    {
 	}
 }

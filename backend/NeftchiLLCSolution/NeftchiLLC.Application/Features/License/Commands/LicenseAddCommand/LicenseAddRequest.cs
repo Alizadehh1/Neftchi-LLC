@@ -6,7 +6,7 @@ namespace NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand
 {
 	public class LicenseAddRequest : IRequest<Document>
 	{
-		public string Name { get; set; }
+        public string Name { get; set; }
 		public required List<DocumentAddFileDto> Files { get; set; }
 	}
 }
