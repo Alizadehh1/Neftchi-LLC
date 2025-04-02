@@ -562,6 +562,36 @@
           }
         }
       }
+    },
+    "/api/translation/{language}/{key}": {
+      "get": {
+        "tags": [
+          "Translation"
+        ],
+        "parameters": [
+          {
+            "name": "language",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

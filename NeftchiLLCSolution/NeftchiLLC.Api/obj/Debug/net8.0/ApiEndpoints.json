@@ -313,5 +313,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NeftchiLLC.Api.Controllers.TranslationController",
+    "Method": "GetTranslation",
+    "RelativePath": "api/translation/{language}/{key}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "language",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

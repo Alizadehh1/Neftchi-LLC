@@ -412,3 +412,5 @@ D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\refint\NeftchiLLC.
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.pdb
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\NeftchiLLC.Api.genruntimeconfig.cache
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\obj\Debug\net8.0\ref\NeftchiLLC.Api.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\bin\Debug\net8.0\az\NeftchiLLC.Application.resources.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Api\bin\Debug\net8.0\en\NeftchiLLC.Application.resources.dll
