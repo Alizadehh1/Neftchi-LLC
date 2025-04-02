@@ -30,3 +30,11 @@ D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\refint\NeftchiLLC.Application.dll
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.pdb
 D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\ref\NeftchiLLC.Application.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\bin\Debug\net8.0\az\NeftchiLLC.Application.resources.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\bin\Debug\net8.0\en\NeftchiLLC.Application.resources.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.Resources.Translations.resources
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.Resources.Translations.az.resources
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.Resources.Translations.en.resources
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\NeftchiLLC.Application.csproj.GenerateResource.cache
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\az\NeftchiLLC.Application.resources.dll
+D:\Neftchi\NeftchiLLCSolution\NeftchiLLC.Application\obj\Debug\net8.0\en\NeftchiLLC.Application.resources.dll

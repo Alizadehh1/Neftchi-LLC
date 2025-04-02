@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NeftchiLLC.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd00d39562531d541446cfb21d13a78f51612a23")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d689597fb45ada5219b88e96ca5ec0b7a772f6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("NeftchiLLC.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NeftchiLLC.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

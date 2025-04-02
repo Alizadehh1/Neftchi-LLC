@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Api.Pipeline;
 using NeftchiLLC.Application;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Contexts;
 <<<<<<< HEAD:NeftchiLLCSolution/NeftchiLLC.Api/Program.cs
 =======
@@ -26,6 +27,7 @@ builder.Services.AddCorrelation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Host.UseServiceProviderFactory(new NeftchiServiceProviderFactory());
+builder.Services.AddSingleton<ITranslationService, TranslationService>();
 
 builder.Services.AddDbContext<DbContext>(cfg =>
 {
