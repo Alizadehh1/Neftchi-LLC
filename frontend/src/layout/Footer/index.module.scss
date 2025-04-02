@@ -1,0 +1,124 @@
+.footer {
+    margin-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+
+    @media (max-width : 512px) {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 0;
+        background-color: #f7f7f7;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width : 512px) {
+        flex-direction: column;
+    }
+}
+
+.left {
+    width: 35%;
+
+    @media (max-width : 512px) {
+        width: 100%;
+    }
+}
+
+.left figure {
+    margin: 0;
+    padding: 0;
+    float: left;
+    height: 47px;
+}
+
+.footerContent {
+    margin-top: 74px;
+}
+
+.flex {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+
+    span {
+        &:last-child {
+            margin-left: 10px;
+            font-size: 13px;
+            margin-top: -5px;
+            font-weight: normal;
+            @media (max-width : 512px) {
+               font-size: 10px;
+            }
+        }
+    }
+}
+
+.sosialIcons {
+    display: flex;
+    margin-top: 12px;
+
+    div {
+        margin-right: 8px;
+    }
+}
+
+.right {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width : 875px){
+        flex-direction: column;
+
+    }
+
+    @media (max-width : 512px) {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width : 512px) {
+            margin-top: 20px;
+        }
+        
+
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+
+            @media (max-width : 512px) {
+                font-size: 14px;
+            }
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #c9c9c9;
+
+            @media (max-width : 512px) {
+                font-size: 13px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    color: #535353;
+}

@@ -1,0 +1,12 @@
+/NeftchiLLCSolution/.vs
+/NeftchiLLCSolution/NeftchiLLC.Domain/obj/*
+/NeftchiLLCSolution/NeftchiLLC.Domain/bin/*
+/NeftchiLLCSolution/NeftchiLLC.Repositories/obj/*
+/NeftchiLLCSolution/NeftchiLLC.Repositories/bin/*
+/NeftchiLLCSolution/NeftchiLLC.Application/obj/*
+/NeftchiLLCSolution/NeftchiLLC.Application/bin/*
+/NeftchiLLCSolution/NeftchiLLC.Api/wwwroot/uploads
+/NeftchiLLCSolution/NeftchiLLC.Api/obj/*
+/NeftchiLLCSolution/NeftchiLLC.Api/bin/*
+**/bin/
+**/obj/
