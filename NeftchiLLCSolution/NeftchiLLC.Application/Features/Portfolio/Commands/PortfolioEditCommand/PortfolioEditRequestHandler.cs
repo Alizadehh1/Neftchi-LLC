@@ -2,11 +2,12 @@
 using Intelect.Infrastructure.Core.Services;
 using MediatR;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioEditCommand
 {
-	class PortfolioEditRequestHandler(IPortfolioRepository portfolioRepository, IFileService fileService, LocalFileService localFileService) : IRequestHandler<PortfolioEditRequest, string>
+	class PortfolioEditRequestHandler(IPortfolioRepository portfolioRepository, IFileService fileService, FtpFileService ftpFileService) : IRequestHandler<PortfolioEditRequest, string>
 	{
 		public async Task<string> Handle(PortfolioEditRequest request, CancellationToken cancellationToken)
 		{
@@ -58,13 +59,17 @@ namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioEditComman
 			#endregion
 			#region Add new files
 
-			var newFiles = await Task.WhenAll(filesToAdd.Select(async m => new PortfolioFile
+			var newFiles = filesToAdd.Select(m =>
 			{
-				Name = Path.GetFileNameWithoutExtension(fileService.UploadAsync(m.File).Result),
-				PortfolioId = portfolio.Id,
-				IsMain = m.IsMain,
-				Path = await localFileService.UploadAsync(m.File),
-			}));
+				var uploadedPath = ftpFileService.Upload(m.File);
+				return new PortfolioFile
+				{
+					Name = Path.GetFileNameWithoutExtension(uploadedPath),
+					PortfolioId = portfolio.Id,
+					IsMain = m.IsMain,
+					Path = uploadedPath,
+				};
+		});
 
 			#endregion
 

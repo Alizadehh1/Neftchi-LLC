@@ -3,18 +3,17 @@ using Intelect.Domain.Core.Configurations;
 using Intelect.Infrastructure.Core.Concepts.BinderConcept;
 using Intelect.Infrastructure.Core.Concepts.CorrelationConcept;
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Api.Pipeline;
 using NeftchiLLC.Application;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Contexts;
+using NeftchiLLC.Domain.Models.Membership;
 
 var builder = WebApplication.CreateBuilder(args);
-//builder.Services.Configure<FormOptions>(options =>
-//{
-//	options.MultipartBodyLengthLimit = 50 * 1024 * 1024; // 50MB
-//});
 builder.Services.AddControllers();
 
 builder.Services.AddCorrelation();
@@ -24,11 +23,33 @@ builder.Host.UseServiceProviderFactory(new NeftchiServiceProviderFactory());
 
 builder.Services.AddDbContext<DbContext>(cfg =>
 {
-	cfg.UseSqlServer(builder.Configuration.GetConnectionString("cString"), cfg =>
-	{
-		cfg.MigrationsHistoryTable("MigrationHistory");
-	});
+	cfg.UseMySql(
+		builder.Configuration.GetConnectionString("cString"),
+		new MySqlServerVersion(new Version(8, 0, 41)), // Replace with actual MySQL version
+		options =>
+		{
+			options.MigrationsHistoryTable("MigrationHistory");
+		});
 });
+
+builder.Services.Configure<FtpFileServiceOptions>(
+	builder.Configuration.GetSection("FtpFileServiceOptions"));
+
+
+builder.Services.AddIdentity<NeftchiUser, IdentityRole>(options =>
+{
+	options.Password.RequireDigit = false;
+	options.Password.RequireNonAlphanumeric = false;
+	options.Password.RequiredUniqueChars = 0;
+	options.Password.RequireUppercase = false;
+	options.Password.RequiredLength = 6;
+	options.User.RequireUniqueEmail = true;
+})
+.AddEntityFrameworkStores<NeftchiContext>()
+.AddDefaultTokenProviders();
+
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
 
 builder.Services.AddCors(cfg => cfg.AddPolicy("allowAll", p =>
 {
@@ -53,6 +74,11 @@ app.UseCorrelation();
 app.UseDbTransaction();
 app.Seed();
 
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseCors("allowAll");
 
 if (app.Environment.IsDevelopment())
@@ -63,9 +89,14 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
-
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+	var services = scope.ServiceProvider;
+	await NeftchiContextSeed.SeedAdminAsync(services);
+}
+
 
 app.Run();
 

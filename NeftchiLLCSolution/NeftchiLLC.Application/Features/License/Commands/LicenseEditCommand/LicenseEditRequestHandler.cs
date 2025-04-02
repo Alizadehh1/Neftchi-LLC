@@ -2,11 +2,12 @@
 using Intelect.Infrastructure.Core.Services;
 using MediatR;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand
 {
-	class LicenseEditRequestHandler(IDocumentRepository documentRepository, IFileService fileService, LocalFileService localFileService) : IRequestHandler<LicenseEditRequest, string>
+	class LicenseEditRequestHandler(IDocumentRepository documentRepository, IFileService fileService, FtpFileService ftpFileService) : IRequestHandler<LicenseEditRequest, string>
 	{
 		public async Task<string> Handle(LicenseEditRequest request, CancellationToken cancellationToken)
 		{
@@ -57,13 +58,18 @@ namespace NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand
 			#endregion
 			#region Add new files
 
-			var newFiles = await Task.WhenAll(filesToAdd.Select(async m => new DocumentFile
+			var newFiles = filesToAdd.Select(m =>
 			{
-				Name = Path.GetFileNameWithoutExtension(fileService.UploadAsync(m.File).Result),
-				DocumentId = license.Id,
-				IsMain = m.IsMain,
-				Path = await localFileService.UploadAsync(m.File),
-			}));
+				var uploadedPath = ftpFileService.Upload(m.File);
+
+				return new DocumentFile
+				{
+					Name = Path.GetFileNameWithoutExtension(uploadedPath),
+					DocumentId = license.Id,
+					IsMain = m.IsMain,
+					Path = uploadedPath,
+				};
+			});
 
 			#endregion
 

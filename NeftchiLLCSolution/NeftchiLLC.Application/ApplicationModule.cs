@@ -4,6 +4,7 @@ using Intelect.Infrastructure.Core.Services;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain;
+using NeftchiLLC.Domain.Contexts;
 
 namespace NeftchiLLC.Application
 {
@@ -17,19 +18,23 @@ namespace NeftchiLLC.Application
 			   .As<IDateTimeService>()
 			   .InstancePerLifetimeScope();
 
-			builder.RegisterType<SftpFileService>()
-				.AsImplementedInterfaces()
-				.InstancePerLifetimeScope();
-
-			builder.RegisterType<LocalFileService>()
-				.AsImplementedInterfaces()
-				.InstancePerLifetimeScope();
+			builder.RegisterType<FtpFileService>()
+			   .AsSelf()
+			   .InstancePerLifetimeScope();
 
 			var dbContextType = typeof(IDomainReference).Assembly.GetType("NeftchiLLC.Domain.Contexts.NeftchiContext");
 
 			builder.RegisterType(dbContextType)
 				.As<DbContext>()
 				.InstancePerLifetimeScope();
+
+			builder.RegisterType<NeftchiContext>()
+			   .AsSelf()
+			   .InstancePerLifetimeScope();
+
+			builder.RegisterType<AzureBlobService>()
+				  .AsSelf()
+				  .SingleInstance();
 		}
 	}
 }

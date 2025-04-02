@@ -2,11 +2,12 @@
 using Intelect.Infrastructure.Core.Services;
 using MediatR;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Project.Commands.ProjectEditCommand
 {
-	class ProjectEditRequestHandler(IProjectRepository projectRepository,IFileService fileService,LocalFileService localFileService) : IRequestHandler<ProjectEditRequest>
+	class ProjectEditRequestHandler(IProjectRepository projectRepository, IFileService fileService, FtpFileService ftpFileService) : IRequestHandler<ProjectEditRequest>
 	{
 		public async Task Handle(ProjectEditRequest request, CancellationToken cancellationToken)
 		{
@@ -65,13 +66,17 @@ namespace NeftchiLLC.Application.Features.Project.Commands.ProjectEditCommand
 			#endregion
 			#region Add new files
 
-			var newFiles = await Task.WhenAll(filesToAdd.Select(async m => new ProjectFile
+			var newFiles = filesToAdd.Select(m =>
 			{
-				Name = Path.GetFileNameWithoutExtension(fileService.UploadAsync(m.File).Result),
-				ProjectId = entity.Id,
-				IsMain = m.IsMain,
-				Path = await localFileService.UploadAsync(m.File),
-			}));
+				var uploadedPath = ftpFileService.Upload(m.File);
+				return new ProjectFile
+				{
+					Name = Path.GetFileNameWithoutExtension(uploadedPath),
+					ProjectId = entity.Id,
+					IsMain = m.IsMain,
+					Path = uploadedPath,
+				};
+			});
 
 			#endregion
 
