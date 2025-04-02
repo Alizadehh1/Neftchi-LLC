@@ -1,56 +1,15 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|solutionrelative:neftchillc.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|solutionrelative:neftchillc.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC24CA3B-D53C-478B-ADAE-5FFE56E6686B}|NeftchiLLC.Application\\NeftchiLLC.Application.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.application\\features\\partner\\commands\\partneraddcommand\\partneraddrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC24CA3B-D53C-478B-ADAE-5FFE56E6686B}|NeftchiLLC.Application\\NeftchiLLC.Application.csproj|solutionrelative:neftchillc.application\\features\\partner\\commands\\partneraddcommand\\partneraddrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.api\\controllers\\partnerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|solutionrelative:neftchillc.api\\controllers\\partnerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|solutionrelative:neftchillc.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC24CA3B-D53C-478B-ADAE-5FFE56E6686B}|NeftchiLLC.Application\\NeftchiLLC.Application.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC24CA3B-D53C-478B-ADAE-5FFE56E6686B}|NeftchiLLC.Application\\NeftchiLLC.Application.csproj|solutionrelative:neftchillc.application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC24CA3B-D53C-478B-ADAE-5FFE56E6686B}|NeftchiLLC.Application\\NeftchiLLC.Application.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.application\\services\\azureblobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC24CA3B-D53C-478B-ADAE-5FFE56E6686B}|NeftchiLLC.Application\\NeftchiLLC.Application.csproj|solutionrelative:neftchillc.application\\services\\azureblobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832828CD-B22A-44DE-8097-00A8DF1FD4B8}|NeftchiLLC.Domain\\NeftchiLLC.Domain.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.domain\\contexts\\neftchicontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{832828CD-B22A-44DE-8097-00A8DF1FD4B8}|NeftchiLLC.Domain\\NeftchiLLC.Domain.csproj|solutionrelative:neftchillc.domain\\contexts\\neftchicontextseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC24CA3B-D53C-478B-ADAE-5FFE56E6686B}|NeftchiLLC.Application\\NeftchiLLC.Application.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.application\\features\\license\\commands\\licenseaddcommand\\licenseaddrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC24CA3B-D53C-478B-ADAE-5FFE56E6686B}|NeftchiLLC.Application\\NeftchiLLC.Application.csproj|solutionrelative:neftchillc.application\\features\\license\\commands\\licenseaddcommand\\licenseaddrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|c:\\users\\alide\\onedrive\\desktop\\development\\backend\\projects\\neftchi-llc\\backend\\neftchillcsolution\\neftchillc.api\\pipeline\\neftchiserviceproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8ED9756C-A111-40E7-81A9-E68E5A5A26CB}|NeftchiLLC.Api\\NeftchiLLC.Api.csproj|solutionrelative:neftchillc.api\\pipeline\\neftchiserviceproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 320,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,136 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PartnersController.cs",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\Controllers\\PartnersController.cs",
-              "RelativeDocumentMoniker": "NeftchiLLC.Api\\Controllers\\PartnersController.cs",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\Controllers\\PartnersController.cs",
-              "RelativeToolTip": "NeftchiLLC.Api\\Controllers\\PartnersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:37:57.78Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NeftchiContextSeed.cs",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Domain\\Contexts\\NeftchiContextSeed.cs",
-              "RelativeDocumentMoniker": "NeftchiLLC.Domain\\Contexts\\NeftchiContextSeed.cs",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Domain\\Contexts\\NeftchiContextSeed.cs",
-              "RelativeToolTip": "NeftchiLLC.Domain\\Contexts\\NeftchiContextSeed.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:36:04.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PartnerAddRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\Features\\Partner\\Commands\\PartnerAddCommand\\PartnerAddRequestHandler.cs",
-              "RelativeDocumentMoniker": "NeftchiLLC.Application\\Features\\Partner\\Commands\\PartnerAddCommand\\PartnerAddRequestHandler.cs",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\Features\\Partner\\Commands\\PartnerAddCommand\\PartnerAddRequestHandler.cs",
-              "RelativeToolTip": "NeftchiLLC.Application\\Features\\Partner\\Commands\\PartnerAddCommand\\PartnerAddRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:35:06.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "NeftchiLLC.Api\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\appsettings.Development.json",
-              "RelativeToolTip": "NeftchiLLC.Api\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-28T17:36:00.37Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AzureBlobService.cs",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\Services\\AzureBlobService.cs",
-              "RelativeDocumentMoniker": "NeftchiLLC.Application\\Services\\AzureBlobService.cs",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\Services\\AzureBlobService.cs",
-              "RelativeToolTip": "NeftchiLLC.Application\\Services\\AzureBlobService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T17:32:05.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LicenseAddRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\Features\\License\\Commands\\LicenseAddCommand\\LicenseAddRequestHandler.cs",
-              "RelativeDocumentMoniker": "NeftchiLLC.Application\\Features\\License\\Commands\\LicenseAddCommand\\LicenseAddRequestHandler.cs",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\Features\\License\\Commands\\LicenseAddCommand\\LicenseAddRequestHandler.cs",
-              "RelativeToolTip": "NeftchiLLC.Application\\Features\\License\\Commands\\LicenseAddCommand\\LicenseAddRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T17:30:33.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationModule.cs",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\ApplicationModule.cs",
-              "RelativeDocumentMoniker": "NeftchiLLC.Application\\ApplicationModule.cs",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Application\\ApplicationModule.cs",
-              "RelativeToolTip": "NeftchiLLC.Application\\ApplicationModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T17:26:27.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NeftchiServiceProviderFactory.cs",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\Pipeline\\NeftchiServiceProviderFactory.cs",
-              "RelativeDocumentMoniker": "NeftchiLLC.Api\\Pipeline\\NeftchiServiceProviderFactory.cs",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\Pipeline\\NeftchiServiceProviderFactory.cs",
-              "RelativeToolTip": "NeftchiLLC.Api\\Pipeline\\NeftchiServiceProviderFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T17:24:09.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\Program.cs",
-              "RelativeDocumentMoniker": "NeftchiLLC.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\Program.cs",
-              "RelativeToolTip": "NeftchiLLC.Api\\Program.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T17:23:20.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "NeftchiLLC.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\Development\\Backend\\Projects\\Neftchi-LLC\\backend\\NeftchiLLCSolution\\NeftchiLLC.Api\\appsettings.json",
-              "RelativeToolTip": "NeftchiLLC.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-28T17:22:03.712Z",
-              "EditorCaption": ""
             }
           ]
         }
