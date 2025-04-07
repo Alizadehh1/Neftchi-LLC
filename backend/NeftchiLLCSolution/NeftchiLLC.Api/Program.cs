@@ -63,6 +63,7 @@ app.UseCorrelation();
 app.UseDbTransaction();
 app.Seed();
 
+app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
