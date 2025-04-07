@@ -1,0 +1,6 @@
+@NeftchiLLC.Api_HostAddress = http://localhost:5010
+
+GET {{NeftchiLLC.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

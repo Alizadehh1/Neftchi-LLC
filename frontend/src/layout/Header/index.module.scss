@@ -1,0 +1,129 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    border-bottom: 0.5px solid #bfbfbf;
+    padding-left: 40px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+figure {
+    cursor: pointer;
+    width: 130px;
+    height: 50px;
+
+    @media (max-width: 768px) {
+        width: 79px;
+    height: 30px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu span:hover {
+    color: #13436b;
+}
+
+.select {
+    width: 5%;
+    margin-right: 50px;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 53px;
+    background-color: #fff;
+    padding: 15px;
+    transition: all 1s;
+    box-shadow: 0 0 0 0.3px #6d6d6d;
+}
+
+.dropdownMenu div {
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.dropdownMenu div:hover {
+    color: #13436b;
+}
+
+.deactive {
+    font-size: 14px;
+    cursor: pointer;
+    color: #6d6d6d;
+    position: relative;
+}
+
+
+.active {
+    font-size: 14px;
+    cursor: pointer;
+    color: #13436b;
+    position: relative;
+}
+
+.hamburgerMenu {
+    font-size: 25px;
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .select {
+      visibility: hidden;
+    }
+    
+
+    .hamburgerMenu {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        display: none;
+        padding: 20px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .arrowIcon {
+        margin-left: 10px;
+        font-size: 16px;
+        color: #13436b;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menuItem {
+        padding: 10px 20px;
+        text-align: center;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .dropdownMenu {
+        position: relative;
+        top: 0;
+        box-shadow: none;
+    }
+}
