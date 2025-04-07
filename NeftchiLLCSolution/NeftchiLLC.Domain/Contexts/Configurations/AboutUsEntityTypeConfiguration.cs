@@ -12,7 +12,7 @@ namespace NeftchiLLC.Domain.Contexts.Configurations
 			builder.Property(m => m.Id).HasColumnType("int").UseIdentityColumn(1, 1);
 			builder.Property(m => m.Title).HasColumnType("nvarchar").HasMaxLength(100).IsRequired();
 			builder.Property(m => m.ImagePath).HasColumnType("nvarchar").HasMaxLength(100).IsRequired();
-			builder.Property(m => m.Content).HasColumnType("LONGTEXT").IsRequired();
+			builder.Property(m => m.Content).HasColumnType("nvarchar(max)").IsRequired();
 
 			builder.ConfigureAuditable();
 

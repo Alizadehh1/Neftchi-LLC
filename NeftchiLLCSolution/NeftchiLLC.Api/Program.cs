@@ -1,15 +1,11 @@
 using Intelect.Application.Core.Services;
 using Intelect.Domain.Core.Configurations;
-using Intelect.Infrastructure.Core.Concepts.BinderConcept;
 using Intelect.Infrastructure.Core.Concepts.CorrelationConcept;
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Api.Pipeline;
 using NeftchiLLC.Application;
-using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Contexts;
 using NeftchiLLC.Domain.Models.Membership;
 
@@ -23,18 +19,11 @@ builder.Host.UseServiceProviderFactory(new NeftchiServiceProviderFactory());
 
 builder.Services.AddDbContext<DbContext>(cfg =>
 {
-	cfg.UseMySql(
-		builder.Configuration.GetConnectionString("cString"),
-		new MySqlServerVersion(new Version(8, 0, 41)),
-		options =>
-		{
-			options.MigrationsHistoryTable("MigrationHistory");
-		});
+	cfg.UseSqlServer(builder.Configuration.GetConnectionString("cString"), cfg =>
+	{
+		cfg.MigrationsHistoryTable("MigrationHistory");
+	});
 });
-
-builder.Services.Configure<FtpFileServiceOptions>(
-	builder.Configuration.GetSection("FtpFileServiceOptions"));
-
 
 builder.Services.AddIdentity<NeftchiUser, IdentityRole>(options =>
 {
@@ -74,11 +63,11 @@ app.UseCorrelation();
 app.UseDbTransaction();
 app.Seed();
 
-//app.UseStaticFiles();
+app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.MapFallbackToFile("index.html");
 app.UseCors("allowAll");
 
 if (app.Environment.IsDevelopment())

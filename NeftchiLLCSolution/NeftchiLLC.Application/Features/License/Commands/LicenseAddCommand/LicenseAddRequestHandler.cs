@@ -1,12 +1,12 @@
-﻿using MediatR;
+﻿using Intelect.Application.Core.Services;
+using MediatR;
 using NeftchiLLC.Application.Repositories;
-using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 using NeftchiLLC.Domain.Models.StableModels;
 
 namespace NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand
 {
-	class LicenseAddRequestHandler(IDocumentRepository documentRepository, FtpFileService ftpFileService) : IRequestHandler<LicenseAddRequest, Document>
+	class LicenseAddRequestHandler(IDocumentRepository documentRepository, LocalFileService localFileService) : IRequestHandler<LicenseAddRequest, Document>
 	{
 		public async Task<Document> Handle(LicenseAddRequest request, CancellationToken cancellationToken)
 		{
@@ -19,10 +19,9 @@ namespace NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand
 			await documentRepository.AddAsync(license, cancellationToken);
 			await documentRepository.SaveAsync(cancellationToken);
 
-			var files = request.Files.Select(m =>
+			var files = await Task.WhenAll(request.Files.Select(async m =>
 			{
-				var uploadedPath = ftpFileService.Upload(m.File);
-
+				var uploadedPath = await localFileService.UploadAsync(m.File);
 				return new DocumentFile
 				{
 					Name = Path.GetFileNameWithoutExtension(uploadedPath),
@@ -30,7 +29,7 @@ namespace NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand
 					IsMain = m.IsMain,
 					Path = uploadedPath
 				};
-			});
+			}));
 
 			await documentRepository.AddFilesAsync(license, files, cancellationToken);
 			await documentRepository.SaveAsync(cancellationToken);

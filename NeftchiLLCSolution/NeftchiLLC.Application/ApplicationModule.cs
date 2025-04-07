@@ -22,6 +22,10 @@ namespace NeftchiLLC.Application
 			   .AsSelf()
 			   .InstancePerLifetimeScope();
 
+			builder.RegisterType<LocalFileService>()
+			   .AsImplementedInterfaces()
+			   .InstancePerLifetimeScope();
+
 			var dbContextType = typeof(IDomainReference).Assembly.GetType("NeftchiLLC.Domain.Contexts.NeftchiContext");
 
 			builder.RegisterType(dbContextType)
