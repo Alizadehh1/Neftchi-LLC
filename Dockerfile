@@ -7,11 +7,20 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
 
 WORKDIR /src
 
-# Copy backend
+# Copy solution file
 COPY backend/NeftchiLLCSolution/NeftchiLLCSolution.sln ./
-COPY backend/NeftchiLLCSolution/NeftchiLLC.*/*.csproj ./NeftchiLLC.*./
-RUN for d in NeftchiLLC.*; do dotnet restore "$d"; done
-COPY backend/NeftchiLLCSolution/. ./
+
+# Copy all .csproj files
+COPY backend/NeftchiLLCSolution/NeftchiLLC.Api/NeftchiLLC.Api.csproj ./NeftchiLLC.Api/
+COPY backend/NeftchiLLCSolution/NeftchiLLC.Application/NeftchiLLC.Application.csproj ./NeftchiLLC.Application/
+COPY backend/NeftchiLLCSolution/NeftchiLLC.Domain/NeftchiLLC.Domain.csproj ./NeftchiLLC.Domain/
+COPY backend/NeftchiLLCSolution/NeftchiLLC.Repositories/NeftchiLLC.Repositories.csproj ./NeftchiLLC.Repositories/
+
+# Restore
+RUN dotnet restore NeftchiLLCSolution.sln
+
+# Copy the rest of the backend source
+COPY backend/NeftchiLLCSolution/. .
 
 # Copy and build frontend
 COPY frontend ./frontend
@@ -20,10 +29,9 @@ RUN npm install && npm run build
 
 # Go back and publish backend
 WORKDIR /src
+# Publish API and include built frontend in wwwroot
+RUN cp -r /src/frontend/dist ./NeftchiLLC.Api/wwwroot
 RUN dotnet publish NeftchiLLC.Api/NeftchiLLC.Api.csproj -c Release -o /app/out
-
-# Copy frontend build into wwwroot
-RUN cp -r /src/frontend/dist /app/out/wwwroot
 
 # Step 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
