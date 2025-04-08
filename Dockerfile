@@ -1,16 +1,23 @@
-# STAGE 1: BUILD DOTNET
+# Step 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-COPY ./backend/NeftchiLLCSolution/NeftchiLLC.Api/NeftchiLLC.Api.csproj ./
-RUN dotnet restore
+# Copy solution and projects
+COPY ./backend/NeftchiLLCSolution/NeftchiLLCSolution.sln ./
+COPY ./backend/NeftchiLLCSolution/NeftchiLLC.*/*.csproj ./src/
 
-COPY ./backend/NeftchiLLCSolution ./
-RUN dotnet publish -c Release -o out
+# Copy all source files
+COPY ./backend/NeftchiLLCSolution ./src/
 
-# FINAL STAGE
+# Restore
+WORKDIR /app/src
+RUN dotnet restore "../NeftchiLLCSolution.sln"
+
+# Publish
+RUN dotnet publish "NeftchiLLC.Api/NeftchiLLC.Api.csproj" -c Release -o /app/out
+
+# Step 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-
 COPY --from=build /app/out ./
 ENTRYPOINT ["dotnet", "NeftchiLLC.Api.dll"]
