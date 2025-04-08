@@ -1,23 +1,28 @@
 # Step 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
 
-# Copy solution and projects
-COPY ./backend/NeftchiLLCSolution/NeftchiLLCSolution.sln ./
-COPY ./backend/NeftchiLLCSolution/NeftchiLLC.*/*.csproj ./src/
+WORKDIR /src
 
-# Copy all source files
-COPY ./backend/NeftchiLLCSolution ./src/
+# Copy solution file and project files
+COPY backend/NeftchiLLCSolution/NeftchiLLCSolution.sln ./
+COPY backend/NeftchiLLCSolution/NeftchiLLC.*/*.csproj ./NeftchiLLC.*./
 
-# Restore
-WORKDIR /app/src
-RUN dotnet restore "../NeftchiLLCSolution.sln"
+# Restore dependencies
+RUN for d in NeftchiLLC.*; do dotnet restore "$d"; done
 
-# Publish
-RUN dotnet publish "NeftchiLLC.Api/NeftchiLLC.Api.csproj" -c Release -o /app/out
+# Copy all backend source files
+COPY backend/NeftchiLLCSolution/. ./
+
+# ✅ Copy frontend built files (must run npm run build manually beforehand)
+COPY frontend/dist ./NeftchiLLC.Api/wwwroot
+
+# Build and publish backend
+RUN dotnet publish NeftchiLLC.Api/NeftchiLLC.Api.csproj -c Release -o /app/publish
 
 # Step 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
+
 WORKDIR /app
-COPY --from=build /app/out ./
+COPY --from=build /app/publish .
+
 ENTRYPOINT ["dotnet", "NeftchiLLC.Api.dll"]
