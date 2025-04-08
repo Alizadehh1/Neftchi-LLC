@@ -37,4 +37,6 @@ RUN dotnet publish NeftchiLLC.Api/NeftchiLLC.Api.csproj -c Release -o /app/out
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app/out .
+EXPOSE 8080
+ENV ASPNETCORE_URLS=http://+:8080
 ENTRYPOINT ["dotnet", "NeftchiLLC.Api.dll"]

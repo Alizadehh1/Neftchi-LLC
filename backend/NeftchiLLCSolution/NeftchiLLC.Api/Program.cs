@@ -9,6 +9,7 @@ using NeftchiLLC.Application;
 using NeftchiLLC.Domain.Contexts;
 using NeftchiLLC.Domain.Models.Membership;
 
+Console.WriteLine(">>> Starting backend...");
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
