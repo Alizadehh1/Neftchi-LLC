@@ -9,7 +9,7 @@ namespace NeftchiLLC.Application.Features.Recommendation.Commands.Recommendation
 	{
 		public async Task<string> Handle(RecommendationEditRequest request, CancellationToken cancellationToken)
 		{
-			var recommendation = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.Letter && d.Id == request.Id && d.DeletedAt == null, cancellationToken: cancellationToken);
+			var recommendation = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.Recommendation && d.Id == request.Id && d.DeletedAt == null, cancellationToken: cancellationToken);
 
 			recommendation.Name = request.Name;
 

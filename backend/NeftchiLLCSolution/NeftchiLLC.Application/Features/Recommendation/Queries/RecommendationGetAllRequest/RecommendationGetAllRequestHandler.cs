@@ -10,7 +10,7 @@ namespace NeftchiLLC.Application.Features.Recommendation.Queries.RecommendationG
 	{
 		public async Task<IEnumerable<DocumentGetAllDto>> Handle(RecommendationGetAllRequest request, CancellationToken cancellationToken)
 		{
-			var documents = documentRepository.GetAll(d => d.DeletedAt == null && d.Type == DocumentType.Letter);
+			var documents = documentRepository.GetAll(d => d.DeletedAt == null && d.Type == DocumentType.Recommendation);
 			var files = documentRepository.GetFiles(d => d.DeletedAt == null);
 
 			return await documents.Select(f => new DocumentGetAllDto

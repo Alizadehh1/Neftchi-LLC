@@ -14,7 +14,7 @@ namespace NeftchiLLC.Application.Features.Recommendation.Commands.Recommendation
 			var recommendation = new Document
 			{
 				Name = request.Name,
-				Type = DocumentType.Letter,
+				Type = DocumentType.Recommendation,
 			};
 
 			await documentRepository.AddAsync(recommendation, cancellationToken);

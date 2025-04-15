@@ -4,6 +4,7 @@
 	{
 		License = 1,
 		Certification = 2,
-		Letter = 3
+		Letter = 3,
+		Recommendation = 4
 	}
 }

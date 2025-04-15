@@ -8,7 +8,7 @@ namespace NeftchiLLC.Application.Features.Recommendation.Queries.RecommendationG
 	{
 		public async Task<DocumentGetByIdDto> Handle(RecommendationGetByIdRequest request, CancellationToken cancellationToken)
 		{
-			var recommendation = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.Letter && d.DeletedAt == null && d.Id == request.Id, cancellationToken: cancellationToken);
+			var recommendation = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.Recommendation && d.DeletedAt == null && d.Id == request.Id, cancellationToken: cancellationToken);
 
 			var files = documentRepository.GetFiles(d => d.DeletedAt == null && d.IsMain && d.DocumentId == recommendation.Id);
 
