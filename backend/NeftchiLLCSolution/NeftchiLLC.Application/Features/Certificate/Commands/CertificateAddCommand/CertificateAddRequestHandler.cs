@@ -1,43 +1,37 @@
-﻿
-using Intelect.Application.Core.Services;
-using Intelect.Infrastructure.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 using NeftchiLLC.Domain.Models.StableModels;
-using System.ComponentModel;
 using Document = NeftchiLLC.Domain.Models.Entities.Document;
 
 namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateAddCommand
 {
-     class RecommendationAddRequestHandler : IRequestHandler<RecommendationAddRequest, Document>
-    {
-        private readonly IFileService fileService;
-        private readonly IDocumentRepository documentRepository;
-        private readonly FtpFileService ftpFileService;
+	class RecommendationAddRequestHandler : IRequestHandler<RecommendationAddRequest, Document>
+	{
+		private readonly IDocumentRepository documentRepository;
+		private readonly AzureBlobService azureBlobService;
 
-        public RecommendationAddRequestHandler(IFileService fileService, IDocumentRepository documentRepository, FtpFileService ftpFileService)
-        {
-            this.fileService = fileService;
-            this.documentRepository = documentRepository;
-            this.ftpFileService = ftpFileService;
-        }
+		public RecommendationAddRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService)
+		{
+			this.documentRepository = documentRepository;
+			this.azureBlobService = azureBlobService;
+		}
 
-        public async Task<Document> Handle(RecommendationAddRequest request, CancellationToken cancellationToken)
-        {
-            var certificate = new Document
-            {
-                Name = request.Name,
-                Type = DocumentType.Certification,
-            };
-
-            await documentRepository.AddAsync(certificate, cancellationToken);
-            await documentRepository.SaveAsync(cancellationToken);
-
-			var files = request.Files.Select(m =>
+		public async Task<Document> Handle(RecommendationAddRequest request, CancellationToken cancellationToken)
+		{
+			var certificate = new Document
 			{
-				var uploadedPath = ftpFileService.Upload(m.File);
+				Name = request.Name,
+				Type = DocumentType.Certification,
+			};
+
+			await documentRepository.AddAsync(certificate, cancellationToken);
+			await documentRepository.SaveAsync(cancellationToken);
+
+			var files = await Task.WhenAll(request.Files.Select(async m =>
+			{
+				var uploadedPath = await azureBlobService.UploadAsync(m.File);
 
 				return new DocumentFile
 				{
@@ -46,12 +40,12 @@ namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateAddCom
 					IsMain = m.IsMain,
 					Path = uploadedPath
 				};
-			});
+			}));
 
 			await documentRepository.AddFilesAsync(certificate, files, cancellationToken);
-            await documentRepository.SaveAsync(cancellationToken);
+			await documentRepository.SaveAsync(cancellationToken);
 
-            return certificate;
-        }
-    }
+			return certificate;
+		}
+	}
 }

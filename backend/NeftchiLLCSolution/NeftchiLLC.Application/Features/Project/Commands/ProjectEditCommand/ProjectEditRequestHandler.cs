@@ -1,13 +1,11 @@
-﻿using Intelect.Application.Core.Services;
-using Intelect.Infrastructure.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Project.Commands.ProjectEditCommand
 {
-	class ProjectEditRequestHandler(IProjectRepository projectRepository, IFileService fileService, FtpFileService ftpFileService) : IRequestHandler<ProjectEditRequest>
+	class ProjectEditRequestHandler(IProjectRepository projectRepository, AzureBlobService azureBlobService) : IRequestHandler<ProjectEditRequest>
 	{
 		public async Task Handle(ProjectEditRequest request, CancellationToken cancellationToken)
 		{
@@ -66,9 +64,9 @@ namespace NeftchiLLC.Application.Features.Project.Commands.ProjectEditCommand
 			#endregion
 			#region Add new files
 
-			var newFiles = filesToAdd.Select(m =>
+			var newFiles = await Task.WhenAll(filesToAdd.Select(async m =>
 			{
-				var uploadedPath = ftpFileService.Upload(m.File);
+				var uploadedPath = await azureBlobService.UploadAsync(m.File);
 				return new ProjectFile
 				{
 					Name = Path.GetFileNameWithoutExtension(uploadedPath),
@@ -76,7 +74,7 @@ namespace NeftchiLLC.Application.Features.Project.Commands.ProjectEditCommand
 					IsMain = m.IsMain,
 					Path = uploadedPath,
 				};
-			});
+			}));
 
 			#endregion
 

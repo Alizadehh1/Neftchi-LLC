@@ -1,5 +1,4 @@
-﻿using Intelect.Infrastructure.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
@@ -8,22 +7,22 @@ using Document = NeftchiLLC.Domain.Models.Entities.Document;
 
 namespace NeftchiLLC.Application.Features.Recommendation.Commands.RecommendationAddCommand
 {
-    class RecommendationAddRequestHandler(IFileService fileService, IDocumentRepository documentRepository, FtpFileService ftpFileService) : IRequestHandler<RecommendationAddRequest, Document>
-    {
-        public async Task<Document> Handle(RecommendationAddRequest request, CancellationToken cancellationToken)
-        {
-            var recommendation = new Document
-            {
-                Name = request.Name,
-                Type = DocumentType.Letter,
-            };
-
-            await documentRepository.AddAsync(recommendation, cancellationToken);
-            await documentRepository.SaveAsync(cancellationToken);
-
-			var files = request.Files.Select(m =>
+	class RecommendationAddRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService) : IRequestHandler<RecommendationAddRequest, Document>
+	{
+		public async Task<Document> Handle(RecommendationAddRequest request, CancellationToken cancellationToken)
+		{
+			var recommendation = new Document
 			{
-				var uploadedPath = ftpFileService.Upload(m.File);
+				Name = request.Name,
+				Type = DocumentType.Letter,
+			};
+
+			await documentRepository.AddAsync(recommendation, cancellationToken);
+			await documentRepository.SaveAsync(cancellationToken);
+
+			var files = await Task.WhenAll(request.Files.Select(async m =>
+			{
+				var uploadedPath = await azureBlobService.UploadAsync(m.File);
 
 				return new DocumentFile
 				{
@@ -32,12 +31,12 @@ namespace NeftchiLLC.Application.Features.Recommendation.Commands.Recommendation
 					IsMain = m.IsMain,
 					Path = uploadedPath
 				};
-			});
+			}));
 
 			await documentRepository.AddFilesAsync(recommendation, files, cancellationToken);
-            await documentRepository.SaveAsync(cancellationToken);
+			await documentRepository.SaveAsync(cancellationToken);
 
-            return recommendation;
-        }
-    }
+			return recommendation;
+		}
+	}
 }

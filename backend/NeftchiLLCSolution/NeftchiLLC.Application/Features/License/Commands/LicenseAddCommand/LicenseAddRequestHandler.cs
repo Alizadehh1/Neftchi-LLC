@@ -1,12 +1,12 @@
-﻿using Intelect.Application.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 using NeftchiLLC.Domain.Models.StableModels;
 
 namespace NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand
 {
-	class LicenseAddRequestHandler(IDocumentRepository documentRepository, LocalFileService localFileService) : IRequestHandler<LicenseAddRequest, Document>
+	class LicenseAddRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService) : IRequestHandler<LicenseAddRequest, Document>
 	{
 		public async Task<Document> Handle(LicenseAddRequest request, CancellationToken cancellationToken)
 		{
@@ -21,7 +21,7 @@ namespace NeftchiLLC.Application.Features.License.Commands.LicenseAddCommand
 
 			var files = await Task.WhenAll(request.Files.Select(async m =>
 			{
-				var uploadedPath = await localFileService.UploadAsync(m.File);
+				var uploadedPath = await azureBlobService.UploadAsync(m.File);
 				return new DocumentFile
 				{
 					Name = Path.GetFileNameWithoutExtension(uploadedPath),

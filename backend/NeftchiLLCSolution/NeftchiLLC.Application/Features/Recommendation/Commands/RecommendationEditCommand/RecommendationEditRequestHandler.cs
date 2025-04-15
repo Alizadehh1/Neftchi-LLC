@@ -1,13 +1,11 @@
-﻿using Intelect.Application.Core.Services;
-using Intelect.Infrastructure.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Recommendation.Commands.RecommendationEditCommand
 {
-	class RecommendationEditRequestHandler(IDocumentRepository documentRepository, IFileService fileService, FtpFileService ftpFileService) : IRequestHandler<RecommendationEditRequest, string>
+	class RecommendationEditRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService) : IRequestHandler<RecommendationEditRequest, string>
 	{
 		public async Task<string> Handle(RecommendationEditRequest request, CancellationToken cancellationToken)
 		{
@@ -58,9 +56,9 @@ namespace NeftchiLLC.Application.Features.Recommendation.Commands.Recommendation
 			#endregion
 			#region Add new files
 
-			var newFiles = filesToAdd.Select(m =>
+			var newFiles = await Task.WhenAll(filesToAdd.Select(async m =>
 			{
-				var uploadedPath = ftpFileService.Upload(m.File);
+				var uploadedPath = await azureBlobService.UploadAsync(m.File);
 
 				return new DocumentFile
 				{
@@ -69,7 +67,7 @@ namespace NeftchiLLC.Application.Features.Recommendation.Commands.Recommendation
 					IsMain = m.IsMain,
 					Path = uploadedPath
 				};
-			});
+			}));
 
 			#endregion
 

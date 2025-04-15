@@ -1,11 +1,10 @@
-﻿using Intelect.Application.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Application.Services;
 
 namespace NeftchiLLC.Application.Features.AboutUs.Commands.AboutUsAddCommand
 {
-	class AboutUsAddRequestHandler(IAboutUsRepository aboutUsRepository,FtpFileService ftpFileService) : IRequestHandler<AboutUsAddRequest>
+	class AboutUsAddRequestHandler(IAboutUsRepository aboutUsRepository,AzureBlobService azureBlobService) : IRequestHandler<AboutUsAddRequest>
 	{
 		public async Task Handle(AboutUsAddRequest request, CancellationToken cancellationToken)
 		{
@@ -14,7 +13,7 @@ namespace NeftchiLLC.Application.Features.AboutUs.Commands.AboutUsAddCommand
 				Content = request.Content,
 				Title = request.Title,
 			};
-			value.ImagePath = ftpFileService.Upload(request.File);
+			value.ImagePath = await azureBlobService.UploadAsync(request.File);
 
 			await aboutUsRepository.AddAsync(value, cancellationToken);
 			await aboutUsRepository.SaveAsync(cancellationToken);

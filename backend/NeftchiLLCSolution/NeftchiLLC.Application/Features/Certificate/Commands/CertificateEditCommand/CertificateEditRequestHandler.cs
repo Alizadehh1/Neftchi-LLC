@@ -1,18 +1,17 @@
-﻿using Intelect.Infrastructure.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateEditCommand
 {
-	class RecommendationEditRequestHandler(IDocumentRepository documentRepository, IFileService fileService, FtpFileService ftpFileService) : IRequestHandler<RecommendationEditRequest, string>
+	class RecommendationEditRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService) : IRequestHandler<RecommendationEditRequest, string>
 	{
 		public async Task<string> Handle(RecommendationEditRequest request, CancellationToken cancellationToken)
 		{
 			var certificate = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.Certification && d.Id == request.Id && d.DeletedAt == null, cancellationToken: cancellationToken);
 
-            certificate.Name = request.Name;
+			certificate.Name = request.Name;
 
 			#region Files
 
@@ -57,9 +56,9 @@ namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateEditCo
 			#endregion
 			#region Add new files
 
-			var newFiles = filesToAdd.Select(m =>
+			var newFiles = await Task.WhenAll(filesToAdd.Select(async m =>
 			{
-				var uploadedPath = ftpFileService.Upload(m.File);
+				var uploadedPath = await azureBlobService.UploadAsync(m.File);
 				return new DocumentFile
 				{
 					Name = Path.GetFileNameWithoutExtension(uploadedPath),
@@ -67,7 +66,7 @@ namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateEditCo
 					IsMain = m.IsMain,
 					Path = uploadedPath,
 				};
-			});
+			}));
 
 			#endregion
 
