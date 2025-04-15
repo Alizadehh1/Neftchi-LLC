@@ -9,10 +9,10 @@ namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioRemoveComm
 		{
 			var portfolio = await portfolioRepository.GetAsync(d => d.DeletedAt == null && d.Id == request.Id, cancellationToken: cancellationToken);
 			var portfolioFiles = portfolioRepository.GetFiles(d => d.PortfolioId == portfolio.Id && d.DeletedAt == null);
-			portfolioRepository.Remove(portfolio);
-
 			foreach (var file in portfolioFiles)
 				await portfolioRepository.RemoveFileAsync(file, cancellationToken);
+			portfolioRepository.Remove(portfolio);
+
 			await portfolioRepository.SaveAsync(cancellationToken);
 		}
 	}
