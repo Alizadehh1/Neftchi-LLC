@@ -1,5 +1,7 @@
 import style from './index.module.scss';
 import Main from '../../layout/Main';
+import { Input } from 'antd';
+import { IoSearchSharp } from "react-icons/io5";
 
 export const data = [
   {
@@ -69,10 +71,12 @@ const Equipment = () => {
               <th>Miqdar</th>
               <th>Model</th>
               <th>Təyinatı</th>
-              <th>Statusun tarixi</th>
+              <th>
+                <Input prefix={<IoSearchSharp />} />
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             {data.map((user) => (
               <tr key={user.age} >
                 <td >{user.age}</td>

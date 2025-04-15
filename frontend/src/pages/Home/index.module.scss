@@ -234,13 +234,32 @@
     font-size: 17px;
     cursor: pointer;
     text-decoration: underline;
+
+    @media (max-width : 512px) {
+       display: none;
+    }
+}
+
+.projectsResponsiveTitleMore{
+    color: #13436b;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: underline;
+    display: none;
+
+    @media (max-width : 512px) {
+       display: block;
+    }
 }
 
 .projectImages {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
     margin-top: 40px;
+    max-width: 1200px;
+
 
     @media (max-width : 512px) {
         flex-direction: column;
@@ -248,7 +267,7 @@
 }
 
 .projectImages figure {
-    height: 352px;
+    height: 322px;
     width: 30%;
     margin-bottom: 15px;
 

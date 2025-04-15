@@ -99,6 +99,9 @@ const Home = () => {
                                 <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
                             </figure>
                         ))}
+                        <div onClick={() => navigate(PROJECT_PATH)} className={style.projectsResponsiveTitleMore}>
+                            Daha çox məlumat al
+                        </div>
                     </div>
 
                 </div>

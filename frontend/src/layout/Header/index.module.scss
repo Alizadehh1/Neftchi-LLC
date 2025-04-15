@@ -16,7 +16,7 @@ figure {
 
     @media (max-width: 768px) {
         width: 79px;
-    height: 30px;
+        height: 30px;
     }
 
     img {
@@ -79,15 +79,16 @@ figure {
 .hamburgerMenu {
     font-size: 25px;
     display: none;
+    margin-right: 20px;
 }
 
 
 @media (max-width: 768px) {
 
     .select {
-      visibility: hidden;
+        visibility: hidden;
     }
-    
+
 
     .hamburgerMenu {
         display: block;

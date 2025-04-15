@@ -16,7 +16,7 @@ export const menuData = [
             {
                 id: 10,
                 value: "Haqqımızda",
-                link: "",
+                link: ABOUT_PATH,
             },
             {
                 id: 11,

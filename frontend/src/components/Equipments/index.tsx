@@ -1,4 +1,4 @@
-import  { useRef } from 'react'
+import { useRef } from 'react'
 import style from './index.module.scss';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
@@ -33,7 +33,7 @@ const Equipments = () => {
 
             <div className={style.equipmentImages}>
 
-                <div  onClick={() => scroll("left")} className={style.equipmentRightArrow}>
+                <div onClick={() => scroll("left")} className={style.equipmentRightArrow}>
                     <FaArrowLeft />
                 </div>
 
@@ -43,6 +43,14 @@ const Equipments = () => {
                             <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
                         </figure>
                     ))}
+
+                    <div
+                        onClick={() => navigate(EQUIPMENT_PATH)}
+                        className={style.equipmentMoreResponsive}
+                    >
+                        Daha çox məlumat al
+                    </div>
+
                 </div>
 
                 <div onClick={() => scroll("right")} className={style.equipmentLeftArrow}>
