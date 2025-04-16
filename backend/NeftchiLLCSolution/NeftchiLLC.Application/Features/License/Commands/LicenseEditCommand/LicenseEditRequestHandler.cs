@@ -51,7 +51,10 @@ namespace NeftchiLLC.Application.Features.License.Commands.LicenseEditCommand
 			#region RemoveUnnecessaryFiles
 
 			foreach (var file in filesToDelete)
+			{
 				await documentRepository.RemoveFileAsync(file);
+				await azureBlobService.RemoveAsync(file.Path);
+			}
 
 			#endregion
 			#region Add new files

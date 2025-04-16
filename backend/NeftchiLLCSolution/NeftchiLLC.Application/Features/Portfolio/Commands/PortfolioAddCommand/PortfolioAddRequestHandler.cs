@@ -1,12 +1,11 @@
-﻿using Intelect.Infrastructure.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioAddCommand
 {
-	class PortfolioAddRequestHandler(IFileService fileService, IPortfolioRepository portfolioRepository, FtpFileService ftpFileService) : IRequestHandler<PortfolioAddRequest, Domain.Models.Entities.Portfolio>
+	class PortfolioAddRequestHandler(IPortfolioRepository portfolioRepository, AzureBlobService azureBlobService) : IRequestHandler<PortfolioAddRequest, Domain.Models.Entities.Portfolio>
 	{
 		public async Task<Domain.Models.Entities.Portfolio> Handle(PortfolioAddRequest request, CancellationToken cancellationToken)
 		{
@@ -19,9 +18,9 @@ namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioAddCommand
 			await portfolioRepository.AddAsync(portfolio, cancellationToken);
 			await portfolioRepository.SaveAsync(cancellationToken);
 
-			var files = request.Files.Select(m =>
+			var files = await Task.WhenAll(request.Files.Select(async m =>
 			{
-				var uploadedPath = ftpFileService.Upload(m.File);
+				var uploadedPath = await azureBlobService.UploadAsync(m.File);
 				return new PortfolioFile
 				{
 					Name = Path.GetFileNameWithoutExtension(uploadedPath),
@@ -29,7 +28,7 @@ namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioAddCommand
 					IsMain = m.IsMain,
 					Path = uploadedPath,
 				};
-			});
+			}));
 
 			await portfolioRepository.AddFilesAsync(portfolio, files, cancellationToken);
 			await portfolioRepository.SaveAsync(cancellationToken);

@@ -58,7 +58,10 @@ namespace NeftchiLLC.Application.Features.Project.Commands.ProjectEditCommand
 			#region RemoveUnnecessaryFiles
 
 			foreach (var file in filesToDelete)
+			{
 				await projectRepository.RemoveFileAsync(file);
+				await azureBlobService.RemoveAsync(file.Path);
+			}
 
 
 			#endregion

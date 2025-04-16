@@ -7,18 +7,18 @@ using Document = NeftchiLLC.Domain.Models.Entities.Document;
 
 namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateAddCommand
 {
-	class RecommendationAddRequestHandler : IRequestHandler<RecommendationAddRequest, Document>
+	class CertificateAddRequestHandler : IRequestHandler<CertificateAddRequest, Document>
 	{
 		private readonly IDocumentRepository documentRepository;
 		private readonly AzureBlobService azureBlobService;
 
-		public RecommendationAddRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService)
+		public CertificateAddRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService)
 		{
 			this.documentRepository = documentRepository;
 			this.azureBlobService = azureBlobService;
 		}
 
-		public async Task<Document> Handle(RecommendationAddRequest request, CancellationToken cancellationToken)
+		public async Task<Document> Handle(CertificateAddRequest request, CancellationToken cancellationToken)
 		{
 			var certificate = new Document
 			{

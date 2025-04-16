@@ -23,5 +23,10 @@ namespace NeftchiLLC.Application.Services
 			await blob.UploadAsync(stream, true);
 			return blob.Uri.ToString();
 		}
+		public async Task RemoveAsync(string filePath)
+		{
+			var blobClient = _container.GetBlobClient(filePath);
+			await blobClient.DeleteIfExistsAsync();
+		}
 	}
 }

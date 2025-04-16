@@ -6,7 +6,7 @@ using NeftchiLLC.Domain.Models.StableModels;
 
 namespace NeftchiLLC.Application.Features.Recommendation.Queries.RecommendationGetAllRequest
 {
-	class CertificateGetAllRequestHandler(IDocumentRepository documentRepository) : IRequestHandler<RecommendationGetAllRequest, IEnumerable<DocumentGetAllDto>>
+	class RecommendationGetAllRequestHandler(IDocumentRepository documentRepository) : IRequestHandler<RecommendationGetAllRequest, IEnumerable<DocumentGetAllDto>>
 	{
 		public async Task<IEnumerable<DocumentGetAllDto>> Handle(RecommendationGetAllRequest request, CancellationToken cancellationToken)
 		{

@@ -1,6 +1,6 @@
 ﻿namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateEditCommand
 {
-    internal class RecommendationEditRequestValidator
+    internal class CertificateEditRequestValidator
 	{
 	}
 }

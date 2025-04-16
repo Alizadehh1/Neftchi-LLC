@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Service.Commands.ServiceAddCommand
 {

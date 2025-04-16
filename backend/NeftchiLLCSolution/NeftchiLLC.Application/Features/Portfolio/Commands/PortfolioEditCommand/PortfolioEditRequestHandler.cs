@@ -1,13 +1,11 @@
-﻿using Intelect.Application.Core.Services;
-using Intelect.Infrastructure.Core.Services;
-using MediatR;
+﻿using MediatR;
 using NeftchiLLC.Application.Repositories;
 using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioEditCommand
 {
-	class PortfolioEditRequestHandler(IPortfolioRepository portfolioRepository, IFileService fileService, FtpFileService ftpFileService) : IRequestHandler<PortfolioEditRequest, string>
+	class PortfolioEditRequestHandler(IPortfolioRepository portfolioRepository, AzureBlobService azureBlobService) : IRequestHandler<PortfolioEditRequest, string>
 	{
 		public async Task<string> Handle(PortfolioEditRequest request, CancellationToken cancellationToken)
 		{
@@ -54,14 +52,17 @@ namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioEditComman
 			#region RemoveUnnecessaryFiles
 
 			foreach (var file in filesToDelete)
+			{
 				await portfolioRepository.RemoveFileAsync(file);
+				await azureBlobService.RemoveAsync(file.Path);
+			}
 
 			#endregion
 			#region Add new files
 
-			var newFiles = filesToAdd.Select(m =>
+			var newFiles = await Task.WhenAll(filesToAdd.Select(async m =>
 			{
-				var uploadedPath = ftpFileService.Upload(m.File);
+				var uploadedPath = await azureBlobService.UploadAsync(m.File);
 				return new PortfolioFile
 				{
 					Name = Path.GetFileNameWithoutExtension(uploadedPath),
@@ -69,7 +70,7 @@ namespace NeftchiLLC.Application.Features.Portfolio.Commands.PortfolioEditComman
 					IsMain = m.IsMain,
 					Path = uploadedPath,
 				};
-		});
+			}));
 
 			#endregion
 

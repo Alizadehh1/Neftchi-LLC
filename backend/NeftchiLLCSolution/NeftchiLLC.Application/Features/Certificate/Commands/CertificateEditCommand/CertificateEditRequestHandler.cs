@@ -5,9 +5,9 @@ using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateEditCommand
 {
-	class RecommendationEditRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService) : IRequestHandler<RecommendationEditRequest, string>
+	class CertificateEditRequestHandler(IDocumentRepository documentRepository, AzureBlobService azureBlobService) : IRequestHandler<CertificateEditRequest, string>
 	{
-		public async Task<string> Handle(RecommendationEditRequest request, CancellationToken cancellationToken)
+		public async Task<string> Handle(CertificateEditRequest request, CancellationToken cancellationToken)
 		{
 			var certificate = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.Certification && d.Id == request.Id && d.DeletedAt == null, cancellationToken: cancellationToken);
 
@@ -51,7 +51,10 @@ namespace NeftchiLLC.Application.Features.Certificate.Commands.CertificateEditCo
 			#region RemoveUnnecessaryFiles
 
 			foreach (var file in filesToDelete)
+			{
 				await documentRepository.RemoveFileAsync(file);
+				await azureBlobService.RemoveAsync(file.Path);
+			}
 
 			#endregion
 			#region Add new files

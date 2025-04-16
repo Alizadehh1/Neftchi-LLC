@@ -24,7 +24,7 @@ namespace NeftchiLLC.Domain.Contexts.Configurations
 				.WithMany()
 				.HasPrincipalKey(m => m.Id)
 				.HasForeignKey(m => m.ProjectId)
-				.OnDelete(DeleteBehavior.NoAction);
+				.OnDelete(DeleteBehavior.Cascade);
 		}
 	}
 }
