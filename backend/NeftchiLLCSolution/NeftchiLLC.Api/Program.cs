@@ -17,7 +17,12 @@ builder.Services.AddCorrelation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Host.UseServiceProviderFactory(new NeftchiServiceProviderFactory());
-
+builder.Services.AddCors(cfg => cfg.AddPolicy("allowAll", p =>
+{
+	p.AllowAnyOrigin()
+	.AllowAnyHeader()
+	.AllowAnyMethod();
+}));
 builder.Services.AddDbContext<DbContext>(cfg =>
 {
 	cfg.UseSqlServer(builder.Configuration.GetConnectionString("cString"), cfg =>
@@ -67,10 +72,10 @@ app.Seed();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseCors("allowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapFallbackToFile("index.html");
-app.UseCors("allowAll");
 
 if (app.Environment.IsDevelopment())
 {
