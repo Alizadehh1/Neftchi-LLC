@@ -56,10 +56,10 @@ builder.Services.AddCors(cfg =>
 {
 	cfg.AddPolicy("allowAll", p =>
 	{
-		p.WithOrigins("https://neftchi-smf.com") // frontend domain here
-		 .AllowAnyHeader()
-		 .AllowAnyMethod()
-		 .AllowCredentials(); // Important for cookies/session auth
+		p.AllowAnyOrigin()
+	   .AllowAnyHeader()
+	   .AllowAnyMethod()
+	   .AllowCredentials();
 	});
 });
 
