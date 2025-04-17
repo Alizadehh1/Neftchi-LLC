@@ -54,9 +54,9 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddCors(cfg =>
 {
-	cfg.AddPolicy("allowALL", p =>
+	cfg.AddPolicy("allowAll", p =>
 	{
-		p.WithOrigins("https://neftchi-smf.com") // or your actual frontend URL
+		p.WithOrigins("http://127.0.0.1:5500")
 		 .AllowAnyHeader()
 		 .AllowAnyMethod()
 		 .AllowCredentials(); // Only valid with specific origins
