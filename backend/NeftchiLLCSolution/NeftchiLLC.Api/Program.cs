@@ -54,12 +54,12 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddCors(cfg =>
 {
-	cfg.AddPolicy("allowAll", p =>
+	cfg.AddPolicy("allowALL", p =>
 	{
-		p.AllowAnyOrigin()
-	   .AllowAnyHeader()
-	   .AllowAnyMethod()
-	   .AllowCredentials();
+		p.WithOrigins("https://neftchi-smf.com") // or your actual frontend URL
+		 .AllowAnyHeader()
+		 .AllowAnyMethod()
+		 .AllowCredentials(); // Only valid with specific origins
 	});
 });
 
