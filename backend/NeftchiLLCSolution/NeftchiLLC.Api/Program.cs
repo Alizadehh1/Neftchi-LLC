@@ -43,15 +43,25 @@ builder.Services.AddIdentity<NeftchiUser, IdentityRole>(options =>
 .AddEntityFrameworkStores<NeftchiContext>()
 .AddDefaultTokenProviders();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+	options.Cookie.SameSite = SameSiteMode.None; // Required for cross-site cookie usage
+	options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Use secure cookies
+});
+
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
-builder.Services.AddCors(cfg => cfg.AddPolicy("allowAll", p =>
+builder.Services.AddCors(cfg =>
 {
-	p.AllowAnyOrigin()
-	.AllowAnyHeader()
-	.AllowAnyMethod();
-}));
+	cfg.AddPolicy("allowAll", p =>
+	{
+		p.WithOrigins("https://neftchi-smf.com") // frontend domain here
+		 .AllowAnyHeader()
+		 .AllowAnyMethod()
+		 .AllowCredentials(); // Important for cookies/session auth
+	});
+});
 
 builder.Services.AddRouting(cfg => cfg.LowercaseUrls = true);
 
