@@ -1,16 +1,27 @@
-﻿using MediatR;
+﻿using Intelect.Domain.Core.Commons;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NeftchiLLC.Application.Features.Account.Commands.AccountLoginCommand;
 using NeftchiLLC.Application.Features.Account.Commands.AccountRegisterCommand;
 using NeftchiLLC.Application.Features.Account.Commands.AccountSignOutCommand;
+using NeftchiLLC.Application.Features.Account.Queries;
 
 namespace NeftchiLLC.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AccountController(IMediator mediator) : ControllerBase
-    {
+	[Route("api/[controller]")]
+	[ApiController]
+	public class AccountController(IMediator mediator) : ControllerBase
+	{
+		[HttpGet]
+		[Authorize(Roles = "Admin")]
+		public async Task<IActionResult> GetAll([FromQuery] UserGetAllRequest request)
+		{
+			var response = await mediator.Send(request);
+			var dto = ApiResponse.Success(response);
+			return Ok(dto);
+		}
+
 		[HttpPost("login")]
 		public async Task<IActionResult> Login([FromBody] AccountLoginRequest request)
 		{

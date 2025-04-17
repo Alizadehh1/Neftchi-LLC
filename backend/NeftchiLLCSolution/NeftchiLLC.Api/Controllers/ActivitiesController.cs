@@ -15,7 +15,7 @@ namespace NeftchiLLC.Api.Controllers
     public class ActivitiesController(IMediator mediator) : ControllerBase
     {
 		[HttpGet]
-		public async Task<IActionResult> GetAll(ActivitiesGetAllRequest request)
+		public async Task<IActionResult> GetAll([FromQuery] ActivitiesGetAllRequest request)
 		{
 			var response = await mediator.Send(request);
 			var dto = ApiResponse.Success(response);

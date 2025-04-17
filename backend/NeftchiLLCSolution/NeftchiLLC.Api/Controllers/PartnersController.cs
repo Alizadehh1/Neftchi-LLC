@@ -16,7 +16,7 @@ namespace NeftchiLLC.Api.Controllers
 	public class PartnersController(IMediator mediator) : ControllerBase
 	{
 		[HttpGet]
-		public async Task<IActionResult> GetAll(PartnerGetAllRequest request)
+		public async Task<IActionResult> GetAll([FromQuery]PartnerGetAllRequest request)
 		{
 			var response = await mediator.Send(request);
 			var dto = ApiResponse.Success(response);
@@ -31,7 +31,7 @@ namespace NeftchiLLC.Api.Controllers
 		}
 		[HttpPost]
 		[Transaction]
-		//[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> Add([FromForm] PartnerAddRequest request)
 		{
 			await mediator.Send(request);

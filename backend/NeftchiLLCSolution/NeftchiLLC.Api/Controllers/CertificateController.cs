@@ -1,6 +1,7 @@
 ﻿using Intelect.Domain.Core.Commons;
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NeftchiLLC.Application.Features.Certificate.Commands.CertificateAddCommand;
 using NeftchiLLC.Application.Features.Certificate.Commands.CertificateEditCommand;
@@ -17,7 +18,8 @@ namespace NeftchiLLC.Api.Controllers
     {
         [HttpPost]
         [Transaction]
-        public async Task<IActionResult> Add([FromForm] CertificateAddRequest request)
+		[Authorize(Roles = "Admin")]
+		public async Task<IActionResult> Add([FromForm] CertificateAddRequest request)
         {
             var response = await mediator.Send(request);
             var dto = ApiResponse.Success(response);
@@ -25,7 +27,8 @@ namespace NeftchiLLC.Api.Controllers
         }
         [HttpPut("{id:int:min(1)}")]
         [Transaction]
-        public async Task<IActionResult> Edit(int id, [FromForm] CertificateEditRequest request)
+		[Authorize(Roles = "Admin")]
+		public async Task<IActionResult> Edit(int id, [FromForm] CertificateEditRequest request)
         {
             request.Id = id;
             await mediator.Send(request);
@@ -35,7 +38,8 @@ namespace NeftchiLLC.Api.Controllers
 
         [HttpDelete("remove/{id:int:min(1)}")]
         [Transaction]
-        public async Task<IActionResult> Remove(int id, [FromForm] CertificateRemoveRequest request)
+		[Authorize(Roles = "Admin")]
+		public async Task<IActionResult> Remove(int id, [FromForm] CertificateRemoveRequest request)
         {
             request.Id = id;
             await mediator.Send(request);

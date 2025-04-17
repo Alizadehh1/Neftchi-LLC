@@ -1,6 +1,7 @@
 ﻿using Intelect.Domain.Core.Commons;
 using Intelect.Infrastructure.Core.Concepts.TransactionalConcept;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NeftchiLLC.Application.Features.Recommendation.Commands.RecommendationAddCommand;
 using NeftchiLLC.Application.Features.Recommendation.Commands.RecommendationEditCommand;
@@ -17,7 +18,8 @@ namespace NeftchiLLC.Api.Controllers
     {
         [HttpPost]
         [Transaction]
-        public async Task<IActionResult> Add([FromForm] RecommendationAddRequest request)
+		[Authorize(Roles = "Admin")]
+		public async Task<IActionResult> Add([FromForm] RecommendationAddRequest request)
         {
             var response = await mediator.Send(request);
             var dto = ApiResponse.Success(response);
@@ -25,7 +27,8 @@ namespace NeftchiLLC.Api.Controllers
         }
         [HttpPut("{id:int:min(1)}")]
         [Transaction]
-        public async Task<IActionResult> Edit(int id, [FromForm] RecommendationEditRequest request)
+		[Authorize(Roles = "Admin")]
+		public async Task<IActionResult> Edit(int id, [FromForm] RecommendationEditRequest request)
         {
             request.Id = id;
             await mediator.Send(request);
@@ -33,7 +36,8 @@ namespace NeftchiLLC.Api.Controllers
         }
         [HttpDelete("remove/{id:int:min(1)}")]
         [Transaction]
-        public async Task<IActionResult> Remove(int id, [FromForm] RecommendationRemoveRequest request)
+		[Authorize(Roles = "Admin")]
+		public async Task<IActionResult> Remove(int id, [FromForm] RecommendationRemoveRequest request)
         {
             request.Id = id;
             await mediator.Send(request);
