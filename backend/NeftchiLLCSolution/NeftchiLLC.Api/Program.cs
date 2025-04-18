@@ -9,8 +9,11 @@ using NeftchiLLC.Application;
 using NeftchiLLC.Domain.Contexts;
 using NeftchiLLC.Domain.Models.Membership;
 
-Console.WriteLine(">>> Starting backend...");
 var builder = WebApplication.CreateBuilder(args);
+if (builder.Environment.IsProduction())
+{
+	Console.WriteLine(">>> Starting backend for Production...");
+}
 builder.Services.AddControllers();
 
 builder.Services.AddCorrelation();
@@ -56,10 +59,20 @@ builder.Services.AddCors(cfg =>
 {
 	cfg.AddPolicy("allowAll", p =>
 	{
-		p.WithOrigins("http://127.0.0.1:5500")
-		 .AllowAnyHeader()
-		 .AllowAnyMethod()
-		 .AllowCredentials(); // Only valid with specific origins
+		if (builder.Environment.IsDevelopment())
+		{
+			p.SetIsOriginAllowed(_ => true)
+			 .AllowAnyHeader()
+			 .AllowAnyMethod()
+			 .AllowCredentials();
+		}
+		else
+		{
+			p.WithOrigins("https://api.neftchi-smf.com")
+			 .AllowAnyHeader()
+			 .AllowAnyMethod()
+			 .AllowCredentials();
+		}
 	});
 });
 
