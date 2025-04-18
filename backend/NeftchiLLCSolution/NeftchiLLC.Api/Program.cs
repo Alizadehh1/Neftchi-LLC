@@ -50,6 +50,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
 	options.Cookie.SameSite = SameSiteMode.None; // Required for cross-site cookie usage
 	options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Use secure cookies
+	options.ExpireTimeSpan = TimeSpan.FromDays(7);
 });
 
 builder.Services.AddAuthentication();

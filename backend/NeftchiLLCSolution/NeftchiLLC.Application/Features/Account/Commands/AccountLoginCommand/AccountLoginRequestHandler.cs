@@ -11,7 +11,7 @@ namespace NeftchiLLC.Application.Features.Account.Commands.AccountLoginCommand
 			var user = await userManager.FindByEmailAsync(request.Email);
 			if (user == null) throw new UnauthorizedAccessException("Invalid credentials");
 
-			var result = await signInManager.PasswordSignInAsync(user, request.Password, false, false);
+			var result = await signInManager.PasswordSignInAsync(user, request.Password, true, false);
 			if (!result.Succeeded) throw new UnauthorizedAccessException("Invalid credentials");
 		}
 	}
