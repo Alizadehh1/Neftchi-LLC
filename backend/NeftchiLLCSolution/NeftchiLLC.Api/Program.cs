@@ -68,7 +68,7 @@ builder.Services.AddCors(cfg =>
 		}
 		else
 		{
-			p.WithOrigins("https://api.neftchi-smf.com")
+			p.SetIsOriginAllowed(_ => true) //p.WithOrigins("https://api.neftchi-smf.com")
 			 .AllowAnyHeader()
 			 .AllowAnyMethod()
 			 .AllowCredentials();
