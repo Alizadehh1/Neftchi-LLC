@@ -10,7 +10,7 @@ namespace NeftchiLLC.Application.Features.License.Queries.LicenseGetByIdQuery
 		{
 			var license = await documentRepository.GetAsync(d => d.Type == Domain.Models.StableModels.DocumentType.License && d.DeletedAt == null && d.Id == request.Id, cancellationToken: cancellationToken);
 
-			var files = documentRepository.GetFiles(d => d.DeletedAt == null && d.IsMain && d.DocumentId == license.Id);
+			var files = documentRepository.GetFiles(d => d.DeletedAt == null && d.DocumentId == license.Id);
 
 			var result = new DocumentGetByIdDto
 			{
