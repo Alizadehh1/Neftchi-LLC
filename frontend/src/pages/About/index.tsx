@@ -1,17 +1,72 @@
-import { useEffect,  useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Main from '../../layout/Main';
 import style from './index.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { setScrollTarget } from '../../store/global';
+import Activities from '../../components/About/Activities/Activities';
+import { FileItem, ILicense, IRecommendation, ISertificate } from './types';
+import axios from 'axios';
+import { baseUrl } from '../../utils/baseUrl';
+import Loading from '../../components/Loading/Loading';
+import { IAbout } from '../../components/Home/AboutUses/types';
 
 const About = () => {
     const dispatch = useDispatch();
 
-    const scrollTarget  =  useSelector((state: any) => state.scroll.target)
+    const scrollTarget = useSelector((state: any) => state.scroll.target)
 
     const licenseRef = useRef<HTMLDivElement>(null);
     const isoRef = useRef<HTMLDivElement>(null);
     const recommendationRef = useRef<HTMLDivElement>(null);
+
+    const [licences, setLicences] = useState<ILicense[]>([]);
+    const [sertificates, setSertificates] = useState<ISertificate[]>([]);
+    const [aboutUses, setAboutUses] = useState<IAbout[]>([]);
+    const [recommendations, setRecommendations] = useState<IRecommendation[]>([]);
+    const [loading, setLoading] = useState(false);
+
+    const fetchLisenceData = async () => {
+        setLoading(true);
+        await axios.get(baseUrl + "/licences").then(res => {
+            setLicences(res?.data?.data)
+        })
+        setLoading(false);
+    }
+
+    const fetchAboutUsesData = async () => {
+        setLoading(true);
+        await axios.get(baseUrl + "/aboutuses").then(res => {
+            setAboutUses(res?.data?.data)
+        })
+        setLoading(false);
+    }
+
+    const fetchSertificatesData = async () => {
+        setLoading(true);
+        await axios.get(baseUrl + "/certificates").then(res => {
+            setSertificates(res?.data?.data)
+        })
+        setLoading(false);
+    }
+
+    const fetchRecommendationData = async () => {
+        setLoading(true);
+        await axios.get(baseUrl + "/recommendations").then(res => {
+            setRecommendations(res?.data?.data)
+        })
+        setLoading(false);
+    }
+
+    useEffect(() => {
+        const fetchData = async () => {
+            await Promise.allSettled([fetchLisenceData(), fetchSertificatesData(), fetchRecommendationData(), fetchAboutUsesData()]);
+            setLoading(false);
+        };
+
+        fetchData();
+    }, []);
+
+
 
     useEffect(() => {
         if (scrollTarget) {
@@ -22,10 +77,13 @@ const About = () => {
 
             if (targetRef) {
                 targetRef.scrollIntoView({ behavior: "smooth", block: "start" });
-                dispatch(setScrollTarget(null)); 
+                dispatch(setScrollTarget(null));
             }
         }
     }, [scrollTarget, dispatch]);
+
+
+    if (loading) return <Loading />
 
     return (
         <Main>
@@ -33,58 +91,34 @@ const About = () => {
             <div className={style.about}>
 
                 <h2 className={style.aboutTitle}>
-                    Haqqımızda
+                    {aboutUses[0]?.title}
                 </h2>
 
-                <div className={style.aboutMenu}>
-                    <p>NEFTÇİ İQ Firması sizə ümumi məlumat üçün bildirir ki, 2001-ci ildə əsası qoyulmuş bu şirkət keçmiş "Qafqazenerjiquraşdırma" trestinin kollektivindən ibarət yüksək səviyyəli peşəkar quraşdırıcılardan və beynəlxalq sertifikat almış elektrik qaynaqçılardan ibarət taşkil olunmuşdur.</p>
-                    <p>
-                        Kollektiv energetika obyektlərində, neft sənayesində və digər sahələrdə özlərini bacarıqlı ixtisasçı kimi göstərmişlər. Onlar aşağıda adları qeyd olunan işlərin quraşdırılması, təmir və tikinti işlərini yerinə yetirmişlər.
-                    </p>
-                </div>
+                <div
+                    className={style.aboutMenu}
+                    dangerouslySetInnerHTML={{ __html: aboutUses[0]?.content }}
+                />
 
                 <div className={style.aboutImage}>
-                    <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
+                    <img src={aboutUses[0]?.imagePath} alt={aboutUses[0]?.title} />
                 </div>
 
             </div>
 
             <hr />
 
-            <div className={style.content}>
-
-                <div className={style.contentMenu}>
-
-                    <div className={style.contentWorks}>
-                        <h2>Yerinə yetirdiyimiz işlər</h2>
-                        <ul>
-                            {[...Array(6)].map((_, index) => (
-                                <li key={index}>Həcmi 30.000m3-dək olan rezervuarların quraşdırılması və təmiri</li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div className={style.contentActivities}>
-                        <h2>Fəaliyyətlərimiz</h2>
-                        <ul>
-                            {[...Array(6)].map((_, index) => (
-                                <li key={index}>Həcmi 30.000m3-dək olan rezervuarların quraşdırılması və təmiri</li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-
-                <p>Bununla yanaşı məlumat üçün onu da bildiririk ki, həmin kollektivin iş bacarığını əməkdaşlıq etdiyimiz SOCAR, Magistral Neft Kəmərləri istehsalat Birliyi, Xəzər Dəniz Neft Qaz Tikinti, Qaradağ sement zavodu, Şirvan IES (Əli Bayramlı DRES), Karasu Operating Company, Shirvan Operating Company, Neftchala Operating Company, Binagadi OIL Company, Absheron Operating Company, GL LTD, Taghiyev Operating Company , Salyan Oil Limited, Socar-AQS şirkətlərinin rəhbərliyinə məlumdur.</p>
-
-            </div>
+            <Activities />
 
             <div ref={licenseRef} className={style.lissenzia}>
                 <h2>Lisenziya</h2>
                 <div className={style.lisensiaImages}>
-                    {[...Array(3)].map((_) => (
-                        <figure>
-                            <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
-                        </figure>
+                    {licences?.map((lisence: ILicense) => (
+                        lisence?.files?.map((file: FileItem) => (
+                            <figure>
+                                <img src={file?.path} />
+                            </figure>
+                        ))
+
                     ))}
                 </div>
             </div>
@@ -92,10 +126,13 @@ const About = () => {
             <div ref={isoRef} className={style.lissenzia}>
                 <h2>İSO sertifikatları</h2>
                 <div className={style.lisensiaImages}>
-                    {[...Array(3)].map((_) => (
-                        <figure>
-                            <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
-                        </figure>
+                    {sertificates?.map((sertificate: ISertificate) => (
+                        sertificate?.files?.map((file: FileItem) => (
+                            <figure>
+                                <img src={file?.path} />
+                            </figure>
+                        ))
+
                     ))}
                 </div>
             </div>
@@ -103,10 +140,13 @@ const About = () => {
             <div ref={recommendationRef} className={style.lissenzia}>
                 <h2>Tövsiyyə məktubları</h2>
                 <div className={style.lisensiaImages}>
-                    {[...Array(3)].map((_) => (
-                        <figure>
-                            <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
-                        </figure>
+                    {recommendations?.map((recommendation: IRecommendation) => (
+                        recommendation?.files?.map((file: FileItem) => (
+                            <figure>
+                                <img src={file?.path} />
+                            </figure>
+                        ))
+
                     ))}
                 </div>
             </div>

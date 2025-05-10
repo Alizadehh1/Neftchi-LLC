@@ -18,7 +18,6 @@
     }
 }
 
-
 .table {
     width: 100%;
     margin-top: 50px;
@@ -28,6 +27,15 @@
     text-align: left;
     width: 15%;
     color: #bbbbbb;
+    @media (max-width : 512px) {
+        width: 30%;
+    }
+}
+
+.inputTd{
+    @media (max-width : 512px) {
+        display: none;
+    }
 }
 
 
@@ -37,7 +45,7 @@
 
 .table tbody tr td {
     font-weight: normal;
-    padding: 10px;
+    padding: 10px 0;
     border-bottom: 1px solid #bbbbbb;
 }
 
@@ -48,6 +56,10 @@
     width: 80%;
     margin: auto;
     margin-top: 80px;
+
+    @media (max-width : 512px) {
+        width: 95%;
+    }
 }
 
 .equipment h2 {
@@ -61,26 +73,84 @@
 
 .equipmentImages {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 24px;
+}
+
+.elements {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    scrollbar-width: none;
+    gap: 16px;
+    /* Aralarında boşluq yaradır */
+    flex-wrap: nowrap;
+
+    @media (max-width : 512px) {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    @media (max-width : 512px) {
+        margin-top: 35px;
+    }
 
     figure {
-        height: 167px;
-        width: 15%;
-        margin-bottom: 30px;
+        width: 23%;
+        height: 235px;
+        flex-shrink: 0;
 
         @media (max-width : 512px) {
-            width: 80%;
+            height: 300px;
+            width: 98%;
             margin: auto;
-            margin-top: 20px;
         }
 
         img {
             width: 100%;
-            height: 100%;
         }
+    }
+}
+
+
+.equipmentRightArrow {
+    width: 60px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #7db2dd;
+    color: #7db2dd;
+    margin-right: 10px;
+    cursor: pointer;
+
+    @media (max-width : 512px) {
+        height: 21px;
+        display: none;
+    }
+}
+
+.equipmentLeftArrow {
+    width: 60px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #13436b;
+    color: #fff;
+    cursor: pointer;
+
+    @media (max-width : 512px) {
+        height: 21px;
+        display: none;
     }
 }
 

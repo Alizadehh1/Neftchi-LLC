@@ -3,6 +3,7 @@ import style from './index.module.scss';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import { EQUIPMENT_PATH } from '../../utils/routes';
+import { photos } from './utils';
 
 
 const Equipments = () => {
@@ -23,6 +24,7 @@ const Equipments = () => {
     return (
         <div className={style.equipment}>
 
+            {/* texnika ve avadanliqlar statik olacaq bu sehifede */}
             <div className={style.equipmentTitle}>
                 <h2 style={{ visibility: "hidden" }}>asfasf</h2>
                 <h2 className={style.equipMentTitleValue}>Texnika və avadanlıqlar</h2>
@@ -33,14 +35,14 @@ const Equipments = () => {
 
             <div className={style.equipmentImages}>
 
-                <div onClick={() => scroll("left")} className={style.equipmentRightArrow}>
+                {/* <div onClick={() => scroll("left")} className={style.equipmentRightArrow}>
                     <FaArrowLeft />
-                </div>
+                </div> */}
 
                 <div ref={imageListRef} className={style.elements}>
-                    {[...Array(15)].map((_) => (
+                    {photos?.slice(0, 4).map((value) => (
                         <figure>
-                            <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
+                            <img src={value?.photo} />
                         </figure>
                     ))}
 
@@ -53,9 +55,9 @@ const Equipments = () => {
 
                 </div>
 
-                <div onClick={() => scroll("right")} className={style.equipmentLeftArrow}>
+                {/* <div onClick={() => scroll("right")} className={style.equipmentLeftArrow}>
                     <FaArrowRight />
-                </div>
+                </div> */}
 
             </div>
 

@@ -9,7 +9,13 @@
 }
 
 .partnersArrow {
+    width: 8%;
     display: flex;
+    justify-content: flex-end;
+
+    @media (max-width : 512px){
+        width: 16%;
+    }
 }
 
 .partnersTitleValue {
@@ -18,7 +24,6 @@
 
     @media (max-width : 512px){
         font-size: 20px;
-        margin-left: -20px;
     }
 }
 
@@ -43,12 +48,14 @@
         color: #fff;
         cursor: pointer;
     }
+
+    
 }
 
 .partnerImages {
     display: flex;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1190px;
     margin: auto;
     margin-top: 40px;
     overflow-x: auto;

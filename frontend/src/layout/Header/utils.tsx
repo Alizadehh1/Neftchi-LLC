@@ -1,7 +1,7 @@
-import { ABOUT_PATH, CONTACT_PATH, EQUIPMENT_PATH, PORTFOLIO_PATH, SERVICES_PATH } from "../../utils/routes";
+import { ABOUT_PATH, CONTACT_PATH, EQUIPMENT_PATH, PORTFOLIO_PATH, PROJECT_PATH, SERVICES_PATH } from "../../utils/routes";
 
 export interface IMenuData {
-    children?: Array<{ id: number; value: string; link: string; ref?: any}>;
+    children?: Array<{ id: number; value: string; link: string; ref?: any }>;
     id: number;
     value: string;
     link: string;
@@ -53,7 +53,14 @@ export const menuData = [
     {
         id: 3,
         value: 'Portfolio',
-        link: PORTFOLIO_PATH
+        link: PORTFOLIO_PATH,
+        children: [
+            {
+                id: 10,
+                value: "Layihələrimiz",
+                link: PROJECT_PATH,
+            },
+        ]
     },
     {
         id: 4,

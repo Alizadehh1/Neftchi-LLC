@@ -1,8 +1,30 @@
 import style from "./index.module.scss";
-import { datas } from './utils';
 import Main from '../../layout/Main';
+import axios from "axios";
+import { baseUrl } from "../../utils/baseUrl";
+import { useEffect, useState } from "react";
+import { IServices } from "./types";
+import Loading from "../../components/Loading/Loading";
 
 const Services = () => {
+    const [loading, setLoading] = useState(false);
+    const [services, setServices] = useState<IServices[]>([]);
+
+
+    const fetchData = async () => {
+        setLoading(true);
+        await axios.get(baseUrl + "/services").then(res => {
+            setServices(res?.data?.data)
+        })
+        setLoading(false);
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, [])
+
+    if (loading) return <Loading />
+
     return (
         <Main>
             <div className={style.container}>
@@ -15,10 +37,10 @@ const Services = () => {
                 <hr className={style.element} />
 
                 <div className={style.content}>
-                    {datas?.map((data: any) => (
+                    {services?.map((data: IServices) => (
                         <div className={style.col}>
-                            <h2>{data?.id}</h2>
-                            <span>{data?.value}</span>
+                            <h2>{data?.rank}</h2>
+                            <span>{data?.name}</span>
                         </div>
                     ))}
                 </div>

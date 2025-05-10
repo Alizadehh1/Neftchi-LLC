@@ -1,6 +1,8 @@
 import style from './index.module.scss';
 import Logo from "../../assets/Logo.png";
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon, YoutubeIcon } from './utils';
+import { useNavigate } from 'react-router-dom';
+import { ABOUT_PATH, EQUIPMENT_PATH, PORTFOLIO_PATH, PROJECT_PATH, SERVICES_PATH } from '../../utils/routes';
 
 const LocationIcon = () => {
     return (
@@ -27,6 +29,8 @@ const TelephoneIcon = () => {
 }
 
 const Footer = () => {
+    const navigate = useNavigate();
+
     return (
         <div className={style.footer}>
             <div className={style.content}>
@@ -63,16 +67,16 @@ const Footer = () => {
 
                 <div className={style.right}>
                     <div>
-                        <h2>Haqqımızda</h2>
-                        <p>Texniki Avadanlıqlar</p>
+                        <h2 onClick={() => navigate(ABOUT_PATH)}>Haqqımızda</h2>
+                        <p onClick={() => navigate(EQUIPMENT_PATH)}>Texniki Avadanlıqlar</p>
                     </div>
                     <div>
-                        <h2>Xidmətlər</h2>
+                        <h2 onClick={() => navigate(SERVICES_PATH)}>Xidmətlər</h2>
                         <p>Əməkdaşlarımız</p>
                     </div>
                     <div>
-                        <h2>Portfolio</h2>
-                        <p>Layihələrimiz</p>
+                        <h2 onClick={() => navigate(PORTFOLIO_PATH)}>Portfolio</h2>
+                        <p onClick={() => navigate(PROJECT_PATH)}>Layihələrimiz</p>
                     </div>
                 </div>
 

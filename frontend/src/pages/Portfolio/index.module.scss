@@ -9,7 +9,7 @@
 
 .element{
     border-color: #25a2fe;
-    width: 85%;
+    width: 100%;
     margin: auto;
     margin-top: 40px;
 }
@@ -24,14 +24,13 @@
 }
 
 .portfolioImages{
-    width: 40%;
+    width: 30%;
     margin-top: 40px;
     @media (max-width : 512px){
         width: 100%;
         margin-top: 24px;
     }
     display: flex;
-    justify-content: space-between;
 }
 
 .portfolioImages figure{

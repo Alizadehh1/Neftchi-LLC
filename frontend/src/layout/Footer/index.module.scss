@@ -87,6 +87,7 @@
 
     div {
         display: flex;
+        cursor: pointer;
         flex-direction: column;
 
         @media (max-width : 512px) {

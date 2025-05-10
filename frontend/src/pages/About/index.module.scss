@@ -23,7 +23,7 @@
 .aboutImage {
     width: 100%;
     margin-top: 30px;
-    height: 500px;
+    height: 450px;
 
     img {
         height: 100%;
@@ -72,87 +72,6 @@
 
 // content
 
-.content {
-    width: 90%;
-    margin: auto;
-    margin-top: 70px;
-    @media (max-width : 512px) {
-       width: 95%;
-    }
-}
-
-.content p {
-    font-size: 14px;
-    margin-top: 30px;
-    line-height: 24px;
-
-    @media (max-width : 512px) {
-        margin-top: 24px;
-    }
-}
-
-.contentMenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @media (max-width : 512px) {
-        margin-left: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.contentWorks h2 {
-    font-size: 28px;
-
-    @media (max-width : 512px) {
-        font-size: 16px;
-    }
-}
-
-.contentActivities ul {
-    margin-top: 30px;
-    @media (max-width : 512px) {
-        margin-top: 24px;
-    }
-}
-
-.contentWorks ul {
-    margin-top: 30px;
-    @media (max-width : 512px) {
-        margin-top: 24px;
-    }
-}
-
-.contentWorks ul li {
-    margin-bottom: 10px;
-    color: #494949;
-    @media (max-width : 512px) {
-       font-size: 13px;
-    }
-}
-
-.contentActivities {
-    @media (max-width : 512px) {
-        margin-top: 70px;
-    }
-}
-
-.contentActivities h2 {
-    font-size: 28px;
-
-    @media (max-width : 512px) {
-        font-size: 16px;
-    }
-}
-
-.contentActivities ul li {
-    color: #494949;
-    margin-bottom: 10px;
-    @media (max-width : 512px) {
-        font-size: 13px;
-     }
-}
 
 // lissenzia
 
@@ -190,8 +109,8 @@
     margin-bottom: 20px;
 
     @media (max-width : 512px) {
-        width: 45%;
-        height: 228px;
+        width: 44%;
+        height: 188px;
     }
 
     img {

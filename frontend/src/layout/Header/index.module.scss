@@ -30,6 +30,10 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width : 934px) {
+        width: 42%;
+    }
 }
 
 
@@ -46,15 +50,19 @@ figure {
     position: absolute;
     top: 53px;
     background-color: #fff;
-    padding: 15px;
     transition: all 1s;
     box-shadow: 0 0 0 0.3px #6d6d6d;
+    padding: 5px 10px;
 }
 
 .dropdownMenu div {
     cursor: pointer;
-    margin-bottom: 15px;
     font-size: 14px;
+    margin-top: 15px;
+
+    &:first-child {
+        margin-top: 0px;
+    }
 }
 
 .dropdownMenu div:hover {
@@ -120,6 +128,10 @@ figure {
         padding: 10px 20px;
         text-align: center;
         border-bottom: 1px solid #eaeaea;
+        width: 90%;
+        text-align: left;
+        z-index: 1;
+        background-color: #fff;
     }
 
     .dropdownMenu {

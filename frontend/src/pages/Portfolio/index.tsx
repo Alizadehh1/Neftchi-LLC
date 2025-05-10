@@ -1,57 +1,53 @@
+import axios from 'axios';
 import Main from '../../layout/Main'
 import style from './index.module.scss';
+import { baseUrl } from '../../utils/baseUrl';
+import { useEffect, useState } from 'react';
+import { FileItem, IPortfolio } from './types';
+import Loading from '../../components/Loading/Loading';
 
 const Portfolio = () => {
+    const [portfolios, setPortfolios] = useState<IPortfolio[]>([]);
+    const [loading, setLoading] = useState(false);
+
+    const fetchData = async () => {
+        setLoading(true);
+        await axios.get(baseUrl + "/portfolios").then(res => {
+            setPortfolios(res?.data?.data)
+        })
+        setLoading(false);
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, [])
+
+    if (loading) return <Loading />
+
     return (
         <Main>
             <div className={style.portfolio}>
+                <h2 className={style.portfolioTitle}>Portfolio</h2>
 
-                <h2 className={style.portfolioTitle}>
-                    Portfolio
-                </h2>
-
-                <div className={style.portfolioImages}>
-                    {[...Array(3)].map((_) => (
-                        <figure>
-                            <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
-                        </figure>
-                    ))}
-                </div>
-
-                <div className={style.portfolioValue}>
-                    <h2 className={style.portfolioValueTitle}>Taghiyev Operating Company / Salyan OIL Limited</h2>
-                    <ul>
-                        {[...Array(6)].map((_, index) => (
-                            <li className={style.portfolioValueContent} key={index}>Həcmi 30.000m3-dək olan rezervuarların quraşdırılması və təmiri</li>
-                        ))}
-                    </ul>
-                </div>
-
+                {portfolios?.map((portfolio: IPortfolio, idx: number) => (
+                    <div key={idx} className={style.portfolioItem}>
+                        <div className={style.portfolioImages}>
+                            {portfolio.files?.map((file: FileItem, i: number) => (
+                                <figure key={i}>
+                                    <img src={file?.path} alt={`Portfolio image ${i + 1}`} />
+                                </figure>
+                            ))}
+                        </div>
+                        <hr className={style.element} />
+                        <div className={style.portfolioValue}>
+                            <h2 className={style.portfolioValueTitle}>{portfolio.name}</h2>
+                            <ul>
+                                <li>{portfolio.description}</li>
+                            </ul>
+                        </div>
+                    </div>
+                ))}
             </div>
-
-            <hr className={style.element} />
-
-
-
-            <div className={style.portfolio}>
-                <div className={style.portfolioImages}>
-                    {[...Array(1)].map((_) => (
-                        <figure>
-                            <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s"} />
-                        </figure>
-                    ))}
-                </div>
-                <div className={style.portfolioValue}>
-                    <h2 className={style.portfolioValueTitle}>Taghiyev Operating Company / Salyan OIL Limited</h2>
-                    <ul>
-                        {[...Array(6)].map((_, index) => (
-                            <li className={style.portfolioValueContent} key={index}>Həcmi 30.000m3-dək olan rezervuarların quraşdırılması və təmiri</li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-
-
 
         </Main>
     )

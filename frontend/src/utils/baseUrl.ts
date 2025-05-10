@@ -1,0 +1,1 @@
+export const baseUrl = "https://api.neftchi-smf.com/api"
