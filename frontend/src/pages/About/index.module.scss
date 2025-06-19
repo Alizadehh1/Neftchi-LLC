@@ -1,120 +1,120 @@
 .about {
-    width: 95%;
-    margin: 80px auto;
+  width: 95%;
+  margin: 80px auto;
 
-    @media (max-width : 512px) {
-        display: flex;
-        flex-direction: column;
-        margin: 20px auto;
-    }
+  @media (max-width: 512px) {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+  }
 }
 
 .aboutTitle {
-    text-align: center;
-    font-size: 32px;
-    font-weight: normal;
+  text-align: center;
+  font-size: 32px;
+  font-weight: normal;
 
-    @media (max-width : 512px) {
-        width: 100%;
-        font-size: 20px;
-    }
+  @media (max-width: 512px) {
+    width: 100%;
+    font-size: 20px;
+  }
 }
 
 .aboutImage {
-    width: 100%;
-    margin-top: 30px;
-    height: 450px;
+  width: 100%;
+  margin-top: 30px;
+  height: 450px;
 
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .aboutMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  @media (max-width: 512px) {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
+    flex-direction: column;
+    margin-top: 14px;
+  }
 
-    @media (max-width : 512px) {
-        display: flex;
-        flex-direction: column;
+  p {
+    color: #7a7a7a;
+
+    &:first-child {
+      font-size: 20px;
+      width: 45%;
+
+      @media (max-width: 512px) {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+
+    &:last-child {
+      font-size: 17px;
+      width: 45%;
+
+      @media (max-width: 512px) {
+        width: 100%;
+        font-size: 14px;
         margin-top: 14px;
+      }
     }
-
-    p {
-        color: #7a7a7a;
-
-        &:first-child {
-            font-size: 20px;
-            width: 45%;
-
-            @media (max-width : 512px) {
-                width: 100%;
-                font-size: 14px;
-            }
-        }
-
-        &:last-child {
-            font-size: 17px;
-            width: 45%;
-
-            @media (max-width : 512px) {
-                width: 100%;
-                font-size: 14px;
-                margin-top: 14px;
-            }
-        }
-    }
+  }
 }
 
 // content
 
-
 // lissenzia
 
 .lissenzia {
-    margin: auto;
-    margin-top: 80px;
-    width: 75%;
+  margin: auto;
+  margin-top: 80px;
+  width: 75%;
 
-    @media (max-width : 512px) {
-        width: 95%;
-    }
+  @media (max-width: 512px) {
+    width: 95%;
+  }
 }
 
 .lisensiaImages {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 40px;
+  display: flex;
+  align-items: center;
+  //   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .lissenzia h2 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: normal;
+  text-align: center;
+  font-size: 32px;
+  font-weight: normal;
 
-    @media (max-width : 512px) {
-        font-size: 20px;
-    }
+  @media (max-width: 512px) {
+    font-size: 20px;
+  }
 }
 
 .lisensiaImages figure {
-    width: 30%;
-    height: 305px;
-    margin-bottom: 20px;
+  width: 30%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 1px solid #dbdbdb66;
+  @media (max-width: 512px) {
+    width: 44%;
+    height: 188px;
+  }
 
-    @media (max-width : 512px) {
-        width: 44%;
-        height: 188px;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -1,40 +1,42 @@
 .container {
-    width: 95%;
-    margin: auto;
+  width: 95%;
+  margin: auto;
 }
 
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-    height: auto;
-}
-
-.hero img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  height: auto;
+  max-height: 512px;
+  overflow: hidden;
+  position: relative;
+  img {
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 40px;
+  }
+  h1 {
+    position: absolute;
+    top: 25%;
+    left: 60px;
+    font-family: Kanit;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 72px;
+    letter-spacing: 0%;
+    color: #13436b;
+  }
 }
 
 //about about about about about about about about about about about
 
-
-
-
 // section section section section section section section
-
-
 
 // services
 
-
-
-
-
 //partners partners
 
-
-
 // projects
-

@@ -1,172 +1,170 @@
 .tableEquipment {
-    width: 86%;
-    margin: auto;
-    margin-top: 75px;
+  width: 86%;
+  margin: auto;
+  margin-top: 75px;
 
-    @media (max-width : 512px) {
-        margin-top: 20px;
-    }
+  @media (max-width: 512px) {
+    margin-top: 20px;
+  }
 }
 
 .tableEquipment h2 {
-    font-size: 32px;
-    font-weight: normal;
-    text-align: center;
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
 
-    @media (max-width : 512px) {
-        font-size: 20px;
-    }
+  @media (max-width: 512px) {
+    font-size: 20px;
+  }
 }
 
 .table {
-    width: 100%;
-    margin-top: 50px;
+  width: 100%;
+  margin-top: 50px;
 }
 
 .table tr th {
-    text-align: left;
-    width: 15%;
-    color: #bbbbbb;
-    @media (max-width : 512px) {
-        width: 30%;
-    }
+  text-align: left;
+  width: 15%;
+  color: #bbbbbb;
+  @media (max-width: 512px) {
+    width: 30%;
+  }
 }
 
-.inputTd{
-    @media (max-width : 512px) {
-        display: none;
-    }
+.inputTd {
+  @media (max-width: 512px) {
+    display: none;
+  }
 }
-
 
 .table tbody {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .table tbody tr td {
-    font-weight: normal;
-    padding: 10px 0;
-    border-bottom: 1px solid #bbbbbb;
+  font-weight: normal;
+  padding: 10px 0;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 // equipment equipment
 
 .equipment {
-    text-align: center;
-    width: 80%;
-    margin: auto;
-    margin-top: 80px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 80px;
 
-    @media (max-width : 512px) {
-        width: 95%;
-    }
+  @media (max-width: 512px) {
+    width: 95%;
+  }
 }
 
 .equipment h2 {
-    font-size: 32px;
-    font-weight: normal;
+  font-size: 32px;
+  font-weight: normal;
 
-    @media (max-width : 512px) {
-        font-size: 20px;
-    }
+  @media (max-width: 512px) {
+    font-size: 20px;
+  }
 }
 
 .equipmentImages {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
 }
 
 .elements {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 24px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    scrollbar-width: none;
-    gap: 16px;
-    /* Aralarında boşluq yaradır */
-    flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  scrollbar-width: none;
+  gap: 16px;
+  /* Aralarında boşluq yaradır */
+  flex-wrap: nowrap;
 
-    @media (max-width : 512px) {
-        flex-direction: column;
-        width: 100%;
+  @media (max-width: 512px) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (max-width: 512px) {
+    margin-top: 35px;
+  }
+
+  figure {
+    width: 23%;
+    height: 235px;
+    flex-shrink: 0;
+
+    @media (max-width: 512px) {
+      height: 300px;
+      width: 98%;
+      margin: auto;
     }
 
-    @media (max-width : 512px) {
-        margin-top: 35px;
+    img {
+      width: 100%;
     }
-
-    figure {
-        width: 23%;
-        height: 235px;
-        flex-shrink: 0;
-
-        @media (max-width : 512px) {
-            height: 300px;
-            width: 98%;
-            margin: auto;
-        }
-
-        img {
-            width: 100%;
-        }
-    }
+  }
 }
 
-
 .equipmentRightArrow {
-    width: 60px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border: 1px solid #7db2dd;
-    color: #7db2dd;
-    margin-right: 10px;
-    cursor: pointer;
+  width: 80px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #7db2dd;
+  color: #7db2dd;
+  margin-right: 10px;
+  cursor: pointer;
 
-    @media (max-width : 512px) {
-        height: 21px;
-        display: none;
-    }
+  @media (max-width: 512px) {
+    height: 21px;
+    display: none;
+  }
 }
 
 .equipmentLeftArrow {
-    width: 60px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #13436b;
-    color: #fff;
-    cursor: pointer;
+  width: 80px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #13436b;
+  color: #fff;
+  cursor: pointer;
 
-    @media (max-width : 512px) {
-        height: 21px;
-        display: none;
-    }
+  @media (max-width: 512px) {
+    height: 21px;
+    display: none;
+  }
 }
 
 .equipment button {
-    background-color: #13436b;
-    border: none;
-    outline: none;
-    color: #fff;
-    width: 20%;
-    height: 50px;
-    border-radius: 3px;
-    font-size: 16px;
-    margin-top: 50px;
-    cursor: pointer;
+  background-color: #13436b;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 20%;
+  height: 50px;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-top: 50px;
+  cursor: pointer;
 
-    @media (max-width : 512px) {
-        width: 80%;
-    }
+  @media (max-width: 512px) {
+    width: 80%;
+  }
 }

@@ -1,84 +1,87 @@
 .partners {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .partnersTitle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .partnersArrow {
-    width: 8%;
-    display: flex;
-    justify-content: flex-end;
+  width: 8%;
+  display: flex;
+  justify-content: flex-end;
 
-    @media (max-width : 512px) {
-        width: 16%;
-    }
+  @media (max-width: 512px) {
+    width: 16%;
+  }
 }
 
 .partnersTitleValue {
-    font-size: 32px;
-    font-weight: normal;
+  font-size: 32px;
+  font-weight: normal;
 
-    @media (max-width : 512px) {
-        font-size: 20px;
-    }
+  @media (max-width: 512px) {
+    font-size: 20px;
+  }
 }
 
 .partnersArrow div {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &:first-child {
-        background-color: #fff;
-        border: 1px solid #7db2dd;
-        color: #7db2dd;
-        margin-right: 10px;
-        cursor: pointer;
-    }
+  background-color: #fff;
+  border: 1px solid #7db2dd;
+  color: #7db2dd;
+  margin-right: 10px;
+  cursor: pointer;
 
-    &:last-child {
-        background-color: #13436b;
-        color: #fff;
-        cursor: pointer;
-    }
-
-
+  transition: 250ms;
+  &:hover {
+    background-color: #13436b;
+    color: #fff;
+    cursor: pointer;
+    transition: 250ms;
+  }
 }
 
 .partnerImages {
-    display: flex;
-    align-items: center;
-    max-width: 1190px;
-    margin: auto;
-    margin-top: 40px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    scrollbar-width: none;
-    gap: 16px;
-    /* Aralarında boşluq yaradır */
-    flex-wrap: nowrap;
+  margin-top: 40px;
+  display: flex;
+  overflow-x: auto;
+  height: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  scrollbar-width: none;
+  gap: 20px;
+  /* Aralarında boşluq yaradır */
+  flex-wrap: nowrap;
 }
 
 .partnerImages figure {
-    min-width: 15%;
-    height: 100px;
-    flex-shrink: 0;
+  //   min-width: 15%;
+  height: unset;
+  //   flex-shrink: 0;
+  width: unset;
+  display: flex;
+  align-items: center;
 
-    img {
-        width: 100%;
-        height: 100%;
-        filter: grayscale(100%);
+  img {
+    width: unset;
+    height: unset;
+    max-height: 100px;
+    min-height: 50px;
+    filter: grayscale(100%);
 
-        &:hover {
-            filter: grayscale(0%) contrast(1.2);
-        }
+    transition: 250ms;
+    &:hover {
+      filter: grayscale(0%) contrast(1.2);
+      transition: 250ms;
     }
+  }
 }
