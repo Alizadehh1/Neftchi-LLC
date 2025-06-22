@@ -28,6 +28,17 @@
     line-height: 72px;
     letter-spacing: 0%;
     color: #13436b;
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 28%;
+      left: 25px;
+      font-family: Kanit;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0%;
+      color: #13436b;
+    }
   }
 }
 

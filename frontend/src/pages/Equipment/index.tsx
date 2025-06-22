@@ -1,6 +1,6 @@
 import style from "./index.module.scss";
 import Main from "../../layout/Main";
-import { Input } from "antd";
+import { Input, Tooltip } from "antd";
 import { IoSearchSharp } from "react-icons/io5";
 import { IEquipment } from "./types";
 import axios from "axios";
@@ -26,18 +26,28 @@ const Equipment = () => {
       behavior: "smooth",
     });
   };
-
-  const fetchData = async () => {
-    setLoading(true);
-    await axios
-      .get(baseUrl + `/equipments?searchTerm=${inputValue}`)
-      .then((res) => {
-        setEquipments(res?.data?.data);
-      });
-    setLoading(false);
-  };
-
+  //  useEffect(() => {
+  //     const fetchData = async () => {
+  //       setLoading(true);
+  //       await axios
+  //         .get(baseUrl + `/equipments?searchTerm=${inputValue}`)
+  //         .then((res) => {
+  //           setEquipments(res?.data?.data);
+  //         });
+  //       setLoading(false);
+  //     };
+  //     fetchData();
+  //   }, [inputValue]);
   useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      await axios
+        .get(baseUrl + `/equipments?searchTerm=${inputValue}`)
+        .then((res) => {
+          setEquipments(res?.data?.data);
+        });
+      setLoading(false);
+    };
     fetchData();
   }, [inputValue]);
 
@@ -47,31 +57,41 @@ const Equipment = () => {
     <Main>
       <div className={style.tableEquipment}>
         <h2>Texnika və avadanlıqlar</h2>
-
+        <div className={style.search}>
+          <Input
+            placeholder="Axtar..."
+            onPressEnter={(e) => {
+              setInputValue(e?.target?.value);
+            }}
+          />
+        </div>
         <table className={style.table}>
           <thead>
             {/* search-da baxarsan */}
             <tr>
-              <th>Təsvir</th>
-              <th>Miqdar</th>
-              <th>Model</th>
-              <th>Təyinatı</th>
-              <th className={style.inputTd}>
-                <Input
-                  onChange={(e) => setInputValue(e?.target?.value)}
-                  prefix={<IoSearchSharp />}
-                />
-              </th>
+              <th style={{ width: "20%" }}>Təsvir</th>
+              <th style={{ width: "20%" }}>Model</th>
+              <th style={{ width: "20%" }}>Miqdar</th>
+              <th style={{ width: "40%" }}>Təyinatı</th>
             </tr>
           </thead>
           <tbody>
             {equipments?.map((equipment: IEquipment) => (
               <tr key={equipment.id}>
                 <td>{equipment.name}</td>
-                <td>{equipment?.quantity}</td>
                 <td>{equipment?.model}</td>
-                <td>{equipment?.description}</td>
-                <td></td>
+                <td>{equipment?.quantity}</td>
+                <td
+                  style={{
+                    maxWidth: "50px",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}>
+                  <Tooltip title={equipment?.description}>
+                    <span>{equipment?.description}</span>
+                  </Tooltip>
+                </td>
               </tr>
             ))}
           </tbody>
@@ -79,7 +99,7 @@ const Equipment = () => {
       </div>
 
       <div className={style.equipment}>
-        <h2>Avadanlıqlar</h2>
+        <h2>Texnikalar</h2>
 
         <div className={style.equipmentImages}>
           <div

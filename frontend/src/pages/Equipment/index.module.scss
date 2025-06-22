@@ -5,6 +5,7 @@
 
   @media (max-width: 512px) {
     margin-top: 20px;
+    width: 95%;
   }
 }
 
@@ -128,6 +129,12 @@
   color: #7db2dd;
   margin-right: 10px;
   cursor: pointer;
+  transition: 250ms;
+  &:hover {
+    background-color: #13436b;
+    color: #fff;
+    transition: 250ms;
+  }
 
   @media (max-width: 512px) {
     height: 21px;
@@ -142,9 +149,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #13436b;
-  color: #fff;
+  background-color: #fff;
+  border: 1px solid #7db2dd;
+  color: #7db2dd;
   cursor: pointer;
+  transition: 250ms;
+  &:hover {
+    background-color: #13436b;
+    color: #fff;
+    transition: 250ms;
+  }
 
   @media (max-width: 512px) {
     height: 21px;
@@ -153,7 +167,7 @@
 }
 
 .equipment button {
-  background-color: #13436b;
+  background-color: #7db2dd;
   border: none;
   outline: none;
   color: #fff;
@@ -166,5 +180,14 @@
 
   @media (max-width: 512px) {
     width: 80%;
+  }
+}
+
+.search {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  input {
+    width: 200px;
   }
 }
