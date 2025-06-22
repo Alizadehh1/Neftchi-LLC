@@ -9,10 +9,12 @@ import { useEffect, useRef, useState } from "react";
 import Loading from "../../components/Loading/Loading";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { photos } from "../../components/Equipments/utils";
+import { RootState } from "../../store/store";
+import { useSelector } from "react-redux";
 
 const Equipment = () => {
   const imageListRef = useRef<HTMLDivElement | null>(null);
-
+  const language = useSelector((state: RootState) => state.scroll.language);
   const [loading, setLoading] = useState(false);
   const [equipments, setEquipments] = useState<IEquipment[]>([]);
   const [inputValue, setInputValue] = useState("");
@@ -56,10 +58,14 @@ const Equipment = () => {
   return (
     <Main>
       <div className={style.tableEquipment}>
-        <h2>Texnika və avadanlıqlar</h2>
+        <h2>
+          {language === 1
+            ? "Texnika və avadanlıqlar"
+            : "Machinery and Equipment"}
+        </h2>
         <div className={style.search}>
           <Input
-            placeholder="Axtar..."
+            placeholder={language === 1 ? "Axtar..." : "Search..."}
             onPressEnter={(e) => {
               setInputValue(e?.target?.value);
             }}
@@ -69,10 +75,16 @@ const Equipment = () => {
           <thead>
             {/* search-da baxarsan */}
             <tr>
-              <th style={{ width: "20%" }}>Təsvir</th>
-              <th style={{ width: "20%" }}>Model</th>
-              <th style={{ width: "20%" }}>Miqdar</th>
-              <th style={{ width: "40%" }}>Təyinatı</th>
+              <th style={{ width: "20%" }}>{language === 1 ? "Ad" : "Name"}</th>
+              <th style={{ width: "20%" }}>
+                {language === 1 ? "Model" : "Model"}
+              </th>
+              <th style={{ width: "20%" }}>
+                {language === 1 ? "Miqdar" : "Quantity"}
+              </th>
+              <th style={{ width: "40%" }}>
+                {language === 1 ? "Təyinatı" : "Purpose"}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -99,7 +111,7 @@ const Equipment = () => {
       </div>
 
       <div className={style.equipment}>
-        <h2>Texnikalar</h2>
+        <h2>{language === 1 ? "Texnikalar" : "Equipment"}</h2>
 
         <div className={style.equipmentImages}>
           <div

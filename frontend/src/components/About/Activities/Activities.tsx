@@ -5,7 +5,7 @@ import { baseUrl } from "../../../utils/baseUrl";
 import { IActivites, ICompletedWorks } from "./types";
 import Loading from "../../Loading/Loading";
 
-const Activities = () => {
+const Activities = ({ language }: any) => {
   const [activities, setActivities] = useState<IActivites[]>([]);
   const [completedWorks, setCompletedWorks] = useState<ICompletedWorks[]>([]);
   const [loading, setLoading] = useState(false);
@@ -43,7 +43,11 @@ const Activities = () => {
     <div className={style.content}>
       <div className={style.contentMenu}>
         <div className={style.contentWorks}>
-          <h2>İxtisaslaşma sahələri və təcrübə</h2>
+          <h2>
+            {language === 1
+              ? "İxtisaslaşma sahələri və təcrübə"
+              : "Areas of Specialization and Experience"}
+          </h2>
           <ul>
             {activities?.map((activity: IActivites, index) => (
               <li key={index}>{activity?.description}</li>
@@ -52,7 +56,7 @@ const Activities = () => {
         </div>
 
         <div className={style.contentActivities}>
-          <h2>Üstünlüklərimiz</h2>
+          <h2>{language === 1 ? "Üstünlüklərimiz" : "Our Advantages"}</h2>
           <ul>
             {completedWorks?.map((completedWork: ICompletedWorks, index) => (
               <li key={index}>{completedWork?.description}</li>

@@ -5,11 +5,13 @@ import { baseUrl } from "../../utils/baseUrl";
 import { useEffect, useState } from "react";
 import { IServices } from "./types";
 import Loading from "../../components/Loading/Loading";
+import { RootState } from "../../store/store";
+import { useSelector } from "react-redux";
 
 const Services = () => {
   const [loading, setLoading] = useState(false);
   const [services, setServices] = useState<IServices[]>([]);
-
+  const language = useSelector((state: RootState) => state.scroll.language);
   const fetchData = async () => {
     setLoading(true);
     const res = await axios.get(baseUrl + "/services");
@@ -32,7 +34,9 @@ const Services = () => {
     <Main>
       <div className={style.container}>
         <div className={style.about}>
-          <h2 className={style.servicesValue}>Xidmətlərimiz</h2>
+          <h2 className={style.servicesValue}>
+            {language === 1 ? "Xidmətlərimiz" : "Our Services"}
+          </h2>
           <p>
             NEFTÇİ İQ Firması sizə ümumi məlumat üçün bildirir ki, 2001-ci ildə
             əsası qoyulmuş bu şirkət keçmiş "Qafqazenerjiquraşdırma" trestinin

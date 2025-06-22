@@ -9,12 +9,13 @@ import axios from "axios";
 import { baseUrl } from "../../utils/baseUrl";
 import Loading from "../../components/Loading/Loading";
 import { IAbout } from "../../components/Home/AboutUses/types";
+import { RootState } from "../../store/store";
 
 const About = () => {
   const dispatch = useDispatch();
 
-  const scrollTarget = useSelector((state: any) => state.scroll.target);
-
+  const scrollTarget = useSelector((state: RootState) => state.scroll.target);
+  const language = useSelector((state: RootState) => state.scroll.language);
   const licenseRef = useRef<HTMLDivElement>(null);
   const isoRef = useRef<HTMLDivElement>(null);
   const recommendationRef = useRef<HTMLDivElement>(null);
@@ -104,10 +105,10 @@ const About = () => {
 
       <hr />
 
-      <Activities />
+      <Activities language={language} />
 
       <div ref={licenseRef} className={style.lissenzia}>
-        <h2>Lisenziya</h2>
+        <h2>{language === 1 ? "Lisenziya" : "License"}</h2>
         <div className={style.lisensiaImages}>
           {licences?.map((lisence: ILicense) =>
             lisence?.files?.map((file: FileItem) => (
@@ -120,7 +121,7 @@ const About = () => {
       </div>
 
       <div ref={isoRef} className={style.lissenzia}>
-        <h2>ISO sertifikatları</h2>
+        <h2>{language === 1 ? "ISO sertifikatları" : "ISO Certificates"}</h2>
         <div className={style.lisensiaImages}>
           {sertificates?.map((sertificate: ISertificate) =>
             sertificate?.files?.map((file: FileItem) => (
@@ -133,7 +134,9 @@ const About = () => {
       </div>
 
       <div ref={recommendationRef} className={style.lissenzia}>
-        <h2>Tövsiyyə məktubları</h2>
+        <h2>
+          {language === 1 ? "Tövsiyə məktubları" : "Recommendation Letters"}
+        </h2>
         <div className={style.lisensiaImages}>
           {recommendations?.map((recommendation: IRecommendation) =>
             recommendation?.files?.map((file: FileItem) => (

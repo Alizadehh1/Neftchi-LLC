@@ -5,11 +5,13 @@ import { baseUrl } from "../../utils/baseUrl";
 import { useEffect, useState } from "react";
 import { FileItem, IPortfolio } from "./types";
 import Loading from "../../components/Loading/Loading";
+import { RootState } from "../../store/store";
+import { useSelector } from "react-redux";
 
 const Portfolio = () => {
   const [portfolios, setPortfolios] = useState<IPortfolio[]>([]);
   const [loading, setLoading] = useState(false);
-
+  const language = useSelector((state: RootState) => state.scroll.language);
   const fetchData = async () => {
     setLoading(true);
     await axios.get(baseUrl + "/portfolios").then((res) => {

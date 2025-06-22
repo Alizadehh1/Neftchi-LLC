@@ -1,6 +1,6 @@
 import style from "./index.module.scss";
 
-const AboutProject = ({ project }: any) => {
+const AboutProject = ({ project, language }: any) => {
   const mainImage = project?.files.find((file: any) => file?.isMain);
 
   return (
@@ -31,22 +31,22 @@ const AboutProject = ({ project }: any) => {
 
         <div className={style.detailContent}>
           <div>
-            <h3>Əməkdaş sayı</h3>
+            <h3>{language === 1 ? "Əməkdaş sayı" : "Number of Employees"}</h3>
             <h3 className={style.employeeNumber}>{project?.employeeNumber}</h3>
           </div>
 
           <div>
-            <h3>Layihənin müddəti</h3>
+            <h3>{language === 1 ? "Layihənin müddəti" : "Project Duration"}</h3>
             <h3>{project?.employeeNumber}</h3>
           </div>
 
           <div>
-            <h3>Başlama tarixi</h3>
+            <h3>{language === 1 ? "Başlama tarixi" : "Start Date"}</h3>
             <h3>{project?.date}</h3>
           </div>
 
           <div>
-            <h3>Təhvil tarixi</h3>
+            <h3>{language === 1 ? "Təhvil tarixi" : "Delivery Date"}</h3>
             <h3>{project?.deliveryDate?.split("T")[0]}</h3>
           </div>
         </div>
