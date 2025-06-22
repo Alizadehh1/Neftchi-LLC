@@ -73,6 +73,65 @@ export const menuData = [
     link: CONTACT_PATH,
   },
 ];
+export const menuDataEn = [
+  {
+    id: 1,
+    value: "About Us",
+    link: ABOUT_PATH,
+    children: [
+      {
+        id: 10,
+        value: "About Us",
+        link: ABOUT_PATH,
+      },
+      {
+        id: 11,
+        value: "Licenses",
+        link: ABOUT_PATH,
+        ref: "license",
+      },
+      {
+        id: 12,
+        value: "ISO",
+        link: ABOUT_PATH,
+        ref: "iso",
+      },
+      {
+        id: 13,
+        value: "Recommendation Letters",
+        link: ABOUT_PATH,
+        ref: "recommendation",
+      },
+      {
+        id: 14,
+        value: "Machinery and Equipment",
+        link: EQUIPMENT_PATH,
+      },
+    ],
+  },
+  {
+    id: 2,
+    value: "Services",
+    link: SERVICES_PATH,
+  },
+  {
+    id: 3,
+    value: "Portfolio",
+    link: PORTFOLIO_PATH,
+    children: [
+      {
+        id: 10,
+        value: "Our Projects",
+        link: PROJECT_PATH,
+      },
+    ],
+  },
+  {
+    id: 4,
+    value: "Contact",
+    link: CONTACT_PATH,
+  },
+];
 
 export const optionsData = [
   {

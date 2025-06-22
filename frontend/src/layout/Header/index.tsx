@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import style from "./index.module.scss";
 import Logo from "../../assets/Neftchi logo.svg";
-import { IMenuData, menuData, optionsData } from "./utils";
+import { IMenuData, menuData, menuDataEn, optionsData } from "./utils";
 import { useNavigate } from "react-router-dom";
 import { Select } from "antd";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useDispatch } from "react-redux";
-import { setScrollTarget } from "../../store/global";
+import { useDispatch, useSelector } from "react-redux";
+import { setLanguage, setScrollTarget } from "../../store/global";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { RootState } from "../../store/store";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const language = useSelector((state: RootState) => state.scroll.language);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -100,9 +102,18 @@ const Header = () => {
         <img src={Logo} alt="logo" />{" "}
       </figure>
       <div className={`${style.menu} ${mobileMenuOpen ? style.open : ""}`}>
-        {menuData.map(renderMenu)}
+        {(language === 1 ? menuData : menuDataEn).map(renderMenu)}
       </div>
-      <Select className={style.select} options={optionsData} />
+      <Select
+        className={style.select}
+        value={language}
+        onChange={(val) => dispatch(setLanguage(val))}>
+        {optionsData.map((option) => (
+          <Select.Option key={option.key} value={option.key}>
+            {option.label}
+          </Select.Option>
+        ))}
+      </Select>
     </div>
   );
 };

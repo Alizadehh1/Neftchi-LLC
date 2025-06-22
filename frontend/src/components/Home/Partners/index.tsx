@@ -5,9 +5,12 @@ import { IPartners } from "./types";
 import axios from "axios";
 import { baseUrl } from "../../../utils/baseUrl";
 import Loading from "../../Loading/Loading";
+import { RootState } from "../../../store/store";
+import { useSelector } from "react-redux";
 
 const Partners = () => {
   const imageListRef = useRef<HTMLDivElement | null>(null);
+  const language = useSelector((state: RootState) => state.scroll.language);
   const [loading, setLoading] = useState(false);
   const [partners, setPartners] = useState<IPartners[]>([]);
 
@@ -39,7 +42,9 @@ const Partners = () => {
     <div className={style.partners}>
       <div className={style.partnersTitle}>
         <h2 style={{ visibility: "hidden" }}>asfasf</h2>
-        <h2 className={style.partnersTitleValue}>Partnyorlarımız</h2>
+        <h2 className={style.partnersTitleValue}>
+          {language === 1 ? "Partnyorlarımız" : "Our Partners"}
+        </h2>
         <div className={style.partnersArrow}>
           <div onClick={() => scroll("left")}>
             <FaArrowLeft />

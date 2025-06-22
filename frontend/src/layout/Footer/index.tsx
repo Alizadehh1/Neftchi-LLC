@@ -15,6 +15,8 @@ import {
   PROJECT_PATH,
   SERVICES_PATH,
 } from "../../utils/routes";
+import { RootState } from "../../store/store";
+import { useSelector } from "react-redux";
 
 const LocationIcon = () => {
   return (
@@ -72,7 +74,7 @@ const TelephoneIcon = () => {
 
 const Footer = () => {
   const navigate = useNavigate();
-
+  const language = useSelector((state: RootState) => state.scroll.language);
   return (
     <div className={style.footer}>
       <div className={style.content}>
@@ -86,7 +88,11 @@ const Footer = () => {
               <span>
                 <LocationIcon />
               </span>
-              <span>AZ 1801, Şirvan şəhəri, Naxçıvan küçəsi 53A</span>
+              <span>
+                {language === 1
+                  ? "AZ 1801, Şirvan şəhəri, Naxçıvan küçəsi 53A"
+                  : "AZ 1801, Shirvan city, Nakhchivan street 53A"}
+              </span>
             </div>
             <div className={style.flex}>
               <span>
@@ -123,16 +129,26 @@ const Footer = () => {
 
         <div className={style.right}>
           <div>
-            <h2 onClick={() => navigate(ABOUT_PATH)}>Haqqımızda</h2>
-            <p onClick={() => navigate(EQUIPMENT_PATH)}>Texniki Avadanlıqlar</p>
+            <h2 onClick={() => navigate(ABOUT_PATH)}>
+              {language === 1 ? "Haqqımızda" : "About Us"}
+            </h2>
+            <p onClick={() => navigate(EQUIPMENT_PATH)}>
+              {language === 1 ? "Texniki Avadanlıqlar" : "Technical Equipment"}
+            </p>
           </div>
           <div>
-            <h2 onClick={() => navigate(SERVICES_PATH)}>Xidmətlər</h2>
-            <p>Əməkdaşlarımız</p>
+            <h2 onClick={() => navigate(SERVICES_PATH)}>
+              {language === 1 ? "Xidmətlər" : "Services"}
+            </h2>
+            <p>{language === 1 ? "Əməkdaşlarımız" : "Our Employees"}</p>
           </div>
           <div>
-            <h2 onClick={() => navigate(PORTFOLIO_PATH)}>Portfolio</h2>
-            <p onClick={() => navigate(PROJECT_PATH)}>Layihələrimiz</p>
+            <h2 onClick={() => navigate(PORTFOLIO_PATH)}>
+              {language === 1 ? "Portfolio" : "Portfolio"}
+            </h2>
+            <p onClick={() => navigate(PROJECT_PATH)}>
+              {language === 1 ? "Layihələrimiz" : "Our Projects"}
+            </p>
           </div>
         </div>
       </div>

@@ -7,10 +7,12 @@ import { baseUrl } from "../../../utils/baseUrl";
 import Loading from "../../Loading/Loading";
 import { useNavigate } from "react-router-dom";
 import { ABOUT_PATH } from "../../../utils/routes";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
 
 const AboutUses = () => {
   const navigate = useNavigate();
-
+  const language = useSelector((state: RootState) => state.scroll.language);
   const [loading, setLoading] = useState(false);
   const [aboutUses, setAboutUses] = useState<IAbout[]>([]);
 
@@ -59,7 +61,7 @@ const AboutUses = () => {
               <span
                 onClick={() => navigate(ABOUT_PATH)}
                 className={style.sectionMore}>
-                Daha çox məlumat al
+                {language === 1 ? "Daha çox məlumat al" : "More information"}
               </span>
             </div>
           </div>

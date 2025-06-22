@@ -6,10 +6,12 @@ import { IServices } from "./types";
 import axios from "axios";
 import { baseUrl } from "../../../utils/baseUrl";
 import Loading from "../../Loading/Loading";
+import { RootState } from "../../../store/store";
+import { useSelector } from "react-redux";
 
 const Services = () => {
   const navigate = useNavigate();
-
+  const language = useSelector((state: RootState) => state.scroll.language);
   const [loading, setLoading] = useState(false);
   const [services, setServices] = useState<IServices[]>([]);
 
@@ -31,11 +33,11 @@ const Services = () => {
     <div className={style.services}>
       <div className={style.serviceTitle}>
         <h2 style={{ visibility: "hidden" }}>asfasf</h2>
-        <h2>Xidmətlərimiz</h2>
+        <h2>{language === 1 ? "Xidmətlərimiz" : "Our Services"}</h2>
         <div
           onClick={() => navigate(SERVICES_PATH)}
           className={style.equipmentMore}>
-          Daha çox məlumat al
+          {language === 1 ? "Daha çox məlumat al" : "More information"}
         </div>
       </div>
 
@@ -49,7 +51,7 @@ const Services = () => {
         <div
           onClick={() => navigate(SERVICES_PATH)}
           className={style.equipmentMoreResponsive}>
-          Daha çox məlumat al
+          {language === 1 ? "Daha çox məlumat al" : "More information"}
         </div>
       </div>
     </div>
