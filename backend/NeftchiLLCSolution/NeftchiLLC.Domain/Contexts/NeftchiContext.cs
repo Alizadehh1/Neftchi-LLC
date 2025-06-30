@@ -2,6 +2,7 @@
 using Intelect.Infrastructure.Core.Services;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using NeftchiLLC.Domain.Models.Entities;
 using NeftchiLLC.Domain.Models.Membership;
 
 namespace NeftchiLLC.Domain.Contexts
@@ -21,7 +22,9 @@ namespace NeftchiLLC.Domain.Contexts
 
 			modelBuilder.ApplyConfigurationsFromAssembly(typeof(NeftchiContext).Assembly);
 		}
-		public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        public DbSet<Translation> Translations { get; set; }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
 		{
 			var changes = this.ChangeTracker.Entries<IAuditableEntity>();
 

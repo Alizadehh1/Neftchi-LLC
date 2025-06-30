@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using NeftchiLLC.Application.Dtos;
 using NeftchiLLC.Application.Services;
 
 namespace NeftchiLLC.Api.Controllers
 {
-    [Route("api/translation")]
     [ApiController]
+    [Route("api/translation")]
     public class TranslationController : ControllerBase
     {
         private readonly ITranslationService _translationService;
@@ -15,10 +17,18 @@ namespace NeftchiLLC.Api.Controllers
         }
 
         [HttpGet("{language}/{key}")]
-        public IActionResult GetTranslation(string language, string key)
+        public async Task<IActionResult> Get(string language, string key)
         {
-            var translatedText = _translationService.GetTranslation(key, language);
-            return Ok(new { key, translatedText });
+            var value = await _translationService.GetTranslation(key, language);
+            return Ok(new { key, value });
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] MultiLanguageContentDto dto)
+        {
+            await _translationService.SaveTranslationAsync(dto);
+            return Ok();
+        }
+ 
     }
 }

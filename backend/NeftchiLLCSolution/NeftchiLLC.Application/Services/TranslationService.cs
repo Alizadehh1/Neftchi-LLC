@@ -1,31 +1,40 @@
-﻿using System.Globalization;
-using System.Reflection;
-using System.Resources;
+﻿using NeftchiLLC.Application.Dtos;
+using NeftchiLLC.Application.Interfaces;
+using NeftchiLLC.Domain.Models.Entities;
 
 namespace NeftchiLLC.Application.Services
 {
+    public interface ITranslationService
+    {
+        Task<string> GetTranslation(string key, string language);
+        Task SaveTranslationAsync(MultiLanguageContentDto dto);
+    }
     public class TranslationService : ITranslationService
     {
-        private readonly ResourceManager _resourceManager;
-        private static readonly HashSet<string> _supportedLanguages = new() { "az", "en" }; // ✅ Define valid languages
+        private readonly ITranslationRepository _repository;
 
-        public TranslationService()
+        public TranslationService(ITranslationRepository repository)
         {
-            _resourceManager = new ResourceManager("NeftchiLLC.Application.Resources.Translations", Assembly.GetExecutingAssembly());
+            _repository = repository;
         }
 
-        public string GetTranslation(string key, string language)
+        public async Task<string> GetTranslation(string key, string language)
         {
-            // ✅ Validate language
-            if (!_supportedLanguages.Contains(language.ToLower()))
+            var result = await _repository.GetAsync(key, language);
+            return result?.Value ?? $"[{key}]";
+        }
+
+        public async Task SaveTranslationAsync(MultiLanguageContentDto dto)
+        {
+            var entries = new List<Translation>
             {
-                return "Invalid Language Code";  // Return error message if language is not valid
-            }
+                new() { Key = dto.Key, Language = "az", Value = dto.Az },
+                new() { Key = dto.Key, Language = "en", Value = dto.En },
+                new() { Key = dto.Key, Language = "ru", Value = dto.Ru }
+            };
 
-            CultureInfo culture = new CultureInfo(language);
-            var translatedText = _resourceManager.GetString(key, culture);
-
-            return translatedText ?? key; // ✅ Return translation if found, else return the key
+            await _repository.SaveMultipleAsync(entries);
         }
     }
+
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NeftchiLLC.Api.Pipeline;
 using NeftchiLLC.Application;
+using NeftchiLLC.Application.Services;
 using NeftchiLLC.Domain.Contexts;
 using NeftchiLLC.Domain.Models.Membership;
 
@@ -87,6 +88,8 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.Configure<JwtOptions>(cfg => builder.Configuration.Bind(cfg.GetType().Name, cfg));
 
 builder.Services.AddScoped<LocalFileService>();
+builder.Services.AddScoped<ITranslationService, TranslationService>();
+
 
 var app = builder.Build();
 app.UseCorrelation();
