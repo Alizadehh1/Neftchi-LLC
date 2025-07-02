@@ -22,8 +22,6 @@ namespace NeftchiLLC.Domain.Contexts
 
 			modelBuilder.ApplyConfigurationsFromAssembly(typeof(NeftchiContext).Assembly);
 		}
-        public DbSet<Translation> Translations { get; set; }
-
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
 		{
 			var changes = this.ChangeTracker.Entries<IAuditableEntity>();

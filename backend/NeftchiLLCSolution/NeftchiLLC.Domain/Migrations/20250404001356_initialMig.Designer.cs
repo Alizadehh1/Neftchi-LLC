@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NeftchiLLC.Domain.Contexts;
 
@@ -11,9 +12,11 @@ using NeftchiLLC.Domain.Contexts;
 namespace NeftchiLLC.Domain.Migrations
 {
     [DbContext(typeof(NeftchiContext))]
-    partial class NeftchiContextModelSnapshot : ModelSnapshot
+    [Migration("20250404001356_initialMig")]
+    partial class initialMig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -707,31 +710,6 @@ namespace NeftchiLLC.Domain.Migrations
                     b.ToTable("Services", (string)null);
                 });
 
-            modelBuilder.Entity("NeftchiLLC.Domain.Models.Entities.Translation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Key")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Language")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Value")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Translations", (string)null);
-                });
-
             modelBuilder.Entity("NeftchiLLC.Domain.Models.Membership.NeftchiUser", b =>
                 {
                     b.Property<string>("Id")
@@ -853,7 +831,7 @@ namespace NeftchiLLC.Domain.Migrations
                     b.HasOne("NeftchiLLC.Domain.Models.Entities.Document", null)
                         .WithMany()
                         .HasForeignKey("DocumentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -862,7 +840,7 @@ namespace NeftchiLLC.Domain.Migrations
                     b.HasOne("NeftchiLLC.Domain.Models.Entities.Portfolio", null)
                         .WithMany()
                         .HasForeignKey("PortfolioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -871,7 +849,7 @@ namespace NeftchiLLC.Domain.Migrations
                     b.HasOne("NeftchiLLC.Domain.Models.Entities.Project", null)
                         .WithMany()
                         .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

@@ -11,9 +11,9 @@ using NeftchiLLC.Domain.Contexts;
 
 namespace NeftchiLLC.Domain.Migrations
 {
-    [DbContext(typeof(DBContext))]
-    [Migration("20250630014601_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(NeftchiContext))]
+    [Migration("20250702222312_translationAdded")]
+    partial class translationAdded
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -732,7 +732,7 @@ namespace NeftchiLLC.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Translations");
+                    b.ToTable("Translations", (string)null);
                 });
 
             modelBuilder.Entity("NeftchiLLC.Domain.Models.Membership.NeftchiUser", b =>
