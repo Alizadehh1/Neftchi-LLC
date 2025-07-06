@@ -1,63 +1,70 @@
 .portfolio {
-    width: 85%;
-    margin: auto;
-    margin-top: 80px;
-    @media (max-width : 512px){
-        margin-top: 24px;
-    }
+  width: 85%;
+  margin: auto;
+  margin-top: 80px;
+  @media (max-width: 512px) {
+    margin-top: 24px;
+  }
 }
 
-.element{
-    border-color: #25a2fe;
-    width: 100%;
-    margin: auto;
-    margin-top: 40px;
+.element {
+  border-color: #89beea5e;
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
 }
 
 .portfolioTitle {
-    text-align: center;
-    font-size: 32px;
-    font-weight: normal;
-    @media (max-width : 512px){
-       font-size: 20px;
-    }
+  text-align: center;
+  font-size: 32px;
+  font-weight: normal;
+  @media (max-width: 512px) {
+    font-size: 20px;
+  }
 }
 
-.portfolioImages{
-    width: 30%;
-    margin-top: 40px;
-    @media (max-width : 512px){
-        width: 100%;
-        margin-top: 24px;
-    }
-    display: flex;
-}
-
-.portfolioImages figure{
-    width: 30%;
-    height: 80px;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.portfolioValue{
+.portfolioImages {
+  margin-top: 40px;
+  @media (max-width: 512px) {
+    width: 100%;
     margin-top: 24px;
+  }
+  display: flex;
 }
 
-.portfolioValueTitle{
-    font-size: 22px;
-    font-weight: normal;
-    @media (max-width : 512px){
-        font-size: 15px;
-    }
+.portfolioImages figure {
+  height: 80px;
+  img {
+    width: unset;
+    height: 100%;
+  }
 }
 
-.portfolioValueContent{
+.portfolioValue {
+  margin-top: 24px;
+  p {
+    font-family: Kanit;
+    font-weight: 400;
     font-size: 16px;
-    margin-top: 10px;
-    @media (max-width : 512px){
-        font-size: 13px;
-    }
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #494949;
+  }
+}
+
+.portfolioValueTitle {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 16px;
+  @media (max-width: 512px) {
+    font-size: 15px;
+  }
+}
+
+.portfolioValueContent {
+  font-size: 16px;
+  margin-top: 10px;
+  @media (max-width: 512px) {
+    font-size: 13px;
+  }
 }
