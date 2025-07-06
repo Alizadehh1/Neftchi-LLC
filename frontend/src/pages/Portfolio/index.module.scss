@@ -25,11 +25,11 @@
 
 .portfolioImages {
   margin-top: 40px;
+  display: flex;
   @media (max-width: 512px) {
     width: 100%;
     margin-top: 24px;
   }
-  display: flex;
 }
 
 .portfolioImages figure {

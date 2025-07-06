@@ -1,12 +1,6 @@
 import style from "./index.module.scss";
 import Logo from "../../assets/Neftchi logo.svg";
-import {
-  FacebookIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  YoutubeIcon,
-} from "./utils";
+import { LinkedinIcon } from "./utils";
 import { Link, useNavigate } from "react-router-dom";
 import {
   ABOUT_PATH,

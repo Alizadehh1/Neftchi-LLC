@@ -1,7 +1,6 @@
 import style from "./index.module.scss";
 import Main from "../../layout/Main";
 import { Input, Tooltip } from "antd";
-import { IoSearchSharp } from "react-icons/io5";
 import { IEquipment } from "./types";
 import axios from "axios";
 import { baseUrl } from "../../utils/baseUrl";
@@ -67,7 +66,7 @@ const Equipment = () => {
           <Input
             placeholder={language === 1 ? "Axtar..." : "Search..."}
             onPressEnter={(e) => {
-              setInputValue(e?.target?.value);
+              setInputValue((e.target as HTMLInputElement).value);
             }}
           />
         </div>

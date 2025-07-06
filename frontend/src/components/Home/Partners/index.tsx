@@ -36,7 +36,7 @@ const Partners = () => {
     fetchData();
   }, []);
 
-  // if (loading) return <Loading />
+  if (loading) return <Loading />;
 
   return (
     <div className={style.partners}>
