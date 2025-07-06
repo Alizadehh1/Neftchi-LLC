@@ -30,7 +30,7 @@ const Contact = () => {
           </div>
           <div>
             <span>{language === 1 ? "Əlaqə" : "Contact"}</span>
-            <h2>Hüseyn Abaslı / (+994 50) 205 85 55</h2>
+            <h2>(+994 50) 205 85 55</h2>
           </div>
           <div>
             <span>{language === 1 ? "Mail adresi" : "Email Address"}</span>

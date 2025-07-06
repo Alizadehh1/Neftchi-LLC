@@ -92,7 +92,7 @@ export const menuDataEn = [
       },
       {
         id: 12,
-        value: "ISO",
+        value: "QHSE",
         link: ABOUT_PATH,
         ref: "iso",
       },
