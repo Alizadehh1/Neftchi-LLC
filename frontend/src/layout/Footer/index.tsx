@@ -7,7 +7,7 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from "./utils";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   ABOUT_PATH,
   EQUIPMENT_PATH,
@@ -109,21 +109,23 @@ const Footer = () => {
           </div>
 
           <div className={style.sosialIcons}>
-            <div>
+            {/* <div>
               <FacebookIcon />
             </div>
             <div>
               <InstagramIcon />
-            </div>
-            <div>
+            </div> */}
+            <Link
+              to="https://www.linkedin.com/company/neftchi-smf/"
+              target="_blank">
               <LinkedinIcon />
-            </div>
-            <div>
+            </Link>
+            {/* <div>
               <YoutubeIcon />
             </div>
             <div>
               <TwitterIcon />
-            </div>
+            </div> */}
           </div>
         </div>
 

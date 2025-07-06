@@ -38,11 +38,10 @@ const Services = () => {
             {language === 1 ? "Xidmətlərimiz" : "Our Services"}
           </h2>
           <p>
-            NEFTÇİ İQ Firması sizə ümumi məlumat üçün bildirir ki, 2001-ci ildə
-            əsası qoyulmuş bu şirkət keçmiş "Qafqazenerjiquraşdırma" trestinin
-            kollektivindən ibarət yüksək səviyyəli peşəkar quraşdırıcılardan və
-            beynəlxalq sertifikat almış elektrik qaynaqçılardan ibarət taşkil
-            olunmuşdur.
+            Sənaye və enerji sahəsində 2001-ci ildən etibarən texniki
+            mükəmməllik, davamlı inkişaf və beynəlxalq standartlara uyğunluq
+            prinsipləri ilə fəaliyyət göstərən <b> ‘Neftçi’ İQ Firması, </b>
+            aşağıdakı ixtisaslaşmış xidmətləri ilə etibarınızın ünvanıdır.
           </p>
         </div>
 
