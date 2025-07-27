@@ -7,7 +7,7 @@ import { baseUrl } from "../../utils/baseUrl";
 import { useEffect, useRef, useState } from "react";
 import Loading from "../../components/Loading/Loading";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-import { photos } from "../../components/Equipments/utils";
+import { photos, photosEquipment } from "../../components/Equipments/utils";
 import { RootState } from "../../store/store";
 import { useSelector } from "react-redux";
 
@@ -110,7 +110,7 @@ const Equipment = () => {
       </div>
 
       <div className={style.equipment}>
-        <h2>{language === 1 ? "Texnikalar" : "Equipment"}</h2>
+        <h2>{language === 1 ? "Texnikalar" : "Machinery"}</h2>
 
         <div className={style.equipmentImages}>
           <div
@@ -130,6 +130,33 @@ const Equipment = () => {
           <div
             onClick={() => scroll("right")}
             className={style.equipmentLeftArrow}>
+            <FaArrowRight />
+          </div>
+        </div>
+      </div>
+      <div className={style.equipment}>
+        <h2>{language === 1 ? "Avadanlıqlar" : "Equipments"}</h2>
+
+        <div className={style.equipmentImages}>
+          <div
+            onClick={() => scroll("left")}
+            className={style.equipmentRightArrow1}
+            style={{ width: "10px!important" }}>
+            <FaArrowLeft />
+          </div>
+
+          <div ref={imageListRef} className={style.elements}>
+            {photosEquipment.map((value) => (
+              <figure>
+                <img src={value?.photo} />
+              </figure>
+            ))}
+          </div>
+
+          <div
+            onClick={() => scroll("right")}
+            className={style.equipmentLeftArrow1}
+            style={{ width: "10px!important" }}>
             <FaArrowRight />
           </div>
         </div>
