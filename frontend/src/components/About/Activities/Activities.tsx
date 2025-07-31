@@ -66,15 +66,42 @@ const Activities = ({ language }: any) => {
       </div>
 
       {/* bunedi statik yoxsa dinamik */}
-      <p>
-        Bununla yanaşı məlumat üçün onu da bildiririk ki, həmin kollektivin iş
-        bacarığını əməkdaşlıq etdiyimiz SOCAR, Magistral Neft Kəmərləri
-        istehsalat Birliyi, Xəzər Dəniz Neft Qaz Tikinti, Qaradağ sement zavodu,
-        Şirvan IES (Əli Bayramlı DRES), Karasu Operating Company, Shirvan
-        Operating Company, Neftchala Operating Company, Binagadi OIL Company,
-        Absheron Operating Company, GL LTD, Taghiyev Operating Company , Salyan
-        Oil Limited, Socar-AQS şirkətlərinin rəhbərliyinə məlumdur.
-      </p>
+      <br />
+
+      <div className={style.contentMenu}>
+        <div className={style.contentWorks}>
+          <h2>
+            {language === 1
+              ? "Əməkdaşlıq Etdiyimiz Tərəfdaşlar"
+              : "Our Partners"}
+          </h2>
+          <ul>
+            <li>SOCAR - Magistral Neft Kəmərləri İstehsalat Birliyi</li>
+            <li>SOCAR - Kompleks Qazma İşləri Tresti</li>
+            <li>SOCAR - Azərkimya İstehsalat Birliyi</li>
+            <li>SOCAR - Neft Qaz Tikinti Tresti</li>
+            <li>GL Group</li>
+            <li>Taghiyev Operating Company</li>
+            <li>Salyan Oil Limited</li>
+            <li>Balakhani Operating Company</li>
+            <li>Binagadi Oil Company</li>
+          </ul>
+        </div>
+        <div className={style.contentActivities}>
+          <h2 style={{ color: "transparent", userSelect: "none" }}>* </h2>
+          <ul>
+            <li>Karasu Operating Company</li>
+            <li>Shirvan Operating Company</li>
+            <li>Neftechala Operating Company</li>
+            <li>Absheron Operating Company</li>
+            <li>Surakhani Oil Operation Company</li>
+            <li>SOCAR-AQS</li>
+            <li>British Petroleum</li>
+            <li>Bahar Energy Operating Company</li>
+            <li>Zenith Aran Oil Company</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

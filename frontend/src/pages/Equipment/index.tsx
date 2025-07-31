@@ -12,42 +12,39 @@ import { RootState } from "../../store/store";
 import { useSelector } from "react-redux";
 
 const Equipment = () => {
-  const imageListRef = useRef<HTMLDivElement | null>(null);
+  const machineryRef = useRef<HTMLDivElement | null>(null);
+  const equipmentRef = useRef<HTMLDivElement | null>(null);
   const language = useSelector((state: RootState) => state.scroll.language);
   const [loading, setLoading] = useState(false);
   const [equipments, setEquipments] = useState<IEquipment[]>([]);
   const [inputValue, setInputValue] = useState("");
 
-  const scroll = (direction: "left" | "right") => {
-    if (!imageListRef.current) return;
+  const scroll = (
+    ref: React.RefObject<HTMLDivElement | null>,
+    direction: "left" | "right"
+  ) => {
+    if (!ref.current) return;
 
-    const scrollAmount = imageListRef.current.clientWidth * 0.2;
-    imageListRef.current.scrollBy({
+    const scrollAmount = ref.current.clientWidth * 0.2;
+    ref.current.scrollBy({
       left: direction === "right" ? scrollAmount : -scrollAmount,
       behavior: "smooth",
     });
   };
-  //  useEffect(() => {
-  //     const fetchData = async () => {
-  //       setLoading(true);
-  //       await axios
-  //         .get(baseUrl + `/equipments?searchTerm=${inputValue}`)
-  //         .then((res) => {
-  //           setEquipments(res?.data?.data);
-  //         });
-  //       setLoading(false);
-  //     };
-  //     fetchData();
-  //   }, [inputValue]);
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      await axios
-        .get(baseUrl + `/equipments?searchTerm=${inputValue}`)
-        .then((res) => {
-          setEquipments(res?.data?.data);
-        });
-      setLoading(false);
+      try {
+        const res = await axios.get(
+          baseUrl + `/equipments?searchTerm=${inputValue}`
+        );
+        setEquipments(res?.data?.data);
+      } catch (error) {
+        console.error("Fetch error:", error);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchData();
   }, [inputValue]);
@@ -72,7 +69,6 @@ const Equipment = () => {
         </div>
         <table className={style.table}>
           <thead>
-            {/* search-da baxarsan */}
             <tr>
               <th style={{ width: "20%" }}>{language === 1 ? "Ad" : "Name"}</th>
               <th style={{ width: "20%" }}>
@@ -109,54 +105,55 @@ const Equipment = () => {
         </table>
       </div>
 
+      {/* Machinery Slider */}
       <div className={style.equipment}>
         <h2>{language === 1 ? "Texnikalar" : "Machinery"}</h2>
 
         <div className={style.equipmentImages}>
           <div
-            onClick={() => scroll("left")}
+            onClick={() => scroll(machineryRef, "left")}
             className={style.equipmentRightArrow}>
             <FaArrowLeft />
           </div>
 
-          <div ref={imageListRef} className={style.elements}>
-            {photos.map((value) => (
-              <figure>
-                <img src={value?.photo} />
+          <div ref={machineryRef} className={style.elements}>
+            {photos.map((value, index) => (
+              <figure key={index}>
+                <img src={value?.photo} alt={`machinery-${index}`} />
               </figure>
             ))}
           </div>
 
           <div
-            onClick={() => scroll("right")}
+            onClick={() => scroll(machineryRef, "right")}
             className={style.equipmentLeftArrow}>
             <FaArrowRight />
           </div>
         </div>
       </div>
+
+      {/* Equipments Slider */}
       <div className={style.equipment}>
         <h2>{language === 1 ? "Avadanlıqlar" : "Equipments"}</h2>
 
         <div className={style.equipmentImages}>
           <div
-            onClick={() => scroll("left")}
-            className={style.equipmentRightArrow1}
-            style={{ width: "10px!important" }}>
+            onClick={() => scroll(equipmentRef, "left")}
+            className={style.equipmentRightArrow1}>
             <FaArrowLeft />
           </div>
 
-          <div ref={imageListRef} className={style.elements}>
-            {photosEquipment.map((value) => (
-              <figure>
-                <img src={value?.photo} />
+          <div ref={equipmentRef} className={style.elements}>
+            {photosEquipment.map((value, index) => (
+              <figure key={index}>
+                <img src={value?.photo} alt={`equipment-${index}`} />
               </figure>
             ))}
           </div>
 
           <div
-            onClick={() => scroll("right")}
-            className={style.equipmentLeftArrow1}
-            style={{ width: "10px!important" }}>
+            onClick={() => scroll(equipmentRef, "right")}
+            className={style.equipmentLeftArrow1}>
             <FaArrowRight />
           </div>
         </div>
