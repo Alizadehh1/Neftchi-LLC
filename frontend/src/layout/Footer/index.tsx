@@ -136,7 +136,9 @@ const Footer = () => {
             <h2 onClick={() => navigate(SERVICES_PATH)}>
               {language === 1 ? "Xidmətlər" : "Services"}
             </h2>
-            <p>{language === 1 ? "Əməkdaşlarımız" : "Our Employees"}</p>
+            <p onClick={() => navigate(PORTFOLIO_PATH)}>
+              {language === 1 ? "Əməkdaşlarımız" : "Our Employees"}
+            </p>
           </div>
           <div>
             <h2 onClick={() => navigate(PORTFOLIO_PATH)}>
